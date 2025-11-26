@@ -3,13 +3,13 @@
 	{
 	  "name": "loc_1",
 	  "position": [0, 0],
-	  "size": [800, 800],
+	  "size": [896, 828],
 	  "scene_path": "res://Src/Game_world/levels/locations/Loc_1.tscn"
 	},
 	{
 	  "name": "loc_2",
-	  "position": [800, 0],
-	  "size": [800, 800],
+	  "position": [896, 0],
+	  "size": [896, 828],
 	  "scene_path": "res://Src/Game_world/levels/locations/Loc_2.tscn"
 	},
 	{

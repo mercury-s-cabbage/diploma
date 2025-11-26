@@ -1,9 +1,85 @@
-[gd_scene load_steps=2 format=3 uid="uid://bltjaag36ibxc"]
+[gd_scene load_steps=15 format=4 uid="uid://bltjaag36ibxc"]
 
-[ext_resource type="Texture2D" uid="uid://bqt4c533xymti" path="res://Src/Game_world/levels/locations/backgrounds/Loc_1.png" id="1_0jc21"]
+[ext_resource type="Texture2D" uid="uid://bdvbdqts1bo70" path="res://Src/Game_world/levels/locations/objects/Isometric/dirtTiles_S.png" id="2_g0ux0"]
+[ext_resource type="Texture2D" uid="uid://bhrh2epkuyoa6" path="res://Src/Game_world/levels/locations/objects/Isometric/dirt_E.png" id="2_wicvd"]
+[ext_resource type="Texture2D" uid="uid://lbx76ley7lpf" path="res://Src/Game_world/levels/locations/objects/ground.png" id="3_g0ux0"]
+[ext_resource type="Texture2D" uid="uid://nu783wxeqxw2" path="res://Src/Game_world/levels/locations/objects/Isometric/planksHole_W.png" id="4_thn45"]
+[ext_resource type="Texture2D" uid="uid://d2hygaxhvjdx1" path="res://Src/Game_world/levels/locations/objects/Isometric/chestOpen_N.png" id="5_hdkpl"]
+[ext_resource type="Texture2D" uid="uid://d1dlypt53x4un" path="res://Src/Game_world/levels/locations/objects/Isometric/chair_E.png" id="6_j23ua"]
+[ext_resource type="Texture2D" uid="uid://tss0gvdqxrrk" path="res://Src/Game_world/levels/locations/objects/Isometric/chair_W.png" id="7_gail3"]
+[ext_resource type="Texture2D" uid="uid://deyyjyehkbbwb" path="res://Src/Game_world/levels/locations/objects/Isometric/barrelsStacked_E.png" id="8_l72ul"]
+[ext_resource type="Texture2D" uid="uid://b7bgbvey2d47" path="res://Src/Game_world/levels/locations/objects/Isometric/barrelsStacked_N.png" id="9_fl5ky"]
+[ext_resource type="Texture2D" uid="uid://cia7262u51xp0" path="res://Src/Game_world/levels/locations/objects/Isometric/barrels_E.png" id="10_iqkqk"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1lsnj"]
+texture = ExtResource("2_g0ux0")
+margins = Vector2i(0, 118)
+texture_region_size = Vector2i(256, 128)
+0:1/0 = 0
+0:0/0 = 0
+0:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hodxg"]
+texture = ExtResource("2_wicvd")
+margins = Vector2i(0, 118)
+texture_region_size = Vector2i(256, 128)
+0:2/0 = 0
+0:3/0 = 0
+0:1/0 = 0
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p8qq1"]
+texture = ExtResource("3_g0ux0")
+texture_region_size = Vector2i(256, 138)
+0:0/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+1:0/0 = 0
+1:1/0 = 0
+1:2/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_p8qq1"]
+tile_shape = 1
+tile_size = Vector2i(256, 128)
+sources/0 = SubResource("TileSetAtlasSource_1lsnj")
+sources/1 = SubResource("TileSetAtlasSource_hodxg")
+sources/2 = SubResource("TileSetAtlasSource_p8qq1")
 
 [node name="Loc1" type="Node2D"]
 
-[node name="Loc1" type="Sprite2D" parent="."]
-position = Vector2(400, 400)
-texture = ExtResource("1_0jc21")
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+y_sort_enabled = true
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAIAAAAAAAIAAQAAAAIAAAABAAIAAQAAAAIAAAAAAAMAAQAAAAIAAAABAAAAAQAAAAIAAAAAAAQAAQAAAAIAAAACAAIAAAAAAAIAAAAAAAEAAAAAAAIAAAABAAEAAQAAAAIAAAABAAMAAQAAAAIAAAABAAQAAQAAAAIAAAACAAQAAQAAAAIAAAAAAAUAAQAAAAIAAAAAAAYAAQAAAAIAAAAAAAcAAQAAAAIAAAABAAgAAQAAAAIAAAAAAAkAAQAAAAIAAAABAAoAAQAAAAIAAAABAAsAAQAAAAIAAAACAAwAAQAAAAIAAAACAA0AAQAAAAIAAAADAA0AAQAAAAIAAAAEAA4AAQAAAAIAAAAEAA8AAQAAAAIAAAAFAA4AAQAAAAIAAAAFAA8AAQAAAAIAAAAFAA0AAQAAAAIAAAAFAAsAAQAAAAIAAAAFAAoAAQAAAAIAAAAEAAsAAQAAAAIAAAAEAAoAAQAAAAIAAAADAAsAAQAAAAIAAAADAAoAAQAAAAIAAAACAAsAAAAAAAIAAAACAAoAAQAAAAIAAAADAAkAAQAAAAIAAAACAAkAAQAAAAIAAAADAAgAAQAAAAIAAAADAAcAAQAAAAIAAAAEAAYAAQAAAAIAAAADAAYAAQAAAAIAAAACAAcAAQAAAAIAAAACAAgAAQAAAAIAAAAAAAoAAQAAAAIAAAABAAcAAQAAAAIAAAACAAYAAQAAAAIAAAACAAUAAQAAAAIAAAADAAUAAQAAAAIAAAABAAYAAQAAAAIAAAABAAUAAQAAAAIAAAACAAMAAQAAAAIAAAADAAQAAQAAAAIAAAADAAMAAQAAAAIAAAAEAAQAAQAAAAIAAAABAAkAAQAAAAIAAAAAAAsAAQAAAAIAAAABAAwAAQAAAAIAAAADAAwAAQAAAAIAAAAEAAwAAQAAAAIAAAAFAAwAAQAAAAIAAAADAA4AAQAAAAIAAAACAA4AAAAAAAIAAAABAA8AAQAAAAIAAAACAA8AAQAAAAIAAAABAA0AAQAAAAIAAAABAA4AAQAAAAIAAAAAAA8AAQAAAAIAAAAEAA0AAAAAAAIAAAAAAAwAAQAAAAIAAAAEAAkAAQAAAAIAAAAEAAgAAQAAAAIAAAAEAAcAAQAAAAIAAAAFAAYAAQAAAAIAAAAFAAcAAQAAAAIAAAAEAAUAAQAAAAIAAAADAAIAAQAAAAIAAAAEAAMAAQAAAAIAAAAFAAIAAQAAAAIAAAAFAAEAAQAAAAIAAAAFAAAAAQAAAAIAAAAEAAAAAQAAAAIAAAADAAAAAQAAAAIAAAACAAAAAQAAAAIAAAACAAEAAQAAAAIAAAAEAAIAAQAAAAIAAAAFAAMAAQAAAAIAAAADAAEAAQAAAAIAAAAEAAEAAQAAAAIAAAAFAAUAAQAAAAIAAAAFAAgAAQAAAAIAAAAAAA0AAQAAAAIAAAAAAA4AAQAAAAIAAAACABAAAQAAAAIAAAADABAAAQAAAAIAAAAEABAAAQAAAAIAAAAFABAAAQAAAAIAAAABABEAAQAAAAIAAAABABAAAQAAAAIAAAAAABEAAAAAAAIAAAAAABIAAQAAAAIAAAAAABMAAQAAAAIAAAABABQAAQAAAAIAAAACABQAAQAAAAIAAAACABMAAQAAAAIAAAADABMAAQAAAAIAAAAEABQAAAAAAAIAAAAFABQAAQAAAAIAAAAFABMAAQAAAAIAAAAEABMAAQAAAAIAAAAEABIAAQAAAAIAAAADABIAAQAAAAIAAAACABIAAQAAAAIAAAABABIAAQAAAAIAAAAFABIAAQAAAAIAAAAEABEAAQAAAAIAAAADABEAAQAAAAIAAAACABEAAQAAAAIAAAAAABAAAQAAAAIAAAABABMAAQAAAAIAAAAAAAgAAQAAAAIAAAADAA8AAQAAAAIAAAAFAAQAAQAAAAIAAAAFAAkAAQAAAAIAAAAFABEAAQAAAAIAAAAFABUAAQAAAAIAAAAAABQAAQAAAAIAAAAAABUAAQAAAAIAAAABABYAAQAAAAIAAAABABUAAQAAAAIAAAACABUAAQAAAAIAAAADABQAAQAAAAIAAAADABUAAQAAAAIAAAAEABUAAQAAAAIAAAAFABYAAQAAAAIAAAAEABYAAQAAAAIAAAADABYAAQAAAAIAAAACABYAAQAAAAIAAAAAABYAAQAAAAIAAAD//wEAAAAAAAIAAAD//wMAAAAAAAIAAAD//xMAAAAAAAIAAAD//xUAAAAAAAIAAAD//w0AAAAAAAIAAAD//wsAAQAAAAIAAAD//wkAAQAAAAIAAAD//wcAAQAAAAIAAAD//wUAAQAAAAIAAAD//xEAAQAAAAIAAAD//w8AAQAAAAIAAAAGAAAAAQAAAAIAAAAGAAIAAQAAAAIAAAAGAAQAAQAAAAIAAAAGAAYAAQAAAAIAAAAGAAgAAQAAAAIAAAAGAAoAAQAAAAIAAAAGAAwAAQAAAAIAAAAGAA4AAQAAAAIAAAAGABAAAQAAAAIAAAAGABIAAQAAAAIAAAAGABQAAQAAAAIAAAAGABYAAQAAAAIAAAA=")
+tile_set = SubResource("TileSet_p8qq1")
+
+[node name="objects" type="Node2D" parent="."]
+
+[node name="PlanksHoleW" type="Sprite2D" parent="objects"]
+position = Vector2(196, 257)
+texture = ExtResource("4_thn45")
+
+[node name="ChestOpenN" type="Sprite2D" parent="objects"]
+position = Vector2(109, 260)
+texture = ExtResource("5_hdkpl")
+
+[node name="ChairE" type="Sprite2D" parent="objects"]
+position = Vector2(190, 179)
+texture = ExtResource("6_j23ua")
+
+[node name="ChairW" type="Sprite2D" parent="objects"]
+position = Vector2(291, 222)
+texture = ExtResource("7_gail3")
+
+[node name="BarrelsStackedE" type="Sprite2D" parent="objects"]
+position = Vector2(122, 13)
+texture = ExtResource("8_l72ul")
+
+[node name="BarrelsStackedN" type="Sprite2D" parent="objects"]
+position = Vector2(680, -94)
+texture = ExtResource("9_fl5ky")
+
+[node name="BarrelsE" type="Sprite2D" parent="objects"]
+position = Vector2(418, -114)
+texture = ExtResource("10_iqkqk")
