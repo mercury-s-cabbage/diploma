@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://0xi70vvomnba"]
+
+[ext_resource type="Script" uid="uid://ceu6sjfs0s736" path="res://Src/main.gd" id="1_cv0qr"]
+[ext_resource type="PackedScene" uid="uid://db0ov61xodrfj" path="res://Src/Game_world/managers/location_manager/LocationManager.tscn" id="2_u7te1"]
+[ext_resource type="PackedScene" uid="uid://cywbprg3hcu08" path="res://Src/Game_world/levels/characters/hero/hero.tscn" id="4_25j1w"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_cv0qr")
+
+[node name="LocationManager" parent="." instance=ExtResource("2_u7te1")]
+
+[node name="Hero" parent="." instance=ExtResource("4_25j1w")]
+position = Vector2(224, 144)

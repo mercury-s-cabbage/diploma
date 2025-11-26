@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bltjaag36ibxc"]
+
+[ext_resource type="Texture2D" uid="uid://bqt4c533xymti" path="res://Src/Game_world/levels/locations/backgrounds/Loc_1.png" id="1_0jc21"]
+
+[node name="Loc1" type="Node2D"]
+
+[node name="Loc1" type="Sprite2D" parent="."]
+position = Vector2(400, 400)
+texture = ExtResource("1_0jc21")
