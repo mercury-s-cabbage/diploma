@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://db0ov61xodrfj"]
-
-[ext_resource type="Script" uid="uid://crg6hflsbcgl" path="res://Src/Game_world/managers/location_manager/location_manager.gd" id="1_wy8rd"]
-
-[node name="LocationManager" type="Node2D"]
-script = ExtResource("1_wy8rd")

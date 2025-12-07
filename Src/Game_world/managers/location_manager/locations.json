@@ -3,7 +3,7 @@
 	{
 	  "name": "loc_1",
 	  "position": [0, 0],
-	  "size": [4000, 4000],
+	  "size": [3968, 2344],
 	  "scene_path": "res://Src/Game_world/levels/locations/Loc_1.tscn"
 	},
 	{

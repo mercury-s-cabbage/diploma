@@ -3,6 +3,8 @@ extends Node2D
 @export var speed: float = 200.0
 var velocity := Vector2.ZERO
 
+signal position_changed(new_position: Vector2)
+
 func _process(delta):
 	velocity = Vector2.ZERO
 
@@ -23,3 +25,6 @@ func _process(delta):
 		$Sprite2D/AnimationPlayer.play("run")
 	else:
 		$Sprite2D/AnimationPlayer.play("idle")
+		
+	# позиция изменилась, обновляем локацию через менеджер
+	position_changed.emit(global_position)
