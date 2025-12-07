@@ -15,6 +15,12 @@ run/main_scene="uid://0xi70vvomnba"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+EventBus="*res://Src/Game_world/managers/EventBus.gd"
+LocationManager="*res://Src/Game_world/managers/location_manager/location_manager.gd"
+QuestManager="*res://Src/Game_world/managers/quest_manager/quest_manager.gd"
+
 [input]
 
 right={

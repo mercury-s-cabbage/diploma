@@ -1,0 +1,51 @@
+{
+  "id": "basic_quest",
+  "title": "Базовый квест",
+  "description": "Тестировать игру это тоже увлекательный квест, правда?",
+  "steps": [
+	{
+	  "id": "step_1",
+	  "type": "enter_zone",
+	  "description": "Дойти до стола",
+	  "target": {
+		"zone_id": "table_zone"
+	  },
+	  "reward": {
+		"xp": 10
+	  }
+	},
+	{
+	  "id": "step_2",
+	  "type": "collect_item",
+	  "description": "Подобрать бочку",
+	  "target": {
+		"item_id": "barrel",
+		"required_count": 1
+	  },
+	  "reward": {
+		"xp": 20,
+		"items": [{"id": "health_potion", "count": 1}]
+	  }
+	},
+	{
+	  "id": "step_3",
+	  "type": "talk_npc",
+	  "description": "Поговорить с Робом",
+	  "target": {
+		"npc_id": "rob",
+		"success_dialog_outcomes": ["quest_completed", "friendly_end"],
+		"fail_dialog_outcomes": ["quest_refused", "angry_end", "wrong_choice"]
+	  },
+	  "reward": {
+		"xp": 50,
+		"gold": 100
+	  }
+	}
+  ],
+  "rewards": {
+	"xp": 80,
+	"items": [
+	  {"id": "iron_sword", "count": 1}
+	]
+  }
+}
