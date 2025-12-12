@@ -4,3 +4,7 @@
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_cv0qr")
+
+[node name="World" type="Node2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true

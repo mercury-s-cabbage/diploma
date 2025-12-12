@@ -6,9 +6,17 @@ extends Node
 var locations_data = []
 var area_size = Vector2(600, 600) # Размер видимой области вокруг игрока
 var active_locations := [] # Список тех локаций, которые реально подгружены
+var world: Node2D = null # Контейнер, куда будут добавляться локации
+
+@onready var tile_container: Node2D
 
 func _ready():
 	load_locations_from_json("res://Src/Game_world/managers/location_manager/locations.json")
+	
+
+
+func set_world(world_node: Node2D) -> void:
+	world = world_node
 
 # предварительная загрузка списка локаций из файла
 func load_locations_from_json(path: String) -> void:
@@ -25,7 +33,7 @@ func load_locations_from_json(path: String) -> void:
 		push_error("Файл локаций не найден или не может быть открыт: " + path)
 
 # принимает позицию игрока и размер области интереса, возвращает все локации, которые в нее попадают
-func get_locations_in_area(area_pos: Vector2, area_size: Vector2) -> Array:
+func get_locations_in_area(area_pos: Vector2) -> Array:
 	var result = []
 	for loc in locations_data:
 		var loc_pos = Vector2(loc["position"][0], loc["position"][1])
@@ -96,7 +104,7 @@ func initialize_world_from_save(save_path: String) -> Vector2:
 		active_locations.append(spawn_data.location)
 		
 		# Обновляем область вокруг стартовой позиции
-		update_player_position(spawn_data.world_pos)
+		#update_player_position(spawn_data.world_pos)
 		return spawn_data.world_pos
 	
 	# Fallback: первая локация
@@ -110,7 +118,7 @@ func initialize_world_from_save(save_path: String) -> Vector2:
 func update_player_position(player_pos: Vector2) -> void:
 	# Рассчитываем область интереса вокруг игрока
 	var area_pos = player_pos - area_size / 2  # Центрируем область вокруг игрока
-	var need_locations = get_locations_in_area(area_pos, area_size)
+	var need_locations = get_locations_in_area(area_pos)
 	
 	# Список имен уже активных локаций для проверки
 	var current_names = []
@@ -132,10 +140,10 @@ func update_player_position(player_pos: Vector2) -> void:
 # Загружаем локацию (пример, нужно доработать под вашу архитектуру)
 func _load_location(loc):
 	var scene = load(loc["scene_path"]).instantiate()
-	add_child(scene)
+	world.add_child(scene)
 	scene.position = Vector2(loc["position"][0], loc["position"][1])
 
-# Выгружаем локацию (пример, доработайте под вашу архитектуру)
+# Выгружаем локацию 
 func _unload_location(loc):
 	for child in get_children():
 		if child.position == Vector2(loc["position"][0], loc["position"][1]):
