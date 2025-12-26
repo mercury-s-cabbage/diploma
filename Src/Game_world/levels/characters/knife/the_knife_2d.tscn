@@ -32,7 +32,7 @@ render_target_update_mode = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.634783, -1.9662929)
 
 [node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport"]
-transform = Transform3D(1, 0, 0, 0, 0.9791626, 0.20307782, 0, -0.20307782, 0.9791626, -0.11032987, 1.7068232, 2.5419586)
+transform = Transform3D(1, 0, 0, 0, 0.9229014, 0.3850364, 0, -0.3850364, 0.9229014, -0.11032987, 2.842955, 2.5419586)
 projection = 1
 size = 3.8868623
 

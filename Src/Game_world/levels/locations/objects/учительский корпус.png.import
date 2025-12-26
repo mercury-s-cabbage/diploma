@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lbx76ley7lpf"
-path="res://.godot/imported/ground.png-01f166c1f39f7fc058bd03ede791e522.ctex"
+uid="uid://c4b5q6mp5rxjl"
+path="res://.godot/imported/учительский корпус.png-1bc92bc1442f9804fce32cc273ff9cd1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Src/Game_world/levels/locations/objects/ground.png"
-dest_files=["res://.godot/imported/ground.png-01f166c1f39f7fc058bd03ede791e522.ctex"]
+source_file="res://Src/Game_world/levels/locations/objects/учительский корпус.png"
+dest_files=["res://.godot/imported/учительский корпус.png-1bc92bc1442f9804fce32cc273ff9cd1.ctex"]
 
 [params]
 
