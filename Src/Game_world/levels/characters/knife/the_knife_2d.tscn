@@ -7,7 +7,7 @@
 radius = 48.0
 height = 128.0
 
-[node name="knife" type="CharacterBody2D"]
+[node name="knife" type="CharacterBody2D" groups=["Player"]]
 z_index = 1
 z_as_relative = false
 y_sort_enabled = true

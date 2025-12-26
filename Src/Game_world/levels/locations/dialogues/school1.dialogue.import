@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://qx3845ar3oso"
+path="res://.godot/imported/school1.dialogue-d6c410984670cbca8b3d8580504d070a.tres"
+
+[deps]
+
+source_file="res://Src/Game_world/levels/locations/dialogues/school1.dialogue"
+dest_files=["res://.godot/imported/school1.dialogue-d6c410984670cbca8b3d8580504d070a.tres"]
+
+[params]
+
+defaults=true

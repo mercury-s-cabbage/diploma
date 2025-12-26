@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://j85x1t8337ow"]
+[gd_scene load_steps=24 format=4 uid="uid://j85x1t8337ow"]
 
 [ext_resource type="Texture2D" uid="uid://d1cqnuyfc741v" path="res://Src/Game_world/levels/locations/objects/Isometric/Isometric Assets 1.png" id="1_0jc21"]
 [ext_resource type="Texture2D" uid="uid://cm6ft0gu0mtcv" path="res://Src/Game_world/levels/locations/objects/учебная.png" id="2_wicvd"]
@@ -6,6 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://c4b5q6mp5rxjl" path="res://Src/Game_world/levels/locations/objects/учительский корпус.png" id="4_p8qq1"]
 [ext_resource type="Texture2D" uid="uid://xk3fmmx8fmwa" path="res://Src/Game_world/levels/locations/objects/трапезная.png" id="5_1qgv3"]
 [ext_resource type="Texture2D" uid="uid://bw7vpr3kpgexn" path="res://Src/Game_world/levels/locations/objects/doc_2025-12-10_22-37-58.Жилой корпус лайн.png" id="6_binwt"]
+[ext_resource type="Script" uid="uid://d0miv7ftbcbc8" path="res://Src/Game_world/levels/locations/трапезная.gd" id="7_jgm6o"]
+[ext_resource type="Script" uid="uid://2d02o2ear8ns" path="res://Src/Game_world/levels/locations/учебный_корпус.gd" id="8_binwt"]
+[ext_resource type="Resource" uid="uid://muxwc8u0obu5" path="res://Src/Game_world/levels/locations/dialogues/kitchen.dialogue" id="8_illif"]
+[ext_resource type="Resource" uid="uid://qx3845ar3oso" path="res://Src/Game_world/levels/locations/dialogues/school1.dialogue" id="8_jgm6o"]
+[ext_resource type="Script" uid="uid://dejre2dop7v3u" path="res://Src/Game_world/levels/locations/жилой_корпус.gd" id="11_thn45"]
+[ext_resource type="Resource" uid="uid://csnm417wxyil8" path="res://Src/Game_world/levels/locations/dialogues/house.dialogue" id="12_hdkpl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wicvd"]
 texture = ExtResource("1_0jc21")
@@ -867,6 +873,15 @@ sources/2 = SubResource("TileSetAtlasSource_jgm6o")
 sources/4 = SubResource("TileSetAtlasSource_illif")
 sources/5 = SubResource("TileSetAtlasSource_thn45")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_binwt"]
+radius = 384.0833
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p8qq1"]
+radius = 251.2051
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_illif"]
+radius = 248.0
+
 [node name="Loc1" type="Node2D"]
 z_as_relative = false
 y_sort_enabled = true
@@ -883,3 +898,34 @@ z_as_relative = false
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAAAAEAAAAAAAAAAAACAA0AAAACAAcAAAABAA0AAAABAAcAAAADAA0AAAADAAcAAAAEAA0AAAAEAAcAAAAFAA0AAAAFAAcAAAAAAA0AAAAAAAcAAAAAAAsAAAAAAAYAAAABAAsAAAABAAYAAAACAAsAAAACAAYAAAADAAsAAAADAAYAAAAEAAsAAAAEAAYAAAAFAAsAAAAFAAYAAAAGAAsAAAAGAAYAAAAHAAsAAAAHAAYAAAAIAAsAAAAIAAYAAAAGAA0AAAAGAAcAAAAHAA0AAAAHAAcAAAAAAAkAAAAAAAUAAAABAAkAAAABAAUAAAACAAkAAAACAAUAAAADAAkAAAADAAUAAAAEAAkAAAAEAAUAAAAFAAkAAAAFAAUAAAAGAAkAAAAGAAUAAAAHAAkAAAAHAAUAAAAIAAkAAAAIAAUAAAAAAAcAAAAAAAQAAAABAAcAAAABAAQAAAACAAcAAAACAAQAAAADAAcAAAADAAQAAAAEAAcAAAAEAAQAAAAFAAcAAAAFAAQAAAAGAAcAAAAGAAQAAAAHAAcAAAAHAAQAAAAIAAcAAAAIAAQAAAABAAUAAAABAAMAAAACAAUAAAACAAMAAAADAAUAAAADAAMAAAAEAAUAAAAEAAMAAAAFAAUAAAAFAAMAAAAGAAUAAAAGAAMAAAAHAAUAAAAHAAMAAAAIAAUAAAAIAAMAAAADAAMAAAADAAIAAAAEAAMAAAAEAAIAAAAFAAMAAAAFAAIAAAAGAAMAAAAGAAIAAAAHAAMAAAAHAAIAAAAHAAEAAAAHAAEAAAAGAAEAAAAGAAEAAAAFAAEAAAAFAAEAAAAEAAEAAAAEAAEAAAAHAP//AAAHAAAAAAAGAP//AAAGAAAAAAAOAA4AAgAFAAgAAAAPAA4AAgAGAAgAAAAQAA4AAgAHAAgAAAANAAwAAgAEAAcAAAAOAAwAAgAFAAcAAAAPAAwAAgAGAAcAAAAQAAwAAgAHAAcAAAARAAwAAgAIAAcAAAARAAoAAgAIAAYAAAAQAAoAAgAHAAYAAAAPAAoAAgAGAAYAAAAOAAoAAgAFAAYAAAANAAoAAgAEAAYAAAAMAAoAAgADAAYAAAALAAoAAgACAAYAAAAKAAgAAgABAAUAAAALAAgAAgACAAUAAAAMAAgAAgADAAUAAAANAAgAAgAEAAUAAAAOAAgAAgAFAAUAAAAPAAgAAgAGAAUAAAAQAAgAAgAHAAUAAAARAAgAAgAIAAUAAAARAAYAAgAIAAQAAAAQAAYAAgAHAAQAAAAPAAYAAgAGAAQAAAAOAAYAAgAFAAQAAAANAAYAAgAEAAQAAAAMAAYAAgADAAQAAAALAAYAAgACAAQAAAAKAAYAAgABAAQAAAAKAAQAAgABAAMAAAALAAQAAgACAAMAAAAMAAQAAgADAAMAAAANAAQAAgAEAAMAAAAOAAQAAgAFAAMAAAAPAAQAAgAGAAMAAAAQAAQAAgAHAAMAAAAOAAIAAgAFAAIAAAAPAAIAAgAGAAIAAAANAAIAAgAEAAIAAAAMAAIAAgADAAIAAAALAAIAAgACAAIAAAAKAAIAAgABAAIAAAAKAAAAAgABAAEAAAALAAAAAgACAAEAAAAMAAAAAgADAAEAAAANAAAAAgAEAAEAAAALAP7/AgACAAAAAAAJAA0ABAAGAAEAAAAKAA0ABAAHAAEAAAALAA4ABAAIAAEAAAAIAA8ABAAFAAIAAAAJAA8ABAAGAAIAAAAKAA8ABAAHAAIAAAALAA8ABAAIAAIAAAALABEABAAIAAMAAAAKABEABAAHAAMAAAAJABEABAAGAAMAAAAIABEABAAFAAMAAAAHABEABAAEAAMAAAAGABMABAADAAQAAAAFABMABAACAAQAAAAGABEABAADAAMAAAAHABMABAAEAAQAAAAIABMABAAFAAQAAAAJABMABAAGAAQAAAAKABMABAAHAAQAAAALABMABAAIAAQAAAALABUABAAIAAUAAAAKABUABAAHAAUAAAAJABUABAAGAAUAAAAIABUABAAFAAUAAAAHABUABAAEAAUAAAAGABUABAADAAUAAAAFABUABAACAAUAAAAEABUABAABAAUAAAAEABcABAABAAYAAAAFABcABAACAAYAAAAGABcABAADAAYAAAAHABcABAAEAAYAAAAIABcABAAFAAYAAAAJABcABAAGAAYAAAAEABkABAABAAcAAAAFABkABAACAAcAAAAGABkABAADAAcAAAAHABkABAAEAAcAAAAIABoABAAFAAcAAAA=")
 tile_set = SubResource("TileSet_1lsnj")
+
+[node name="Трапезная" type="Area2D" parent="."]
+z_index = 2
+script = ExtResource("7_jgm6o")
+dialogue_scene = ExtResource("8_illif")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Трапезная"]
+position = Vector2(1216, 3296)
+shape = SubResource("CircleShape2D_binwt")
+
+[node name="Учебный корпус" type="Area2D" parent="."]
+z_index = 2
+script = ExtResource("8_binwt")
+dialogue_scene = ExtResource("8_jgm6o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Учебный корпус"]
+position = Vector2(1592, 1872)
+shape = SubResource("CircleShape2D_p8qq1")
+
+[node name="Жилой корпус" type="Area2D" parent="."]
+z_index = 2
+script = ExtResource("11_thn45")
+dialogue_scene = ExtResource("12_hdkpl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Жилой корпус"]
+position = Vector2(3008, 1528)
+shape = SubResource("CircleShape2D_illif")
+
+[connection signal="body_entered" from="Трапезная" to="Трапезная" method="_on_body_entered"]
+[connection signal="body_entered" from="Учебный корпус" to="." method="_on_учебный_корпус_body_entered"]
+[connection signal="body_entered" from="Жилой корпус" to="Трапезная" method="_on_body_entered"]

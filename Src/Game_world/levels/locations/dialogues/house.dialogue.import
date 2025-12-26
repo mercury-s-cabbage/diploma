@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://csnm417wxyil8"
+path="res://.godot/imported/house.dialogue-b350e4236eb2e509c0731ff82095a4ea.tres"
+
+[deps]
+
+source_file="res://Src/Game_world/levels/locations/dialogues/house.dialogue"
+dest_files=["res://.godot/imported/house.dialogue-b350e4236eb2e509c0731ff82095a4ea.tres"]
+
+[params]
+
+defaults=true

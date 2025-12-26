@@ -135,7 +135,7 @@ _data = {
 radius = 24.0
 height = 48.0
 
-[node name="Hero" type="CharacterBody2D"]
+[node name="Hero" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_qufuv")
 speed = 400.0
 
