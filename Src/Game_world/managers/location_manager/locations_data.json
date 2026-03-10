@@ -1,0 +1,22 @@
+{
+  "locations": [
+	{
+	  "id": "loc_1",
+	  "coords": [0, 0],
+	  "size": [4608, 3600],
+	  "loc_path": "res://Src/Game_world/levels/locations/Loc_1.tscn"
+	},
+	{
+	  "id": "loc_2",
+	  "coords": [4608, 10],
+	  "size": [896, 828],
+	  "loc_path": "res://Src/Game_world/levels/locations/Loc_2.tscn"
+	},
+	{
+	  "id": "loc_3",
+	  "coords": [0, 3600],
+	  "size": [1600, 800],
+	  "loc_path": "res://Src/Game_world/levels/locations/Loc_3.tscn"
+	}
+  ]
+}

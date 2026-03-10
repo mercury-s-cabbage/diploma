@@ -1,6 +1,6 @@
 extends Node
 
-''' Мэнеджер отвечает за бесшовную подгрузку локаций по мере прохождения игроком контента'''
+''' Менеджер отвечает за бесшовную подгрузку локаций по мере прохождения игроком контента'''
 
 # Список всех локаций с координатами
 var locations_data = []
@@ -8,12 +8,8 @@ var area_size = Vector2(600, 600) # Размер видимой области �
 var active_locations := [] # Список тех локаций, которые реально подгружены
 var world: Node2D = null # Контейнер, куда будут добавляться локации
 
-@onready var tile_container: Node2D
-
 func _ready():
 	load_locations_from_json("res://Src/Game_world/managers/location_manager/locations.json")
-	
-
 
 func set_world(world_node: Node2D) -> void:
 	world = world_node
@@ -32,7 +28,7 @@ func load_locations_from_json(path: String) -> void:
 	else:
 		push_error("Файл локаций не найден или не может быть открыт: " + path)
 
-# принимает позицию игрока и размер области интереса, возвращает все локации, которые в нее попадают
+# принимает позицию игрока, возвращает все локации, которые в нее попадают
 func get_locations_in_area(area_pos: Vector2) -> Array:
 	var result = []
 	for loc in locations_data:
@@ -49,7 +45,7 @@ func rects_intersect(pos1, size1, pos2, size2) -> bool:
 			pos1.y < pos2.y + size2.y and
 			pos1.y + size1.y > pos2.y)
 
-# НОВОЕ: Находит локацию по мировым координатам игрока из сохранения
+# Находит локацию по мировым координатам игрока из сохранения
 func get_location_by_world_pos(world_pos: Vector2) -> Dictionary:
 	var closest_loc = null
 	var min_dist = INF
@@ -104,7 +100,6 @@ func initialize_world_from_save(save_path: String) -> Vector2:
 		active_locations.append(spawn_data.location)
 		
 		# Обновляем область вокруг стартовой позиции
-		#update_player_position(spawn_data.world_pos)
 		return spawn_data.world_pos
 	
 	# Fallback: первая локация
@@ -137,7 +132,7 @@ func update_player_position(player_pos: Vector2) -> void:
 			_unload_location(loc)
 			active_locations.erase(loc)
 
-# Загружаем локацию (пример, нужно доработать под вашу архитектуру)
+# Загружаем локацию 
 func _load_location(loc):
 	var scene = load(loc["scene_path"]).instantiate()
 	world.add_child(scene)

@@ -6,9 +6,9 @@
 	{
 	  "id": "step_1",
 	  "type": "enter_zone",
-	  "description": "Дойти до стола",
+	  "description": "Дойти до нижнего угла карты",
 	  "target": {
-		"zone_id": "table_zone"
+		"zone_id": "angle_zone"
 	  },
 	  "reward": {
 		"xp": 10

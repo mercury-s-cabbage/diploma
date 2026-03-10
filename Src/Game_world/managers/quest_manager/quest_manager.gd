@@ -3,11 +3,6 @@ extends Node
 var available_quests: Dictionary = {}  # id -> path/to/quest.json Все существующие квесты в игре
 var active_quests: Dictionary = {}     # id -> QuestData (loaded) Квесты, которые игрок принял
 
-signal quest_failed(quest_id: String)
-signal quest_started(quest_id: String, quest_data: Dictionary)  # + данные!
-signal quest_updated(quest_id: String, step_index: int, step_data: Dictionary)
-signal quest_completed(quest_id: String, rewards: Dictionary)
-
 @export var quests_directory: String = "res://Src/Game_world/managers/quest_manager/quests"
 
 func _ready():
@@ -41,7 +36,7 @@ func _on_start_quest(id: String):
 	quest_data.progress = {}
 	
 	# отправляем сигнал о том, что появился новый квест
-	quest_started.emit(id, quest_data)
+	EventBus.quest_started.emit(id, quest_data)
 	print("start")
 	
 # загружаем квест из json-файла по требованию
@@ -106,7 +101,7 @@ func complete_step(quest: Dictionary) -> bool:
 	var step = quest.steps[quest.current_step]
 	apply_reward(step.reward)
 	quest.current_step += 1
-	quest_updated.emit(quest.id, quest.current_step - 1, 100)
+	EventBus.quest_updated.emit(quest.id, quest.current_step - 1, 100)
 	print("Completed step %d of quest %s" % [quest.current_step - 1, quest.id])
 	return quest.current_step >= quest.steps.size()
 
@@ -118,12 +113,12 @@ func check_completion(quest_id: String):
 func complete_quest(quest_id: String):
 	var quest = active_quests[quest_id]
 	apply_reward(quest.rewards)
-	quest_completed.emit(quest_id, quest.rewards)
+	EventBus.quest_completed.emit(quest_id, quest.rewards)
 	active_quests.erase(quest_id)
 	print("Completed quest: %s" % quest_id)
 
 func fail_quest(quest_id: String):
-	quest_failed.emit(quest_id)
+	EventBus.quest_failed.emit(quest_id)
 	active_quests.erase(quest_id)
 	print("Failed quest: %s" % quest_id)
 
