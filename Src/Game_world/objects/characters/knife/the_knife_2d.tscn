@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://chbb43v1i76rp"]
+
+[ext_resource type="Script" uid="uid://bey85pqcvrnll" path="res://Src/Game_world/objects/characters/knife/character_body_2d.gd" id="1_rq16l"]
+[ext_resource type="PackedScene" uid="uid://3qn7gp422c0s" path="res://Src/Game_world/objects/characters/knife/3d/knife3d.tscn" id="2_rwfx3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2cc2k"]
+radius = 48.0
+height = 128.0
+
+[node name="knife" type="CharacterBody2D" unique_id=782577203 groups=["Player"]]
+z_index = 1
+z_as_relative = false
+y_sort_enabled = true
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_rq16l")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=681787847]
+y_sort_enabled = true
+offset_left = -266.0
+offset_top = -402.0
+offset_right = 246.0
+offset_bottom = 110.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1629990287]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="knife" parent="SubViewportContainer/SubViewport" unique_id=519641736 instance=ExtResource("2_rwfx3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.634783, -1.9662929)
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=776840795]
+transform = Transform3D(1, 0, 0, 0, 0.9229014, 0.3850364, 0, -0.3850364, 0.9229014, -0.11032987, 2.842955, 2.5419586)
+projection = 1
+size = 3.8868623
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport" unique_id=1532824832]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2560955, 4.292664)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=900168880]
+y_sort_enabled = true
+shape = SubResource("CapsuleShape2D_2cc2k")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=455986435]
+zoom = Vector2(0.8, 0.8)

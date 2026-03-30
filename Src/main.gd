@@ -1,14 +1,15 @@
 extends Node2D  
 
 # Предварительно загружаем сцену игрока 
-var player_scene = preload("res://Src/Game_world/levels/characters/knife/the_knife_2d.tscn")
+var player_scene = preload("res://Src/Game_world/objects/characters/knife/the_knife_2d.tscn")
 
 func _ready():	
 	var world = $World
-	LocationManager.set_world(world)
+	LocationLoader.set_world(world)
+	
 	# Получаем позицию спавна из сохранения и инициализируем мир
-	var spawn_pos = LocationManager.initialize_world_from_save("res://Saves/save_01.json")
-
+	# Пока позиция спавна это 0 0
+	var spawn_pos = Vector2.ZERO
 	
 	# Создаём игрока в нужной позиции
 	var player = player_scene.instantiate()
@@ -16,4 +17,4 @@ func _ready():
 	player.global_position = spawn_pos
 	
 	# Подписываемся на движение игрока для динамической подгрузки локаций
-	player.position_changed.connect(LocationManager.update_player_position)
+	player.position_changed.connect(LocationLoader.update_world_request)

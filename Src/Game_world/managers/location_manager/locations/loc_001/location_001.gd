@@ -1,7 +1,7 @@
 extends Node
 
-var location_data_file = "res://Src/Game_world/managers/location_manager/locations/loc_002/location_data_002.json"
-var current_state_file = "res://Src/Game_world/managers/location_manager/locations/loc_002/current_state_002.json"
+var location_data_file = "res://Src/Game_world/managers/location_manager/locations/loc_001/location_data_001.json"
+var current_state_file = "res://Src/Game_world/managers/location_manager/locations/loc_001/current_state_001.json"
 var location_data = {}
 var current_state = {}
 var scene_node: Node = null
@@ -41,8 +41,9 @@ func load_from_json(path: String) -> Dictionary:  # ← Dictionary!
 	else:
 		push_error("Ошибка JSON в %s: %s" % [path, json.get_error_message()])
 		return {}
-		
+
 func unload_loc() -> void:
 		if scene_node and scene_node.is_inside_tree():
 			scene_node.queue_free()  # удаляем из world
 			scene_node = null
+	

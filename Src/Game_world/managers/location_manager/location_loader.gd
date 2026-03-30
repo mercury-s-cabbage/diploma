@@ -15,9 +15,6 @@ var current_locations: = {}
 # при запуске загружаем данные локаций из json
 func _ready() -> void:
 	locations_data = load_locations_from_json(data_path)
-	
-func _process(delta: float) -> void:
-	pass
 
 # первоначальная загрузка данных о менеджерах скриптов из json
 func load_locations_from_json(path: String) -> Array:
@@ -68,7 +65,7 @@ func find_current_locations(load_zone: Array, unload_zone: Array) -> Array:
 	for loc_id in load_zone:
 		if loc_id not in new_ids:
 			new_ids.append(loc_id)
-
+	
 	return new_ids
 
 # возвращает инстанс менеджера локации
@@ -101,6 +98,7 @@ func get_location_instance(loc_id: String) -> Node:
 		push_error("Unsupported location resource type for: %s" % loc_data["loc_path"])
 		return null
 	current_locations[loc_id] = instance
+
 	return instance
 
 # проходит по всем текущим локациям. Загружает незагруженные, неиспользуемые - отгружает
@@ -108,15 +106,25 @@ func update_current_locations(new_locations_ids:  Array):
 	for loc_id in current_locations:
 		if loc_id not in new_locations_ids:
 			var loc_instance = current_locations[loc_id]
-			if loc_instance.has_method("unload"):
-				loc_instance.unload()
+			if loc_instance.has_method("unload_loc"):
+				loc_instance.unload_loc()
+
 				
 	for loc_id in new_locations_ids:
 		if loc_id not in current_locations:
 			# создаем инстанс менеджера локации
 			var loc_instance = get_location_instance(loc_id)
-			if loc_instance and loc_instance.has_method("load"):
-				var scene = loc_instance.load()
+			if loc_instance and loc_instance.has_method("load_loc"):
+				var scene = loc_instance.load_loc()
+				print("scene = ", scene)
 				world.add_child(scene)
+
+func set_world(world_node: Node2D) -> void:
+	world = world_node
 	
+func update_world_request(player_pos: Vector2):
+	var load_zone = get_locations_in_area(player_pos, load_area_size)
+	var unload_zone = get_locations_in_area(player_pos, unload_area_size)
+	var new_locs = find_current_locations(load_zone, unload_zone)
+	update_current_locations(new_locs)
 	

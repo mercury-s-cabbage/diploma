@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://do47niu67mhyc"]
+
+[ext_resource type="Texture2D" uid="uid://unrrcxubwmq0" path="res://Src/Game_world/managers/location_manager/locations/loc_001/backgrounds/loc_1_1.JPG" id="1_bxkfo"]
+[ext_resource type="PackedScene" uid="uid://b454riybtorj0" path="res://Src/Game_world/objects/trees/Ель_4.tscn" id="2_580w7"]
+[ext_resource type="PackedScene" uid="uid://dof1cdtdumfep" path="res://Src/Game_world/objects/trees/Ель_1.tscn" id="2_fvsdi"]
+[ext_resource type="PackedScene" uid="uid://8u6bi8lrr7dk" path="res://Src/Game_world/objects/trees/Ель_2.tscn" id="3_c0oti"]
+[ext_resource type="PackedScene" uid="uid://d33rqkb0qhxhg" path="res://Src/Game_world/objects/trees/Ель_3.tscn" id="5_qpjy5"]
+[ext_resource type="Texture2D" uid="uid://c6jvvw37ltfqs" path="res://Src/Game_world/objects/houses/images/склад лайн (2).png" id="6_kqfrr"]
+[ext_resource type="Texture2D" uid="uid://6s1252ma4mny" path="res://Src/Game_world/objects/houses/images/Жилой_корпус.png" id="6_vfcek"]
+
+[node name="Sb1" type="Node2D" unique_id=43295266]
+z_as_relative = false
+y_sort_enabled = true
+
+[node name="Loc11" type="Sprite2D" parent="." unique_id=182343115]
+z_as_relative = false
+position = Vector2(2500, 1750)
+texture = ExtResource("1_bxkfo")
+
+[node name="Деревья" type="Node2D" parent="." unique_id=2035952797]
+z_index = 1
+z_as_relative = false
+y_sort_enabled = true
+
+[node name="Ель14" parent="Деревья" unique_id=457219278 instance=ExtResource("5_qpjy5")]
+position = Vector2(2471, 1089)
+scale = Vector2(0.7, 0.7)
+
+[node name="Ель2" parent="Деревья" unique_id=1951626880 instance=ExtResource("3_c0oti")]
+position = Vector2(394, 138)
+scale = Vector2(0.8, 0.8)
+
+[node name="Ель1" parent="Деревья" unique_id=1225936164 instance=ExtResource("2_fvsdi")]
+position = Vector2(169, 273)
+
+[node name="Ель4" parent="Деревья" unique_id=1260124021 instance=ExtResource("2_580w7")]
+position = Vector2(719, 28)
+
+[node name="Ель5" parent="Деревья" unique_id=1618131967 instance=ExtResource("2_580w7")]
+position = Vector2(895, 175)
+
+[node name="Ель11" parent="Деревья" unique_id=241759980 instance=ExtResource("2_580w7")]
+position = Vector2(589, 476)
+
+[node name="Ель7" parent="Деревья" unique_id=1732568658 instance=ExtResource("2_fvsdi")]
+position = Vector2(691, 1223)
+scale = Vector2(1.4, 1.4)
+
+[node name="Ель3" parent="Деревья" unique_id=534160412 instance=ExtResource("2_fvsdi")]
+position = Vector2(287, 2090)
+
+[node name="Ель18" parent="Деревья" unique_id=336213906 instance=ExtResource("2_fvsdi")]
+position = Vector2(754, 2927)
+
+[node name="Ель9" parent="Деревья" unique_id=1623449947 instance=ExtResource("3_c0oti")]
+position = Vector2(3358, 903)
+rotation = -3.1415925
+scale = Vector2(1.2, -1.2)
+
+[node name="Ель15" parent="Деревья" unique_id=630025953 instance=ExtResource("3_c0oti")]
+position = Vector2(2491, 2513)
+rotation = -3.1415925
+scale = Vector2(1.2, -1.2)
+
+[node name="Ель6" parent="Деревья" unique_id=1403446422 instance=ExtResource("2_580w7")]
+position = Vector2(589, 112)
+rotation = -3.1415925
+scale = Vector2(0.8, -0.8)
+
+[node name="Ель12" parent="Деревья" unique_id=419545895 instance=ExtResource("5_qpjy5")]
+position = Vector2(959, 1475)
+
+[node name="Ель19" parent="Деревья" unique_id=1433616196 instance=ExtResource("5_qpjy5")]
+position = Vector2(1639, 3222)
+
+[node name="Ель10" parent="Деревья" unique_id=295084190 instance=ExtResource("2_580w7")]
+position = Vector2(1639, 1155)
+
+[node name="Ель8" parent="Деревья" unique_id=995166147 instance=ExtResource("3_c0oti")]
+position = Vector2(1302, 421)
+
+[node name="Ель13" parent="Деревья" unique_id=1132474783 instance=ExtResource("3_c0oti")]
+position = Vector2(3069, 1032)
+
+[node name="Ель16" parent="Деревья" unique_id=1254555218 instance=ExtResource("3_c0oti")]
+position = Vector2(4508, 2671)
+rotation = -3.1415925
+scale = Vector2(0.8, -0.8000001)
+
+[node name="Ель17" parent="Деревья" unique_id=577081285 instance=ExtResource("2_fvsdi")]
+position = Vector2(206, 829)
+
+[node name="ЖилойКорпус" type="Sprite2D" parent="." unique_id=1812138861]
+z_index = 1
+position = Vector2(3812.35, 2275.875)
+scale = Vector2(0.88070005, 0.8807)
+texture = ExtResource("6_vfcek")
+
+[node name="СкладЛайн(2)" type="Sprite2D" parent="." unique_id=1586174715]
+z_index = 1
+position = Vector2(1809.0001, 410)
+scale = Vector2(0.52959996, 0.4976591)
+texture = ExtResource("6_kqfrr")
