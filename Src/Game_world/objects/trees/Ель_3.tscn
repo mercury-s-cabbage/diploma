@@ -6,11 +6,11 @@
 radius = 21.84033
 
 [node name="Ель3" type="Node2D" unique_id=457219278]
-z_index = 1
 z_as_relative = false
-y_sort_enabled = true
 
 [node name="Ель3" type="Sprite2D" parent="." unique_id=1388635239]
+z_as_relative = false
+y_sort_enabled = true
 position = Vector2(0, -340)
 texture = ExtResource("1_mc2qs")
 

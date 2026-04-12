@@ -5,21 +5,19 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2cc2k"]
 radius = 48.0
-height = 128.0
+height = 104.0
 
 [node name="knife" type="CharacterBody2D" unique_id=782577203 groups=["Player"]]
-z_index = 1
 z_as_relative = false
-y_sort_enabled = true
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_rq16l")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=681787847]
-y_sort_enabled = true
-offset_left = -266.0
-offset_top = -402.0
-offset_right = 246.0
-offset_bottom = 110.0
+offset_left = -262.0
+offset_top = -448.0
+offset_right = 250.0
+offset_bottom = 64.0
+pivot_offset = Vector2(270, 400)
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1629990287]
 transparent_bg = true
@@ -27,18 +25,18 @@ handle_input_locally = false
 render_target_update_mode = 4
 
 [node name="knife" parent="SubViewportContainer/SubViewport" unique_id=519641736 instance=ExtResource("2_rwfx3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.634783, -1.9662929)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0145612955, -9.82109)
 
 [node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=776840795]
-transform = Transform3D(1, 0, 0, 0, 0.9229014, 0.3850364, 0, -0.3850364, 0.9229014, -0.11032987, 2.842955, 2.5419586)
+transform = Transform3D(0.99999833, -0.0016182702, 0.00087371125, 0.0016024306, 0.9998397, 0.017835137, -0.0009024332, -0.017833706, 0.9998406, -0.11032987, 2.0133667, -7.0992413)
 projection = 1
 size = 3.8868623
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport" unique_id=1532824832]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2560955, 4.292664)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.247778, 4.292664)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=900168880]
-y_sort_enabled = true
+position = Vector2(0, -26)
 shape = SubResource("CapsuleShape2D_2cc2k")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=455986435]

@@ -1,4 +1,4 @@
-extends Node
+extends Resource
 
 var location_data_file = "res://Src/Game_world/managers/location_manager/locations/loc_002/location_data_002.json"
 var current_state_file = "res://Src/Game_world/managers/location_manager/locations/loc_002/current_state_002.json"
@@ -6,23 +6,20 @@ var location_data = {}
 var current_state = {}
 var scene_node: Node = null
 
-func load_loc() -> Node:  # ← Node вместо PackedScene
+func load_loc() -> String:  # ← Node вместо PackedScene
 	location_data = load_from_json(location_data_file) 
 	current_state = load_from_json(current_state_file)
 	if not location_data is Dictionary or not location_data.has("SB_1"):
 		push_error("location_data недоступен или нет ключа 'SB_1': ", location_data)
-		return null
+		return ""
 		
 	var scene_path = location_data["SB_1"]["bg"]
 	if not ResourceLoader.exists(scene_path):
 		push_error("Сцена не найдена: " + scene_path)
-		return null
+		return ""
 		
-	var scene = load(scene_path) as PackedScene
-	var instance = scene.instantiate()
-	
-	scene_node = instance
-	return instance
+	ResourceLoader.load_threaded_request(scene_path)
+	return scene_path
 
 func load_from_json(path: String) -> Dictionary:  # ← Dictionary!
 	var file = FileAccess.open(path, FileAccess.READ)
@@ -41,8 +38,3 @@ func load_from_json(path: String) -> Dictionary:  # ← Dictionary!
 	else:
 		push_error("Ошибка JSON в %s: %s" % [path, json.get_error_message()])
 		return {}
-		
-func unload_loc() -> void:
-		if scene_node and scene_node.is_inside_tree():
-			scene_node.queue_free()  # удаляем из world
-			scene_node = null

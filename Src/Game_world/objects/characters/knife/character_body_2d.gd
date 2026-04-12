@@ -19,7 +19,6 @@ func _physics_process(delta: float) -> void:
 			speed = FAST_SPEED
 		velocity = direction * speed
 		
-		# ИСПРАВЛЕНО: убраны дублирующиеся animation.play()
 		animation.play("run")
 		
 		# Поворот к направлению движения

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bvs05tjyvkpyv"]
+
+[ext_resource type="Script" uid="uid://dm3dmb6tlgja3" path="res://Src/Game_world/managers/location_manager/locations/loc_003/sb_1.gd" id="1_aachs"]
+[ext_resource type="Texture2D" uid="uid://c4ho5p61pu0p5" path="res://Src/Game_world/managers/location_manager/locations/loc_003/backgrounds/IMG_2672.JPG" id="2_amdgv"]
+
+[node name="Sb1" type="Node2D" unique_id=908777010]
+script = ExtResource("1_aachs")
+
+[node name="Img2672" type="Sprite2D" parent="." unique_id=1442760470]
+position = Vector2(2500, 5250)
+texture = ExtResource("2_amdgv")
