@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c7t8hf0hfsom1"]
+
+[ext_resource type="Texture2D" uid="uid://desfiar30j7f8" path="res://Src/Game_world/objects/decor/images/IMG_1743 (2).PNG" id="1_r7ejb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_24e0t"]
+radius = 23.675674
+height = 92.0621
+
+[node name="Бочонок" type="StaticBody2D" unique_id=173035121]
+
+[node name="Img1743(2)" type="Sprite2D" parent="." unique_id=1286043213]
+position = Vector2(2.2003784, -109.97936)
+texture = ExtResource("1_r7ejb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=751002081]
+position = Vector2(0.66116333, -27.7686)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_24e0t")

@@ -3,17 +3,214 @@
 [ext_resource type="Texture2D" uid="uid://s3a57ssysrj6" path="res://Src/Game_world/managers/location_manager/locations/loc_002/backgrounds/loc_2_1.JPG" id="1_6ph8l"]
 [ext_resource type="PackedScene" uid="uid://8u6bi8lrr7dk" path="res://Src/Game_world/objects/trees/Ель_2.tscn" id="2_525xr"]
 [ext_resource type="Texture2D" uid="uid://bs3an0pxp7hm1" path="res://Src/Game_world/objects/houses/images/учительский корпус (2).png" id="3_p2y4g"]
+[ext_resource type="Texture2D" uid="uid://xf4v1xxrdfmr" path="res://Src/Game_world/objects/houses/images/учебная (2).png" id="4_hclsy"]
+[ext_resource type="Texture2D" uid="uid://dtwbu6g6f0kgg" path="res://Src/Game_world/objects/houses/images/Баня.png" id="5_p63c8"]
+[ext_resource type="PackedScene" uid="uid://b454riybtorj0" path="res://Src/Game_world/objects/trees/Ель_4.tscn" id="5_r78sl"]
+[ext_resource type="PackedScene" uid="uid://d33rqkb0qhxhg" path="res://Src/Game_world/objects/trees/Ель_3.tscn" id="6_r78sl"]
+[ext_resource type="PackedScene" uid="uid://dof1cdtdumfep" path="res://Src/Game_world/objects/trees/Ель_1.tscn" id="7_bstin"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r78sl"]
+size = Vector2(5118.1084, 198.28345)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bstin"]
+size = Vector2(251.45059, 3613.7703)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rmd0y"]
+radius = 626.6076
 
 [node name="Sb1" type="Node2D" unique_id=1049502826]
+y_sort_enabled = true
 
 [node name="Loc21" type="Sprite2D" parent="." unique_id=1620931605]
+z_index = -1
+y_sort_enabled = true
 position = Vector2(7500, 1750)
 texture = ExtResource("1_6ph8l")
 
-[node name="Ель2" parent="." unique_id=1951626880 instance=ExtResource("2_525xr")]
-position = Vector2(5263.318, 678.7185)
-
 [node name="УчительскийКорпус(2)" type="Sprite2D" parent="." unique_id=264257351]
-position = Vector2(6321.6226, 2482.7183)
-scale = Vector2(0.8611199, 0.8611199)
+position = Vector2(6200.738, 2653.2188)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("3_p2y4g")
+
+[node name="Учебная(2)" type="Sprite2D" parent="." unique_id=829359885]
+position = Vector2(7912.4175, 1904.4869)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_hclsy")
+
+[node name="Баня" type="Sprite2D" parent="." unique_id=2085283381]
+position = Vector2(5575.738, 1104.1586)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_p63c8")
+
+[node name="Деревья" type="Node2D" parent="." unique_id=180422709]
+z_as_relative = false
+y_sort_enabled = true
+
+[node name="Ель5" parent="Деревья" unique_id=1260124021 instance=ExtResource("5_r78sl")]
+position = Vector2(6019.0137, 404.281)
+
+[node name="Ель7" parent="Деревья" unique_id=1906215455 instance=ExtResource("5_r78sl")]
+position = Vector2(9802.538, 609.95355)
+scale = Vector2(0.8, 0.8)
+
+[node name="Ель11" parent="Деревья" unique_id=1215518043 instance=ExtResource("5_r78sl")]
+position = Vector2(9549.799, 1956.2059)
+scale = Vector2(0.8, 0.8)
+
+[node name="Ель12" parent="Деревья" unique_id=201797323 instance=ExtResource("5_r78sl")]
+position = Vector2(9696.838, 2084.865)
+rotation = 3.1415927
+scale = Vector2(0.5, -0.5)
+
+[node name="Ель3" parent="Деревья" unique_id=1951626880 instance=ExtResource("2_525xr")]
+position = Vector2(5510.451, 426.93805)
+
+[node name="Ель26" parent="Деревья" unique_id=504973723 instance=ExtResource("2_525xr")]
+position = Vector2(5564.2705, 39.4339)
+scale = Vector2(1.5, 1.5)
+
+[node name="Ель31" parent="Деревья" unique_id=1648686459 instance=ExtResource("2_525xr")]
+position = Vector2(8735.144, 1252.7885)
+
+[node name="Ель38" parent="Деревья" unique_id=820704796 instance=ExtResource("2_525xr")]
+position = Vector2(9568.31, 3098.7517)
+
+[node name="Ель19" parent="Деревья" unique_id=183608877 instance=ExtResource("2_525xr")]
+position = Vector2(8346.767, 34.05194)
+
+[node name="Ель6" parent="Деревья" unique_id=604746747 instance=ExtResource("2_525xr")]
+position = Vector2(9939.84, 147.07404)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Ель13" parent="Деревья" unique_id=194993860 instance=ExtResource("2_525xr")]
+position = Vector2(9084.102, 130.92783)
+rotation = 3.1415927
+scale = Vector2(1.4, -1.4)
+
+[node name="Ель14" parent="Деревья" unique_id=1048406742 instance=ExtResource("2_525xr")]
+position = Vector2(7517.9385, 243.9498)
+rotation = 3.1415927
+scale = Vector2(1.4, -1.4)
+
+[node name="Ель23" parent="Деревья" unique_id=32993285 instance=ExtResource("2_525xr")]
+position = Vector2(7275.7485, 550.724)
+rotation = 3.1415927
+scale = Vector2(1.4, -1.4)
+
+[node name="Ель35" parent="Деревья" unique_id=1272249098 instance=ExtResource("2_525xr")]
+position = Vector2(5216.584, 2849.539)
+rotation = 3.1415927
+scale = Vector2(1.4, -1.4)
+
+[node name="Ель32" parent="Деревья" unique_id=334111271 instance=ExtResource("2_525xr")]
+position = Vector2(7449.104, 1764.2117)
+rotation = 3.1415927
+scale = Vector2(1.4, -1.4)
+
+[node name="Ель4" parent="Деревья" unique_id=457219278 instance=ExtResource("6_r78sl")]
+position = Vector2(5836.8604, 267.7309)
+
+[node name="Ель17" parent="Деревья" unique_id=263405347 instance=ExtResource("6_r78sl")]
+position = Vector2(8032.718, 418.42694)
+scale = Vector2(1.2, 1.2)
+
+[node name="Ель25" parent="Деревья" unique_id=728254308 instance=ExtResource("6_r78sl")]
+position = Vector2(6095.1963, 219.29285)
+scale = Vector2(1.2, 1.2)
+
+[node name="Ель10" parent="Деревья" unique_id=2016691851 instance=ExtResource("6_r78sl")]
+position = Vector2(9345.926, 590.65106)
+
+[node name="Ель8" parent="Деревья" unique_id=427416776 instance=ExtResource("6_r78sl")]
+position = Vector2(6563.431, 956.6273)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Ель29" parent="Деревья" unique_id=426812943 instance=ExtResource("6_r78sl")]
+position = Vector2(8472, 1174.9805)
+
+[node name="Ель37" parent="Деревья" unique_id=1183651708 instance=ExtResource("6_r78sl")]
+position = Vector2(9526.346, 3794.9685)
+
+[node name="Ель27" parent="Деревья" unique_id=646470406 instance=ExtResource("6_r78sl")]
+position = Vector2(6563.431, 187.00098)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Ель24" parent="Деревья" unique_id=1413119163 instance=ExtResource("6_r78sl")]
+position = Vector2(6778.711, 192.38293)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Ель9" parent="Деревья" unique_id=135233256 instance=ExtResource("6_r78sl")]
+position = Vector2(9641.936, 499.1571)
+rotation = 3.1415927
+scale = Vector2(1.7, -1.7)
+
+[node name="Ель22" parent="Деревья" unique_id=1404584720 instance=ExtResource("6_r78sl")]
+position = Vector2(7085.4844, 337.69702)
+rotation = 3.1415927
+scale = Vector2(1.7, -1.7)
+
+[node name="Ель39" parent="Деревья" unique_id=1955527853 instance=ExtResource("6_r78sl")]
+position = Vector2(4962.499, 637.2593)
+rotation = 3.1415927
+scale = Vector2(1.7, -1.7)
+
+[node name="Ель30" parent="Деревья" unique_id=1888707342 instance=ExtResource("6_r78sl")]
+position = Vector2(9746.49, 1845.889)
+rotation = 3.1415927
+scale = Vector2(1.7, -1.7)
+
+[node name="Ель36" parent="Деревья" unique_id=471057076 instance=ExtResource("6_r78sl")]
+position = Vector2(9875.783, 3503.3533)
+rotation = 3.1415927
+scale = Vector2(1.7, -1.7)
+
+[node name="Ель20" parent="Деревья" unique_id=1947414060 instance=ExtResource("6_r78sl")]
+position = Vector2(10099.405, 1107.3235)
+rotation = 3.1415927
+scale = Vector2(1.7, -1.7)
+
+[node name="Ель1" parent="Деревья" unique_id=1225936164 instance=ExtResource("7_bstin")]
+position = Vector2(5204.676, 263.26318)
+
+[node name="Ель15" parent="Деревья" unique_id=971234390 instance=ExtResource("7_bstin")]
+position = Vector2(8762.18, 128.71313)
+
+[node name="Ель2" parent="Деревья" unique_id=555235864 instance=ExtResource("7_bstin")]
+position = Vector2(5290.788, 882.1934)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Ель33" parent="Деревья" unique_id=538492224 instance=ExtResource("7_bstin")]
+position = Vector2(6307.085, 611.8962)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Ель21" parent="Деревья" unique_id=856772698 instance=ExtResource("7_bstin")]
+position = Vector2(9375.729, 112.56714)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Ель16" parent="Деревья" unique_id=450730172 instance=ExtResource("7_bstin")]
+position = Vector2(7798.8013, 123.331116)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Верхняя граница" type="StaticBody2D" parent="." unique_id=1816722939]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Верхняя граница" unique_id=2045403691]
+position = Vector2(7531.268, 89.14172)
+shape = SubResource("RectangleShape2D_r78sl")
+
+[node name="Правая граница" type="StaticBody2D" parent="." unique_id=674808778]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Правая граница" unique_id=686861058]
+position = Vector2(9875.754, 1676.5155)
+shape = SubResource("RectangleShape2D_bstin")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Правая граница" unique_id=1908584646]
+position = Vector2(9792.016, 2344.4)
+shape = SubResource("CircleShape2D_rmd0y")

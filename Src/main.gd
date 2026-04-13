@@ -9,7 +9,7 @@ func _ready():
 	
 	# Получаем позицию спавна из сохранения и инициализируем мир
 	# Пока позиция спавна это 0 0
-	var spawn_pos = Vector2.ZERO
+	var spawn_pos = Vector2(1000, 1000)
 	
 	# Создаём игрока в нужной позиции
 	var player = player_scene.instantiate()

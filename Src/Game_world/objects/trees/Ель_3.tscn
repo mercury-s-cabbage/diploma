@@ -11,12 +11,12 @@ z_as_relative = false
 [node name="Ель3" type="Sprite2D" parent="." unique_id=1388635239]
 z_as_relative = false
 y_sort_enabled = true
-position = Vector2(0, -340)
+position = Vector2(6, -411)
 texture = ExtResource("1_mc2qs")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=364858490]
 position = Vector2(0, -340)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1678992825]
-position = Vector2(-5, 392)
+position = Vector2(0, 315)
 shape = SubResource("CircleShape2D_js6gv")

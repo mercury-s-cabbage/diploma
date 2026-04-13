@@ -2,10 +2,19 @@
 
 [ext_resource type="Script" uid="uid://dm3dmb6tlgja3" path="res://Src/Game_world/managers/location_manager/locations/loc_003/sb_1.gd" id="1_aachs"]
 [ext_resource type="Texture2D" uid="uid://c4ho5p61pu0p5" path="res://Src/Game_world/managers/location_manager/locations/loc_003/backgrounds/IMG_2672.JPG" id="2_amdgv"]
+[ext_resource type="Texture2D" uid="uid://c6jvvw37ltfqs" path="res://Src/Game_world/objects/houses/images/склад лайн (2).png" id="3_3muq8"]
 
 [node name="Sb1" type="Node2D" unique_id=908777010]
+y_sort_enabled = true
 script = ExtResource("1_aachs")
 
 [node name="Img2672" type="Sprite2D" parent="." unique_id=1442760470]
+z_index = -1
+y_sort_enabled = true
 position = Vector2(2500, 5250)
 texture = ExtResource("2_amdgv")
+
+[node name="СкладЛайн(2)" type="Sprite2D" parent="." unique_id=1406285535]
+position = Vector2(3744, 5456)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_3muq8")
