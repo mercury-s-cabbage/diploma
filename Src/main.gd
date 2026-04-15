@@ -15,6 +15,35 @@ func _ready():
 	var player = player_scene.instantiate()
 	world.add_child(player)
 	player.global_position = spawn_pos
+	EventBus.start_quest.emit("001")
 	
 	# Подписываемся на движение игрока для динамической подгрузки локаций
 	player.position_changed.connect(LocationLoader.update_world_request)
+	#copy_default_save_to_user(d
+		#"res://Src/Game_world/managers/quest_manager/progress_default.json", 
+		#"res://Src/Game_world/managers/quest_manager/progress.json"
+	#)
+#
+## функция здесь временно, пока не создам менеджер сохранений
+#func copy_default_save_to_user(default_path: String, user_path: String) -> bool:
+	#if not FileAccess.file_exists(default_path):
+		#push_error("Default save file not found: %s" % default_path)
+		#return false
+#
+	#var source_file := FileAccess.open(default_path, FileAccess.READ)
+	#if source_file == null:
+		#push_error("Can't open source file: %s" % default_path)
+		#return false
+#
+	#var content := source_file.get_as_text()
+	#source_file.close()
+#
+	#var target_file := FileAccess.open(user_path, FileAccess.WRITE)
+	#if target_file == null:
+		#push_error("Can't open target file: %s" % user_path)
+		#return false
+#
+	#target_file.store_string(content)
+	#target_file.close()
+#
+	#return true

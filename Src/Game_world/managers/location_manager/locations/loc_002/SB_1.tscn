@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b1ydjnrsa3tg7"]
 
 [ext_resource type="Texture2D" uid="uid://s3a57ssysrj6" path="res://Src/Game_world/managers/location_manager/locations/loc_002/backgrounds/loc_2_1.JPG" id="1_6ph8l"]
+[ext_resource type="Script" uid="uid://c7gug8v88kvxk" path="res://Src/Game_world/managers/location_manager/locations/loc_002/sb_1.gd" id="1_bstin"]
 [ext_resource type="PackedScene" uid="uid://8u6bi8lrr7dk" path="res://Src/Game_world/objects/trees/Ель_2.tscn" id="2_525xr"]
 [ext_resource type="Texture2D" uid="uid://bs3an0pxp7hm1" path="res://Src/Game_world/objects/houses/images/учительский корпус (2).png" id="3_p2y4g"]
 [ext_resource type="Texture2D" uid="uid://xf4v1xxrdfmr" path="res://Src/Game_world/objects/houses/images/учебная (2).png" id="4_hclsy"]
@@ -18,8 +19,15 @@ size = Vector2(251.45059, 3613.7703)
 [sub_resource type="CircleShape2D" id="CircleShape2D_rmd0y"]
 radius = 626.6076
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rmd0y"]
+size = Vector2(1391.1019, 1043.9242)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bstin"]
+radius = 723.9013
+
 [node name="Sb1" type="Node2D" unique_id=1049502826]
 y_sort_enabled = true
+script = ExtResource("1_bstin")
 
 [node name="Loc21" type="Sprite2D" parent="." unique_id=1620931605]
 z_index = -1
@@ -214,3 +222,21 @@ shape = SubResource("RectangleShape2D_bstin")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Правая граница" unique_id=1908584646]
 position = Vector2(9792.016, 2344.4)
 shape = SubResource("CircleShape2D_rmd0y")
+
+[node name="field" type="Area2D" parent="." unique_id=749167868]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="field" unique_id=953807220]
+position = Vector2(8136.494, 1552.5557)
+rotation = 0.64481807
+scale = Vector2(0.90330565, 1)
+skew = 0.34906584
+shape = SubResource("RectangleShape2D_rmd0y")
+
+[node name="banya" type="Area2D" parent="." unique_id=1486979390]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="banya" unique_id=1402991931]
+position = Vector2(5515.8535, 1253.603)
+shape = SubResource("CircleShape2D_bstin")
+
+[connection signal="body_entered" from="field" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="banya" to="." method="_on_banya_body_entered"]

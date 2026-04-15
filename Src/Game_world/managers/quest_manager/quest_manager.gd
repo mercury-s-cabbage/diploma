@@ -1,12 +1,25 @@
 extends Node
 
+@export var quests_directory: String = "res://Src/Game_world/managers/quest_manager/quests"
+@export var progress_file: String = "res://Src/Game_world/managers/quest_manager/progress.json"
+var progress: Dictionary
+
 var available_quests: Dictionary = {}  # id -> path/to/quest.json Все существующие квесты в игре
 var active_quests: Dictionary = {}     # id -> QuestData (loaded) Квесты, которые игрок принял
+var tracked_signals: Dictionary = {} # сигналы, которые отслеживаются квестами в данный момент
+# tracked_signals:
+# {
+#   "_on_npc_talked": [
+#       {"quest_id": "001", "values": ["steve", "accept"]},
+#       {"quest_id": "002", "values": ["bob", "refuse"]}
+#   ]
+# }
 
-@export var quests_directory: String = "res://Src/Game_world/managers/quest_manager/quests"
+
 
 func _ready():
 	load_quest_paths(quests_directory)
+	progress = load_from_json(progress_file)
 	# подключаем сигналы, которые будут триггерить квесты
 	EventBus.npc_talk_accepted.connect(_on_npc_talk_accepted)
 	EventBus.item_acquired.connect(_on_item_acquired)
@@ -26,8 +39,8 @@ func load_quest_paths(dir_path: String):
 				available_quests[quest_id] = dir_path + "/" + file_name
 			file_name = dir.get_next()
 		dir.list_dir_end()
-	print("Loaded %d quest paths" % available_quests.size())
 
+# пришел сигнал-запрос на запуск квеста
 func _on_start_quest(id: String):
 	# загружаем данные нужного квеста
 	var quest_path = available_quests[id]
@@ -35,10 +48,55 @@ func _on_start_quest(id: String):
 	quest_data.current_step = 0
 	quest_data.progress = {}
 	
-	# отправляем сигнал о том, что появился новый квест
+	register_quest_signals(quest_data, 0)
+	# отправляем сигнал о том, что был загружен новый квест
+	progress[id]["status"] = 1
+	active_quests[id] = quest_data
 	EventBus.quest_started.emit(id, quest_data)
-	print("start")
+
+func register_quest_signals(quest_data: Dictionary, step_id: int) -> void:
+	if not quest_data.has("id") or not quest_data.has("steps"):
+		return
+
+	var quest_id: String = str(quest_data["id"])
+	var steps: Dictionary = quest_data["steps"]
 	
+	remove_quest_signals(quest_id)
+
+	if not steps.has(str(step_id)):
+		return
+
+	var step_data: Dictionary = steps[str(step_id)]
+	if not step_data.has("signals"):
+		return
+
+	var signals_data: Dictionary = step_data["signals"]
+
+	for signal_name in signals_data.keys():
+		var handler_name := "_on_%s" % signal_name
+
+		if not tracked_signals.has(handler_name):
+			tracked_signals[handler_name] = []
+		
+		for tracked_values in signals_data[signal_name]:
+			var entry := {
+				"quest_id": quest_id,
+				"values": tracked_values.duplicate()
+			}
+
+			tracked_signals[handler_name].append(entry)
+
+# удаляет все отслеживания сигналов для квеста с quest_id
+func remove_quest_signals(quest_id: String) -> void:
+	for handler_name in tracked_signals.keys():
+		var entries: Array = tracked_signals[handler_name]
+		for i in range(entries.size() - 1, -1, -1):
+			var entry = entries[i]
+			if entry is Dictionary and str(entry.get("quest_id", "")) == quest_id:
+				entries.remove_at(i)
+		if entries.is_empty():
+			tracked_signals.erase(handler_name)
+			
 # загружаем квест из json-файла по требованию
 func load_quest_data(path: String) -> Dictionary:
 	var file = FileAccess.open(path, FileAccess.READ)
@@ -50,112 +108,74 @@ func load_quest_data(path: String) -> Dictionary:
 	if parse_result != OK:
 		push_error("JSON Parse Error: %s" % json.get_error_message())
 		return {}
-	
 	return json.data	
+
+func end_quest(quest_id: String):
+	remove_quest_signals(quest_id)
+	progress[quest_id]["status"] = 2
+	active_quests.erase(quest_id)
+	# TODO: на этом месте надо сохранять прогресс
+	print("end quest ", quest_id)
+	
+	
+		
+func update_quest(quest_id: String):
+	var step = str(int(progress[quest_id]["current_step"]))
+	for sig in (progress[quest_id][step]):
+		for aim in progress[quest_id][step][sig]:
+			if progress[quest_id][step][sig][aim] == 0:
+				return
+	var new_step = progress[quest_id]["current_step"] + 1
+	progress[quest_id]["current_step"] = new_step
+	if new_step == active_quests[quest_id]["k_steps"]:
+		end_quest(quest_id)
+		return
+	register_quest_signals(active_quests[quest_id], new_step)
+	print("step changed: ", new_step)
+	
+	
+func _on_area_entered(zone_id: String):
+	if "_on_area_entered" in tracked_signals.keys():
+		for quest in tracked_signals["_on_area_entered"]:
+			var quest_id = quest["quest_id"]
+			if quest["values"][0] == zone_id:
+				var step = str(int(progress[quest_id]["current_step"]))
+				print("aimed ", zone_id)
+				progress[quest_id][step]["area_entered"][zone_id] = 1
+				update_quest(quest_id)
+			
 
 # пришел сигнал о разговоре с npc
 func _on_npc_talk_accepted(npc_id: String, outcome: String):
 	pass
 
 func _on_item_acquired(item_id: String, count: int):
-	for quest_id in active_quests:
-		var quest = active_quests[quest_id]
-		if advance_step(quest, {"type": "collect_item", "item_id": item_id, "count": count}):
-			check_completion(quest_id)
+	pass
 
-func _on_area_entered(zone_id: String):
-	for quest_id in active_quests:
-		var quest = active_quests[quest_id]
-		if advance_step(quest, {"type": "enter_zone", "zone_id": zone_id}):
-			check_completion(quest_id)
+
 
 func _on_enemy_killed(enemy_type: String):
-	for quest_id in active_quests:
-		var quest = active_quests[quest_id]
-		if advance_step(quest, {"type": "kill_enemy", "enemy_type": enemy_type}):
-			check_completion(quest_id)
-
-func advance_step(quest: Dictionary, event: Dictionary) -> bool:
-	var step = quest.steps[quest.current_step]
-	if step.type == event.type:
-		match step.type:
-			"collect_item":
-				if step.target.item_id == event.item_id:
-					var current = quest.progress.get(step.id, 0)
-					quest.progress[step.id] = current + event.count
-					if quest.progress[step.id] >= step.target.required_count:
-						return complete_step(quest)
-			"enter_zone":
-				if step.target.zone_id == event.zone_id:
-					return complete_step(quest)
-			"talk_npc":
-				if step.target.npc_id == event.get("npc_id", ""):
-					if event.outcome in step.target.success_dialog_outcomes:
-						return complete_step(quest)
-					elif event.outcome in step.target.fail_dialog_outcomes:
-						fail_quest(quest.id)
-						return false
-	return false
+	pass
 
 func complete_step(quest: Dictionary) -> bool:
-	var step = quest.steps[quest.current_step]
-	apply_reward(step.reward)
-	quest.current_step += 1
-	EventBus.quest_updated.emit(quest.id, quest.current_step - 1, 100)
-	print("Completed step %d of quest %s" % [quest.current_step - 1, quest.id])
-	return quest.current_step >= quest.steps.size()
-
-func check_completion(quest_id: String):
-	var quest = active_quests[quest_id]
-	if quest.current_step >= quest.steps.size():
-		complete_quest(quest_id)
+	return 0
 
 func complete_quest(quest_id: String):
-	var quest = active_quests[quest_id]
-	apply_reward(quest.rewards)
-	EventBus.quest_completed.emit(quest_id, quest.rewards)
-	active_quests.erase(quest_id)
-	print("Completed quest: %s" % quest_id)
-
-func fail_quest(quest_id: String):
-	EventBus.quest_failed.emit(quest_id)
-	active_quests.erase(quest_id)
-	print("Failed quest: %s" % quest_id)
-
-func apply_reward(reward: Dictionary):
-	if reward.has("xp"):
-		pass
-	if reward.has("gold"):
-		pass
-	if reward.has("items"):
-		for item in reward.items:
-			pass
-
-# API для UI/сохранений
-func get_quest_status(quest_id: String) -> Dictionary:
-	if active_quests.has(quest_id):
-		return {
-			"id": quest_id,
-			"status": "active",
-			"current_step": active_quests[quest_id].current_step,
-			"steps_count": active_quests[quest_id].steps.size(),
-			"title": active_quests[quest_id].title
-		}
-	return {"id": quest_id, "status": "inactive"}
-
-func save_state() -> Dictionary:
-	var state = {}
-	for quest_id in active_quests:
-		state[quest_id] = {
-			"current_step": active_quests[quest_id].current_step,
-			"progress": active_quests[quest_id].progress
-		}
-	return state
+	pass
 
 func load_state(state: Dictionary):
-	for quest_id in state:
-		if available_quests.has(quest_id):
-			var quest_data = load_quest_data(available_quests[quest_id])
-			quest_data.current_step = state[quest_id].current_step
-			quest_data.progress = state[quest_id].progress
-			active_quests[quest_id] = quest_data
+	pass
+
+func load_from_json(path: String):
+	var file = FileAccess.open(path, FileAccess.READ)
+	if file:
+		var text = file.get_as_text()
+		file.close()
+		var data = JSON.parse_string(text)
+		if typeof(data) == TYPE_DICTIONARY:
+			return data
+		else:
+			push_error("JSON-файл имеет неверный формат")
+	else:
+		push_error("The file was not found or could not be opened: " + path)
+	return []

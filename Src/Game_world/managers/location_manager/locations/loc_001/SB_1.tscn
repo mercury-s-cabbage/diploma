@@ -31,7 +31,7 @@ position = Vector2(2497.4998, -1438.75)
 scale = Vector2(4.1624994, 3.598125)
 texture = ExtResource("2_4otos")
 
-[node name="Loc11" type="Sprite2D" parent="." unique_id=1761449351]
+[node name="background" type="Sprite2D" parent="." unique_id=1761449351]
 z_index = -1
 position = Vector2(2500, 1750)
 texture = ExtResource("1_bxkfo")
@@ -238,20 +238,6 @@ scale = Vector2(0.8, 0.8)
 position = Vector2(4153, 1185.0001)
 scale = Vector2(0.9, 0.9)
 
-[node name="Ворота" parent="." unique_id=1183562552 instance=ExtResource("10_jhrta")]
-position = Vector2(2211, 1397)
-scale = Vector2(-1, 1)
-
-[node name="Бочонок3" parent="." unique_id=173035121 instance=ExtResource("9_wrbtc")]
-position = Vector2(1929, 1890)
-
-[node name="Бочонок4" parent="." unique_id=1177265422 instance=ExtResource("9_wrbtc")]
-position = Vector2(2274, 1698)
-
-[node name="Бочонок5" parent="." unique_id=198944647 instance=ExtResource("9_wrbtc")]
-position = Vector2(1844.9999, 1937.9999)
-scale = Vector2(0.85, 0.85)
-
 [node name="Склад" type="Node2D" parent="." unique_id=1341733624]
 y_sort_enabled = true
 
@@ -333,6 +319,21 @@ scale = Vector2(1, -1)
 
 [node name="Забор7" parent="Забор9" unique_id=1713072624 instance=ExtResource("11_hk53j")]
 position = Vector2(618, 2450)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Бочонок3" parent="Забор9" unique_id=173035121 instance=ExtResource("9_wrbtc")]
+position = Vector2(1929, 1890)
+
+[node name="Бочонок4" parent="Забор9" unique_id=1177265422 instance=ExtResource("9_wrbtc")]
+position = Vector2(2274, 1698)
+
+[node name="Бочонок5" parent="Забор9" unique_id=198944647 instance=ExtResource("9_wrbtc")]
+position = Vector2(1844.9999, 1937.9999)
+scale = Vector2(0.85, 0.85)
+
+[node name="Ворота" parent="Забор9" unique_id=1183562552 instance=ExtResource("10_jhrta")]
+position = Vector2(2211, 1397)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
