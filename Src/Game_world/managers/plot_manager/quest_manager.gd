@@ -1,7 +1,7 @@
 extends Node
 
-@export var quests_directory: String = "res://Src/Game_world/managers/quest_manager/quests"
-@export var progress_file: String = "res://Src/Game_world/managers/quest_manager/progress.json"
+@export var quests_directory: String = "res://Src/Game_world/managers/plot_manager/quests"
+@export var progress_file: String = "res://Src/Game_world/managers/plot_manager/progress.json"
 var progress: Dictionary
 
 var available_quests: Dictionary = {}  # id -> path/to/quest.json Все существующие квесты в игре
@@ -105,6 +105,7 @@ func end_quest(quest_id: String):
 	progress[quest_id]["status"] = 2
 	active_quests.erase(quest_id)
 	# TODO: на этом месте надо сохранять прогресс
+	EventBus.quest_ended.emit(quest_id)
 	print("end quest ", quest_id)
 	
 func _on_area_entered(zone_id: String):

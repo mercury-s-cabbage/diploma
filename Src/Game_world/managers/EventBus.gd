@@ -14,7 +14,7 @@ signal start_quest(quest_id: String)
 signal quest_failed(quest_id: String)
 signal quest_started(quest_id: String, quest_data: Dictionary)  # + данные!
 signal quest_updated(quest_id: String, step_index: int, step_data: Dictionary)
-signal quest_completed(quest_id: String, rewards: Dictionary)
+signal quest_ended(quest_id: String)
 
 # Другие события игры 
 signal player_level_up(level: int)

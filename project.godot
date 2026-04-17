@@ -22,9 +22,10 @@ config/icon="res://icon.svg"
 [autoload]
 
 EventBus="*res://Src/Game_world/managers/EventBus.gd"
-QuestManager="*res://Src/Game_world/managers/quest_manager/quest_manager.gd"
+QuestManager="*res://Src/Game_world/managers/plot_manager/quest_manager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 LocationLoader="*uid://bkl1ulojyjocx"
+StoryManager="*uid://bvsoiij17iptd"
 
 [editor_plugins]
 
