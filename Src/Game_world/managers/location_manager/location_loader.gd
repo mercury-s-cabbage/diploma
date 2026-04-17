@@ -1,12 +1,14 @@
 extends Node
 
+const Utils = preload("res://Src/Game_world/managers/utils.gd")
+
 # данные всех менеджеров локаций: id, coords, size, path
 var data_path = "res://Src/Game_world/managers/location_manager/locations_managers.json"
 var locations_managers_data = [] 
 
 # квадратная область, пересечение которой выгружает или загружает локацию
-var load_area_size = Vector2(2000, 2000)
-var unload_area_size = Vector2(3000, 3000)
+var load_area_size = Vector2(5000, 5000)
+var unload_area_size = Vector2(4000, 4000)
 
 var world: Node2D = null
 # id: Node
@@ -17,7 +19,7 @@ var pending_loads: Dictionary = {}
 
 # при запуске загружаем данные локаций из json
 func _ready() -> void:
-	locations_managers_data = load_locations_from_json(data_path)
+	locations_managers_data = Utils.load_from_json(data_path)["locations_managers"]
 
 # в _process отслеживаем, не загрузились ли инстансы локаций в их менеджеров
 func _process(delta: float) -> void:
@@ -110,18 +112,5 @@ func get_locations_in_area(player_pos: Vector2, area_size: Vector2) -> Array:
 func set_world(world_node: Node2D) -> void:
 	world = world_node
 	
-# первоначальная загрузка данных о менеджерах скриптов из json
-func load_locations_from_json(path: String) -> Array:
-	var file = FileAccess.open(path, FileAccess.READ)
-	if file:
-		var text = file.get_as_text()
-		file.close()
-		var data = JSON.parse_string(text)
-		if typeof(data) == TYPE_DICTIONARY and data.has("locations_managers"):
-			return data["locations_managers"]
-		else:
-			push_error("JSON-файл локаций имеет неверный формат")
-	else:
-		push_error("The location file was not found or could not be opened: " + path)
-	return []
+
 	
