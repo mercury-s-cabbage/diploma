@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://c7t8hf0hfsom1" path="res://Src/Game_world/objects/decor/бочонок.tscn" id="9_wrbtc"]
 [ext_resource type="PackedScene" uid="uid://cqasv6dc3yfef" path="res://Src/Game_world/objects/decor/ворота.tscn" id="10_jhrta"]
 [ext_resource type="PackedScene" uid="uid://d2htis428hij" path="res://Src/Game_world/objects/decor/забор.tscn" id="11_hk53j"]
+[ext_resource type="PackedScene" uid="uid://daeebrminxas5" path="res://Src/Game_world/objects/items/branch.tscn" id="14_m8vib"]
 [ext_resource type="Texture2D" uid="uid://dybo1tft335bi" path="res://Src/Game_world/managers/location_manager/locations/loc_001/backgrounds/606bff5ea1295bc5031d35584e504c35.jpg" id="14_w0rmf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hk53j"]
@@ -363,3 +364,9 @@ texture = ExtResource("14_w0rmf")
 position = Vector2(-1557.9999, 2578)
 scale = Vector2(2.5554168, 2.605059)
 texture = ExtResource("14_w0rmf")
+
+[node name="PickedItemBase" parent="." unique_id=850774426 instance=ExtResource("14_m8vib")]
+position = Vector2(2372, 1936)
+
+[node name="PickedItemBase2" parent="." unique_id=135732193 instance=ExtResource("14_m8vib")]
+position = Vector2(886, 1243)

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://basx85r88spmj"]
+
+[ext_resource type="Script" uid="uid://bpv43mipgibvq" path="res://Src/Game_world/objects/items/picked_item_base.gd" id="1_kar4c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kar4c"]
+radius = 98.045906
+
+[node name="PickedItemBase" type="Node2D" unique_id=850774426]
+script = ExtResource("1_kar4c")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=170927077]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=298795318]
+shape = SubResource("CircleShape2D_kar4c")
+
+[node name="Label" type="Label" parent="." unique_id=896807570]
+offset_left = -43.0
+offset_top = -72.0
+offset_right = -3.0
+offset_bottom = -49.0
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_body_exited"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

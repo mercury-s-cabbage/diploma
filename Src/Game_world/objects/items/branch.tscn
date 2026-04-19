@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://daeebrminxas5"]
+
+[ext_resource type="PackedScene" uid="uid://basx85r88spmj" path="res://Src/Game_world/objects/items/PickedItemBase.tscn" id="1_jl26u"]
+[ext_resource type="Texture2D" uid="uid://yw6cngu6eql4" path="res://Src/Game_world/objects/items/images/branch.PNG" id="2_uy5tj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jl26u"]
+radius = 89.20202
+
+[node name="PickedItemBase" unique_id=850774426 instance=ExtResource("1_jl26u")]
+item_count = 1
+item_name = "Ветка"
+item_id = "branch"
+
+[node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(170927077) index="0" unique_id=298795318]
+shape = SubResource("CircleShape2D_jl26u")
+
+[node name="Branch" type="Sprite2D" parent="." index="2" unique_id=422851697]
+position = Vector2(7.6293945e-06, 3.8146973e-06)
+scale = Vector2(0.224, 0.21400006)
+texture = ExtResource("2_uy5tj")

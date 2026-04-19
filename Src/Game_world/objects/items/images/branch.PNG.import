@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vrpjjv7t5cq5"
-path="res://.godot/imported/c1306575-1e57-4628-8ae2-f193e5a24a2b.png-397a8dec9df98f204e6177ec0e6f3340.ctex"
+uid="uid://yw6cngu6eql4"
+path="res://.godot/imported/branch.PNG-692c91be1bca53a41b6e5c813b19eed3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Src/Game_world/objects/items/images/c1306575-1e57-4628-8ae2-f193e5a24a2b.png"
-dest_files=["res://.godot/imported/c1306575-1e57-4628-8ae2-f193e5a24a2b.png-397a8dec9df98f204e6177ec0e6f3340.ctex"]
+source_file="res://Src/Game_world/objects/items/images/branch.PNG"
+dest_files=["res://.godot/imported/branch.PNG-692c91be1bca53a41b6e5c813b19eed3.ctex"]
 
 [params]
 
