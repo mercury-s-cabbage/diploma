@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6s1252ma4mny"
-path="res://.godot/imported/Жилой_корпус.png-bc2d860017ea063e25582577686acfdc.ctex"
+uid="uid://cjn70x4glnn05"
+path="res://.godot/imported/main_corpus.PNG-dab56c523971fd4e8f9e2adbbfd9d2c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Src/Game_world/objects/houses/images/Жилой_корпус.png"
-dest_files=["res://.godot/imported/Жилой_корпус.png-bc2d860017ea063e25582577686acfdc.ctex"]
+source_file="res://Src/Game_world/objects/houses/images/main_corpus.PNG"
+dest_files=["res://.godot/imported/main_corpus.PNG-dab56c523971fd4e8f9e2adbbfd9d2c9.ctex"]
 
 [params]
 
