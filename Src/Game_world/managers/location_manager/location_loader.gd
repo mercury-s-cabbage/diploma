@@ -30,6 +30,12 @@ func _process(delta: float) -> void:
 		if status == ResourceLoader.THREAD_LOAD_LOADED:
 			var scene = ResourceLoader.load_threaded_get(scene_path)
 			var instance = scene.instantiate()
+			
+			for loc in locations_managers_data:
+				if loc["id"] == loc_id:
+					instance.position = Vector2(loc["coords"][0], loc["coords"][1])
+					break
+					
 			world.add_child(instance)
 			current_locations[loc_id] = instance  
 			finished.append(loc_id)

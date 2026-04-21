@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://omd1stvkxuex"]
+
+[ext_resource type="LabelSettings" uid="uid://bys5y6g2nu3le" path="res://Src/UI/Res/label_settings.tres" id="1_3bghi"]
+[ext_resource type="Texture2D" uid="uid://b4ji2mbolj7qk" path="res://icon.svg" id="1_djnvg"]
+[ext_resource type="LabelSettings" uid="uid://c1usg8fqbkeha" path="res://Src/UI/Res/params_font_settings.tres" id="1_e6k1m"]
+[ext_resource type="StyleBox" uid="uid://b7hhrp6sfpvau" path="res://Src/UI/Res/base_box_texture.tres" id="1_jdgjb"]
+[ext_resource type="Script" uid="uid://831cokuuu4j5" path="res://Src/UI/InventoryUI/Components/item.gd" id="2_jdgjb"]
+[ext_resource type="Texture2D" uid="uid://c5x4815xf7kh6" path="res://Src/UI/Res/Frame 4 (2).png" id="5_mmj7d"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_txuvy"]
+
+[node name="Item_box" type="PanelContainer" unique_id=466880808]
+offset_right = 768.0
+offset_bottom = 50.0
+theme_override_styles/panel = ExtResource("1_jdgjb")
+script = ExtResource("2_jdgjb")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1029193383]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer" unique_id=52053045]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/MarginContainer2" unique_id=1703198754]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_djnvg")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer" unique_id=2024229455]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+
+[node name="Name" type="Label" parent="HBoxContainer/MarginContainer" unique_id=1517029026]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Предмет"
+label_settings = ExtResource("1_3bghi")
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="HBoxContainer" unique_id=1770999226]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Control" unique_id=266226482]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -164.0
+offset_top = -3.0
+offset_bottom = 3.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Quantity" type="Label" parent="HBoxContainer/Control/HBoxContainer" unique_id=978650817]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_txuvy")
+text = "2"
+label_settings = ExtResource("1_e6k1m")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Control/HBoxContainer" unique_id=907061704]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+texture = ExtResource("5_mmj7d")
+expand_mode = 3
+
+[node name="Price" type="Label" parent="HBoxContainer/Control/HBoxContainer" unique_id=1591170781]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_stretch_ratio = 0.0
+text = "100"
+label_settings = ExtResource("1_e6k1m")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

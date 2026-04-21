@@ -9,10 +9,10 @@ script = ExtResource("1_jgka6")
 
 [node name="Img2673" type="Sprite2D" parent="." unique_id=652926892]
 z_index = -1
-position = Vector2(7500, 5250)
+position = Vector2(2500, 1750)
 texture = ExtResource("2_0j124")
 
 [node name="Учебная(2)" type="Sprite2D" parent="." unique_id=1656697962]
 y_sort_enabled = true
-position = Vector2(6296, 4456)
+position = Vector2(1296, 954)
 texture = ExtResource("3_le5hp")
