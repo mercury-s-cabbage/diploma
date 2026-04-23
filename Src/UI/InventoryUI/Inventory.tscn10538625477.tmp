@@ -248,6 +248,7 @@ theme_override_constants/separation = 0
 [node name="Item_box10" parent="Main_panel/main_canvas/right_margins/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=668815764 instance=ExtResource("1_woaut")]
 layout_mode = 2
 count = 30
+price = 100
 icon = ExtResource("9_n2w7r")
 
 [node name="Item_box8" parent="Main_panel/main_canvas/right_margins/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=485357405 instance=ExtResource("1_woaut")]

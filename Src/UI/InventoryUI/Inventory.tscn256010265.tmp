@@ -1,14 +1,13 @@
 [gd_scene format=3 uid="uid://cjd1pplafteqn"]
 
-[ext_resource type="Shader" uid="uid://dhr48ufalvmpb" path="res://Src/UI/res/Shaders/blur_schader.gdshader" id="1_5oprr"]
+[ext_resource type="Shader" uid="uid://dhr48ufalvmpb" path="res://Src/UI/Res/Shaders/blur_schader.gdshader" id="1_5oprr"]
 [ext_resource type="Script" uid="uid://dgeuvjgy5d25k" path="res://Src/UI/InventoryUI/inventory.gd" id="1_480j7"]
 [ext_resource type="PackedScene" uid="uid://omd1stvkxuex" path="res://Src/UI/InventoryUI/Components/Item.tscn" id="1_woaut"]
-[ext_resource type="Texture2D" uid="uid://cbsbdlw3m61lv" path="res://Src/UI/res/images/Rectangle 5.png" id="1_ylf4w"]
-[ext_resource type="StyleBox" uid="uid://b7hhrp6sfpvau" path="res://Src/UI/res/Textures/base_box_texture.tres" id="2_0bxrf"]
-[ext_resource type="LabelSettings" uid="uid://de1i5peasmwj8" path="res://Src/UI/res/Label_settings/menu_label.tres" id="2_jfugs"]
-[ext_resource type="Texture2D" uid="uid://d272f5ymnigty" path="res://Src/UI/res/images/Rectangle 12.png" id="3_pnvpb"]
-[ext_resource type="StyleBox" uid="uid://558ab2lt46ec" path="res://Src/UI/res/Textures/focus_box_texture.tres" id="4_pnvpb"]
-[ext_resource type="Texture2D" uid="uid://yw6cngu6eql4" path="res://Src/Game_world/objects/items/images/branch.PNG" id="9_n2w7r"]
+[ext_resource type="Texture2D" uid="uid://cbsbdlw3m61lv" path="res://Src/UI/Res/images/Rectangle 5.png" id="1_ylf4w"]
+[ext_resource type="StyleBox" uid="uid://b7hhrp6sfpvau" path="res://Src/UI/Res/Textures/base_box_texture.tres" id="2_0bxrf"]
+[ext_resource type="LabelSettings" uid="uid://de1i5peasmwj8" path="res://Src/UI/Res/Label_settings/menu_label.tres" id="2_jfugs"]
+[ext_resource type="Texture2D" uid="uid://d272f5ymnigty" path="res://Src/UI/Res/images/Rectangle 12.png" id="3_pnvpb"]
+[ext_resource type="StyleBox" uid="uid://558ab2lt46ec" path="res://Src/UI/Res/Textures/focus_box_texture.tres" id="4_pnvpb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5oprr"]
 shader = ExtResource("1_5oprr")
@@ -22,7 +21,7 @@ texture_margin_top = 7.0
 texture_margin_right = 7.0
 texture_margin_bottom = 7.0
 
-[node name="Inventory" type="CanvasLayer" unique_id=791678795 groups=["inventory_ui"]]
+[node name="Inventory" type="CanvasLayer" unique_id=791678795 groups=["ui"]]
 script = ExtResource("1_480j7")
 
 [node name="Main_panel" type="Panel" parent="." unique_id=1759834889]
@@ -247,8 +246,6 @@ theme_override_constants/separation = 0
 
 [node name="Item_box10" parent="Main_panel/main_canvas/right_margins/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=668815764 instance=ExtResource("1_woaut")]
 layout_mode = 2
-count = 30
-icon = ExtResource("9_n2w7r")
 
 [node name="Item_box8" parent="Main_panel/main_canvas/right_margins/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=485357405 instance=ExtResource("1_woaut")]
 layout_mode = 2

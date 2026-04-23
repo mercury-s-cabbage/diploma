@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://omd1stvkxuex"]
 
-[ext_resource type="LabelSettings" uid="uid://bys5y6g2nu3le" path="res://Src/UI/Res/label_settings.tres" id="1_3bghi"]
+[ext_resource type="LabelSettings" uid="uid://bys5y6g2nu3le" path="res://Src/UI/res/Label_settings/label_settings.tres" id="1_3bghi"]
 [ext_resource type="Texture2D" uid="uid://b4ji2mbolj7qk" path="res://icon.svg" id="1_djnvg"]
-[ext_resource type="LabelSettings" uid="uid://c1usg8fqbkeha" path="res://Src/UI/Res/params_font_settings.tres" id="1_e6k1m"]
-[ext_resource type="StyleBox" uid="uid://b7hhrp6sfpvau" path="res://Src/UI/Res/base_box_texture.tres" id="1_jdgjb"]
+[ext_resource type="LabelSettings" uid="uid://c1usg8fqbkeha" path="res://Src/UI/res/Label_settings/params_font_settings.tres" id="1_e6k1m"]
+[ext_resource type="StyleBox" uid="uid://b7hhrp6sfpvau" path="res://Src/UI/res/Textures/base_box_texture.tres" id="1_jdgjb"]
 [ext_resource type="Script" uid="uid://831cokuuu4j5" path="res://Src/UI/InventoryUI/Components/item.gd" id="2_jdgjb"]
-[ext_resource type="Texture2D" uid="uid://c5x4815xf7kh6" path="res://Src/UI/Res/Frame 4 (2).png" id="5_mmj7d"]
+[ext_resource type="Texture2D" uid="uid://c5x4815xf7kh6" path="res://Src/UI/res/images/Frame 4 (2).png" id="5_mmj7d"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_txuvy"]
 

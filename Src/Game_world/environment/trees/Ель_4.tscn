@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b454riybtorj0"]
+
+[ext_resource type="Texture2D" uid="uid://ci3pxiy6hj1hk" path="res://Src/Game_world/environment/trees/images/Ель_4.png" id="1_y54bf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y54bf"]
+size = Vector2(217, 76)
+
+[node name="Ель4" type="Node2D" unique_id=1260124021]
+z_as_relative = false
+
+[node name="Ель4" type="Sprite2D" parent="." unique_id=729758800]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-2, -143)
+texture = ExtResource("1_y54bf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1738851775]
+position = Vector2(2, -31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1905587058]
+shape = SubResource("RectangleShape2D_y54bf")

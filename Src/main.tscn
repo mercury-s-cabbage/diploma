@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ceu6sjfs0s736" path="res://Src/main.gd" id="1_cv0qr"]
 [ext_resource type="PackedScene" uid="uid://cjd1pplafteqn" path="res://Src/UI/InventoryUI/Inventory.tscn" id="2_cv0qr"]
+[ext_resource type="PackedScene" uid="uid://ev64uln88pho" path="res://Src/UI/PauseUI/pause.tscn" id="3_u7te1"]
 
 [node name="Main" type="Node2D" unique_id=975468242]
 script = ExtResource("1_cv0qr")
@@ -11,3 +12,7 @@ z_as_relative = false
 y_sort_enabled = true
 
 [node name="Inventory" parent="." unique_id=791678795 instance=ExtResource("2_cv0qr")]
+visible = false
+
+[node name="Pause" parent="." unique_id=259700143 instance=ExtResource("3_u7te1")]
+visible = false

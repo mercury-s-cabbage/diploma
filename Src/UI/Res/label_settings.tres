@@ -1,7 +1,0 @@
-[gd_resource type="LabelSettings" format=3 uid="uid://bys5y6g2nu3le"]
-
-[ext_resource type="FontFile" uid="uid://di5agfh20xmw2" path="res://Src/UI/Res/Bainsley_Roman.otf" id="1_pw16l"]
-
-[resource]
-font = ExtResource("1_pw16l")
-font_size = 24

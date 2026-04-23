@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://8u6bi8lrr7dk"]
+
+[ext_resource type="Texture2D" uid="uid://b8fqari77gnlh" path="res://Src/Game_world/environment/trees/images/Ель_2.png" id="1_06153"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ulwul"]
+radius = 24.020824
+
+[node name="Ель2" type="Node2D" unique_id=1951626880]
+z_as_relative = false
+
+[node name="Ель2" type="Sprite2D" parent="." unique_id=2080114298]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(0, -369)
+texture = ExtResource("1_06153")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=523082695]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=822108862]
+shape = SubResource("CircleShape2D_ulwul")

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ev64uln88pho"]
+
+[ext_resource type="Shader" uid="uid://dhr48ufalvmpb" path="res://Src/UI/res/Shaders/blur_schader.gdshader" id="1_ptfqg"]
+[ext_resource type="Script" uid="uid://c4uupg2acv2gw" path="res://Src/UI/PauseUI/pause.gd" id="1_u6r87"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u6r87"]
+shader = ExtResource("1_ptfqg")
+shader_parameter/lod = 0.0
+shader_parameter/darken_strength = 0.35
+
+[node name="Pause" type="CanvasLayer" unique_id=259700143 groups=["pause_ui"]]
+script = ExtResource("1_u6r87")
+
+[node name="shader_panel" type="Panel" parent="." unique_id=661640731]
+material = SubResource("ShaderMaterial_u6r87")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
