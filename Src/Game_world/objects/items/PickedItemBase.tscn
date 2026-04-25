@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://basx85r88spmj"]
 
-[ext_resource type="Script" uid="uid://bpv43mipgibvq" path="res://Src/Game_world/objects/items/picked_item_base.gd" id="1_kar4c"]
+[ext_resource type="Script" uid="uid://c2hlhyfwgaho7" path="res://Src/Game_world/objects/items/Picked_item_base.gd" id="1_kar4c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kar4c"]
 radius = 98.045906

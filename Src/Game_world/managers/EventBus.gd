@@ -4,7 +4,7 @@ extends Node
 # Подписка на событие реализуется через EventBus."signal_name".connect("_on_signal_name_function")
 # Инициация событий реализуется через EventBus."signal_name".emit("signal_data")
 
-signal item_acquired(item_id: String, count: int)
+signal item_acquired(item: ItemData, count: int)
 signal area_entered(zone_id: String)
 signal start_quest(quest_id: String)
 

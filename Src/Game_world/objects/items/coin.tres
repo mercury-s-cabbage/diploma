@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bwyq4ms1o1uxv"]
+
+[ext_resource type="Texture2D" uid="uid://q1a1261qbg2" path="res://Src/Game_world/objects/items/images/free-icon-coins-325788.png" id="1_xh43d"]
+[ext_resource type="Script" uid="uid://nyg6rqr2oalr" path="res://Src/Game_world/objects/items/PickedItemResource.gd" id="2_r5xve"]
+
+[resource]
+script = ExtResource("2_r5xve")
+id = "coin"
+name = "Деньги"
+icon = ExtResource("1_xh43d")
+price = 1
+description = "Пока есть. Но это ненадолго."
+metadata/_custom_type_script = "uid://nyg6rqr2oalr"

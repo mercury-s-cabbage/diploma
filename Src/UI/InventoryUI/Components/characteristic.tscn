@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dvim8t5g8h1ik"]
+
+[ext_resource type="Script" uid="uid://bphyn7rmccd21" path="res://Src/UI/InventoryUI/Components/characteristic.gd" id="1_6lr3a"]
+
+[node name="Characteristic" type="MarginContainer" unique_id=1070051182]
+offset_right = 544.0
+offset_bottom = 128.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+script = ExtResource("1_6lr3a")
+
+[node name="MarginContainer" type="HBoxContainer" parent="." unique_id=357387989]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Name" type="Label" parent="MarginContainer" unique_id=1958047888]
+layout_mode = 2
+text = "Название"
+
+[node name="Control" type="Control" parent="MarginContainer" unique_id=289953805]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="State" type="Label" parent="MarginContainer/Control" unique_id=1860105350]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -19.0
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "20"

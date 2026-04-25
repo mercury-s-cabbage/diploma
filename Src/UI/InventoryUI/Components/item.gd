@@ -9,11 +9,14 @@ extends PanelContainer
 @export var count: int = 1
 @export var price: int = 0
 @export var icon: CompressedTexture2D 
+@export var id: String
+
+signal selected(item_id)
 
 func _ready() -> void:
 	$HBoxContainer/Control/HBoxContainer/Price.text = str(price)
 	$HBoxContainer/Control/HBoxContainer/Quantity.text = str(count)
-	$HBoxContainer/MarginContainer/Name.text = name
+	$HBoxContainer/MarginContainer/Name.text = item_name
 	$HBoxContainer/MarginContainer2/TextureRect.texture = icon
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -30,4 +33,15 @@ func _on_mouse_exited() -> void:
 
 func _on_gui_input(event: InputEvent) -> void:
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			pass
+			selected.emit(id)
+			
+func is_item():
+	return true
+
+func get_id():
+	return id
+	
+func update_count():
+	print(count)
+	$HBoxContainer/Control/HBoxContainer/Quantity.text = str(count)
+	

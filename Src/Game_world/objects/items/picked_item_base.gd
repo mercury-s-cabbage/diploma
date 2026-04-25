@@ -1,18 +1,14 @@
 extends Node2D
 
-class_name PickedItem
-
-@export var item_count: int 
-@export var item_name: String = ""
-@export var item_id: String = ""
-
+@export var item_data: ItemData
+@export var count: int = 1
 @onready var label: Label = $Label
 
 var player_inside := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	label.text = item_name
+	label.text = item_data.name
 	label.visible = false
 
 func _process(delta: float) -> void:
@@ -38,7 +34,7 @@ func _on_body_exited(body: Node2D) -> void:
 
 func pickup() -> void:
 	queue_free()
-	EventBus.emit_signal("item_acquired", item_id, item_count)
+	EventBus.emit_signal("item_acquired", item_data, count)
 
 func _on_area_2d_mouse_entered() -> void:
 	if player_inside:

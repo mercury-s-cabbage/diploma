@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dku0bgfmmik8e"]
+
+[ext_resource type="Texture2D" uid="uid://yw6cngu6eql4" path="res://Src/Game_world/objects/items/images/branch.PNG" id="1_53avu"]
+[ext_resource type="Script" uid="uid://nyg6rqr2oalr" path="res://Src/Game_world/objects/items/PickedItemResource.gd" id="1_rx7st"]
+
+[resource]
+script = ExtResource("1_rx7st")
+id = "branch"
+name = "Ветка"
+icon = ExtResource("1_53avu")
+price = 10
+description = "Обыкновенная ветка. Сгодится, чтобы костер разжечь или рогатку сделать."
+stats = {
+"Редкость": "Обычная"
+}
+metadata/_custom_type_script = "uid://nyg6rqr2oalr"

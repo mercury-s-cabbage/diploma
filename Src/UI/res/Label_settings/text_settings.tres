@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://dwfwdkejuruxp"]
+
+[ext_resource type="FontFile" uid="uid://di5agfh20xmw2" path="res://Src/UI/res/Fonts/Bainsley_Roman.otf" id="1_qu6mf"]
+
+[resource]
+line_spacing = -4.0
+font = ExtResource("1_qu6mf")
+font_size = 20
