@@ -98,7 +98,8 @@ func update_quest(quest_id: String):
 		end_quest(quest_id)
 		return
 	register_quest_signals(active_quests[quest_id], new_step)
-	print("step changed: ", new_step)
+	EventBus.emit_signal("quest_step_changed", quest_id, int(new_step))
+	#print("step changed: ", new_step)
 	
 func end_quest(quest_id: String):
 	remove_quest_signals(quest_id)

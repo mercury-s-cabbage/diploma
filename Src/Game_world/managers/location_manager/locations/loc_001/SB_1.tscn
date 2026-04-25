@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://cqasv6dc3yfef" path="res://Src/Game_world/environment/decor/ворота.tscn" id="10_jhrta"]
 [ext_resource type="PackedScene" uid="uid://d2htis428hij" path="res://Src/Game_world/environment/decor/забор.tscn" id="11_hk53j"]
 [ext_resource type="PackedScene" uid="uid://daeebrminxas5" path="res://Src/Game_world/objects/items/branch.tscn" id="14_m8vib"]
-[ext_resource type="Texture2D" uid="uid://dybo1tft335bi" path="res://Src/Game_world/managers/location_manager/locations/loc_001/backgrounds/606bff5ea1295bc5031d35584e504c35.jpg" id="14_w0rmf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hk53j"]
 size = Vector2(5084, 178)
@@ -349,21 +348,6 @@ shape = SubResource("RectangleShape2D_hk53j")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Границы слева" unique_id=945408800]
 position = Vector2(118, 1748)
 shape = SubResource("RectangleShape2D_4otos")
-
-[node name="606Bff5Ea1295Bc5031d35584e504c35" type="Sprite2D" parent="." unique_id=2047445682]
-position = Vector2(-1535.75, -961.1876)
-scale = Vector2(2.5554168, 2.605059)
-texture = ExtResource("14_w0rmf")
-
-[node name="606Bff5Ea1295Bc5031d35584e504c36" type="Sprite2D" parent="." unique_id=601749281]
-position = Vector2(-1553, 802)
-scale = Vector2(2.5554168, 2.605059)
-texture = ExtResource("14_w0rmf")
-
-[node name="606Bff5Ea1295Bc5031d35584e504c37" type="Sprite2D" parent="." unique_id=1371490136]
-position = Vector2(-1557.9999, 2578)
-scale = Vector2(2.5554168, 2.605059)
-texture = ExtResource("14_w0rmf")
 
 [node name="PickedItemBase" parent="." unique_id=850774426 instance=ExtResource("14_m8vib")]
 position = Vector2(2372, 1936)

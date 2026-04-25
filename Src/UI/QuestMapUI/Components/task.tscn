@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://cmnahqn8ndhov"]
+
+[ext_resource type="Script" uid="uid://bv8oycghejyc5" path="res://Src/UI/QuestMapUI/Components/task.gd" id="1_mjdab"]
+[ext_resource type="LabelSettings" uid="uid://dn0yslhq6ky0k" path="res://Header_label2.tres" id="1_s80pg"]
+[ext_resource type="LabelSettings" uid="uid://dwfwdkejuruxp" path="res://Src/UI/res/Label_settings/text_settings.tres" id="2_mjdab"]
+[ext_resource type="LabelSettings" uid="uid://bjfnjkylgu5f3" path="res://task_description.tres" id="3_37b6f"]
+
+[node name="Task" type="Control" unique_id=452446161]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_right = -704.0
+offset_bottom = 304.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_mjdab")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1890614550]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 110.0
+grow_horizontal = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=631763031]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 20
+
+[node name="Name" type="Label" parent="VBoxContainer/MarginContainer" unique_id=2115043641]
+custom_minimum_size = Vector2(300, 30)
+layout_mode = 2
+size_flags_vertical = 0
+text = "Название задания из нескольких строк"
+label_settings = ExtResource("1_s80pg")
+autowrap_mode = 3
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=1412314672]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+
+[node name="main_text" type="Label" parent="VBoxContainer/MarginContainer2" unique_id=253301782]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+text = "Основной текст задания большого размера, чтобы было удобно смотреть изменения при масштабировании окна"
+label_settings = ExtResource("2_mjdab")
+autowrap_mode = 3
+
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer" unique_id=313954010]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 0
+
+[node name="add_text" type="Label" parent="VBoxContainer/MarginContainer3" unique_id=1941056009]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+text = "Основной текст задания большого размера, чтобы было удобно смотреть изменения при масштабировании окна"
+label_settings = ExtResource("3_37b6f")
+autowrap_mode = 3

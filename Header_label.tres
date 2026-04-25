@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://cdw3155hncd0p"]
+
+[ext_resource type="FontFile" uid="uid://82q5gje0l353" path="res://Src/UI/res/Fonts/Mookmania.otf" id="1_n4bi6"]
+
+[resource]
+font = ExtResource("1_n4bi6")
+font_size = 30
