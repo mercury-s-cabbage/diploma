@@ -13,6 +13,11 @@ signal quest_started(quest_id: String, quest_data: Dictionary)
 signal quest_step_changed(quest_id: String, step: int) 
 signal quest_ended(quest_id: String)
 
-signal load_save(save_id: int)
+# События сохранений
+signal save_game()
 signal create_save()
-signal inventory_changed()
+signal save_created(save_id: String, current_save_id: String)
+signal set_save(save_id: String)
+
+# События UI
+signal update_inventory_ui(inventory_list: Dictionary)

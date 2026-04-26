@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dxpg7ybedtfkr"]
+
+[ext_resource type="Script" uid="uid://divr6230gc28y" path="res://Src/UI/Additional/aqired_items.gd" id="1_p2hc8"]
+[ext_resource type="Texture2D" uid="uid://bvei7nakvmnc0" path="res://Src/UI/res/images/Group 24 (1).png" id="2_p2hc8"]
+[ext_resource type="LabelSettings" uid="uid://dvu2vx124c05c" path="res://info_text.tres" id="3_p2hc8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6hp0h"]
+texture = ExtResource("2_p2hc8")
+
+[node name="AqiredItems" type="CanvasLayer" unique_id=733223219]
+script = ExtResource("1_p2hc8")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1960644669]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -280.0
+offset_top = -88.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_bottom = 40
+
+[node name="Panel" type="Panel" parent="MarginContainer" unique_id=1134380883]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6hp0h")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Panel" unique_id=1470291495]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -224.0
+offset_top = -8.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Name" type="Label" parent="MarginContainer/Panel/HBoxContainer" unique_id=418679871]
+layout_mode = 2
+text = "Поднятый предмет"
+label_settings = ExtResource("3_p2hc8")
+
+[node name="Q" type="Label" parent="MarginContainer/Panel/HBoxContainer" unique_id=242276721]
+layout_mode = 2
+text = "+2"
+label_settings = ExtResource("3_p2hc8")

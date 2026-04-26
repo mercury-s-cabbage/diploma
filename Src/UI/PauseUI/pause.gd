@@ -14,7 +14,7 @@ func _ready() -> void:
 	saves_list = Utils.load_from_json(saves_list_path).ids
 	visible = false
 	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
-	EventBus.load_save.connect(_on_load_save)
+	#EventBus.load_save.connect(_on_load_save)
 	EventBus.create_save.connect(_update_saves)
 
 func _update_saves():
@@ -45,16 +45,15 @@ func _open_saves():
 		var scene := load("res://Src/UI/PauseUI/Components/save_option.tscn") as PackedScene
 		var new_option := scene.instantiate()
 		new_option.button_text = "Сохранение %s" % save
-		new_option.save_id = int(save)
+		new_option.save_id = save
 		saves_container.add_child(new_option)
 
 func _close_saves():
 	main_menu.visible = true
 	saves_ui.visible = false
 
-func load_save(save_id: int):
+func load_save(save_id: String):
 	SaveManager.set_save(save_id)
-
 
 func _on_new_save_pressed() -> void:
 	SaveManager.create_save(SaveManager.current_save)

@@ -4,10 +4,13 @@ extends Node
 @onready var pause_ui = get_tree().get_first_node_in_group("pause_ui")
 @onready var quest_ui = get_tree().get_first_node_in_group("quest_ui")
 
+var item_push = preload("res://Src/UI/Additional/aqired_items.tscn")
+
 var current_ui = null
 var is_paused = false
 
 func _ready() -> void:
+	EventBus.item_acquired.connect(_on_item_acquired)
 	process_mode = Node.PROCESS_MODE_ALWAYS
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -43,4 +46,24 @@ func toggle_pause(ui: Node) -> void:
 		get_tree().paused = true
 		is_paused = true
 		
-		
+func _on_item_acquired(item: ItemData, count: int) -> void:
+	if inventory_ui == null:
+		return
+
+	var popup = item_push.instantiate()
+	inventory_ui.add_child(popup)
+
+	if popup.has_method("set_item"):
+		popup.set_item(item, count)
+
+	popup.panel.modulate.a = 0.0
+
+	var tween = get_tree().create_tween()
+	tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+	tween.tween_property(popup.panel, "modulate:a", 1.0, 0.2)
+	tween.tween_interval(3.0)
+	tween.tween_property(popup.panel, "modulate:a", 0.0, 0.2)
+	tween.finished.connect(func():
+		if is_instance_valid(popup):
+			popup.queue_free()
+	)

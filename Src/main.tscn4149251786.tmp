@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://0xi70vvomnba"]
+
+[ext_resource type="Script" uid="uid://ceu6sjfs0s736" path="res://Src/main.gd" id="1_cv0qr"]
+[ext_resource type="PackedScene" uid="uid://cjd1pplafteqn" path="res://Src/UI/InventoryUI/Inventory_ui.tscn" id="2_cv0qr"]
+[ext_resource type="PackedScene" uid="uid://ev64uln88pho" path="res://Src/UI/PauseUI/pause.tscn" id="3_u7te1"]
+[ext_resource type="PackedScene" uid="uid://bkmbt1qekuow" path="res://Src/UI/QuestMapUI/quest_map_ui.tscn" id="4_wwdwr"]
+
+[node name="Main" type="Node2D" unique_id=975468242]
+script = ExtResource("1_cv0qr")
+
+[node name="World" type="Node2D" parent="." unique_id=533448766]
+z_as_relative = false
+y_sort_enabled = true
+
+[node name="Inventory" parent="." unique_id=791678795 instance=ExtResource("2_cv0qr")]
+visible = false
+
+[node name="Pause" parent="." unique_id=259700143 instance=ExtResource("3_u7te1")]
+visible = false
+
+[node name="QuestMapUi" parent="." unique_id=442863293 instance=ExtResource("4_wwdwr")]
+visible = false

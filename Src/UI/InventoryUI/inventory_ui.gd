@@ -9,15 +9,18 @@ func _ready() -> void:
 	visible = false
 	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
 	EventBus.item_acquired.connect(add_to_inventory)
-	EventBus.inventory_changed.connect(_on_inventory_changed)
+	EventBus.update_inventory_ui.connect(_on_inventory_updated)
 
+func _save_loaded():
+	pass
+	
 func show_menu() -> void:
 	visible = true
 
 func hide_menu() -> void:
 	visible = false
-	
-func create_inventory_list(inventory_list: Dictionary) -> void:
+
+func _on_inventory_updated(inventory_list: Dictionary) -> void:
 	for child in items_container.get_children():
 		child.queue_free()
 
@@ -73,7 +76,3 @@ func _on_item_selected(item_id: String) -> void:
 			new_s.state = item_data.stats[s]
 			stats_container.add_child(new_s)
 			
-func _on_inventory_changed() -> void:
-	var inventory_data = InventoryManager.inventory_list
-	print("new_inventory: ", InventoryManager.inventory_list)
-	create_inventory_list(inventory_data)
