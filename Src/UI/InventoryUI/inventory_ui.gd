@@ -9,7 +9,7 @@ func _ready() -> void:
 	visible = false
 	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
 	EventBus.item_acquired.connect(add_to_inventory)
-	create_inventory_list(InventoryManager.inventory_list)
+	EventBus.inventory_changed.connect(_on_inventory_changed)
 
 func show_menu() -> void:
 	visible = true
@@ -20,11 +20,20 @@ func hide_menu() -> void:
 func create_inventory_list(inventory_list: Dictionary) -> void:
 	for child in items_container.get_children():
 		child.queue_free()
-	
+
 	for item_id in inventory_list:
 		var item_data = ItemLibrary.get_item_by_id(item_id)
 		var count = inventory_list[item_id]
-		add_to_inventory(item_data, count)
+
+		var scene := load("res://Src/UI/InventoryUI/Components/Item.tscn") as PackedScene
+		var new_item := scene.instantiate()
+		new_item.id = item_data.id
+		new_item.count = count
+		new_item.icon = item_data.icon
+		new_item.item_name = item_data.name
+		new_item.price = item_data.price
+		new_item.selected.connect(_on_item_selected)
+		items_container.add_child(new_item)
 
 func add_to_inventory(item: ItemData, count: int) -> void:
 	var existing_item := find_item_by_id(item.id)
@@ -63,4 +72,9 @@ func _on_item_selected(item_id: String) -> void:
 			new_s.stat_name = s
 			new_s.state = item_data.stats[s]
 			stats_container.add_child(new_s)
+			
+func _on_inventory_changed() -> void:
+	var inventory_data = InventoryManager.inventory_list
+	print("new_inventory: ", InventoryManager.inventory_list)
+	create_inventory_list(inventory_data)
 		

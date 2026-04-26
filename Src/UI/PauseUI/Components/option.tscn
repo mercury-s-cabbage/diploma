@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cw47iesvni3nt"]
+
+[ext_resource type="FontFile" uid="uid://di5agfh20xmw2" path="res://Src/UI/res/Fonts/Bainsley_Roman.otf" id="1_r1cfm"]
+[ext_resource type="Script" uid="uid://b356utc2jlpik" path="res://Src/UI/PauseUI/Components/option.gd" id="2_bteh8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1pkma"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r1cfm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bteh8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_id3rk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e34nx"]
+
+[node name="Node2D" type="Button" unique_id=1803466626]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -52.0
+offset_right = 96.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.35313147, 0.61165303, 0.78339463, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.58844495, 0.7794634, 0.9136837, 1)
+theme_override_fonts/font = ExtResource("1_r1cfm")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1pkma")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_r1cfm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bteh8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_id3rk")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_e34nx")
+text = "Текст кнопки"
+script = ExtResource("2_bteh8")

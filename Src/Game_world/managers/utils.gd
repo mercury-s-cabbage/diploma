@@ -13,3 +13,11 @@ static func load_from_json(path: String):
 	else:
 		push_error("The location file was not found or could not be opened: " + path)
 	return []
+
+static func save_to_json(path: String, data: Dictionary) -> void:
+	var file = FileAccess.open(path, FileAccess.WRITE)
+	if file:
+		file.store_string(JSON.stringify(data, "\t"))
+		file.close()
+	else:
+		push_error("The file could not be opened for writing: " + path)

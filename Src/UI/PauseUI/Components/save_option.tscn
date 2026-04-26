@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ds66irc54srxb"]
+
+[ext_resource type="PackedScene" uid="uid://cw47iesvni3nt" path="res://Src/UI/PauseUI/Components/option.tscn" id="1_ga12c"]
+[ext_resource type="Script" uid="uid://b2ybam8k12" path="res://Src/UI/PauseUI/Components/save_option.gd" id="2_lfrs7"]
+
+[node name="Node2D" unique_id=1803466626 instance=ExtResource("1_ga12c")]
+script = ExtResource("2_lfrs7")
+save_id = 0
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

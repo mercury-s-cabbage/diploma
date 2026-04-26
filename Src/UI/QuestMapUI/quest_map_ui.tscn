@@ -10,7 +10,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6lsm2"]
 shader = ExtResource("1_ocgpu")
 shader_parameter/lod = 2.214000105165
-shader_parameter/darken_strength = 0.42800002033
+shader_parameter/darken_strength = 0.7130000338675
 
 [node name="QuestMapUi" type="CanvasLayer" unique_id=442863293 groups=["quest_ui"]]
 script = ExtResource("1_6lsm2")

@@ -29,6 +29,7 @@ StoryManager="*uid://bvsoiij17iptd"
 InventoryManager="*uid://breoq5dyserpl"
 UiManager="*uid://gqfiy1r1dtqx"
 ItemLibrary="*uid://f02hc1cqroys"
+SaveManager="*uid://0jkagaq380y8"
 
 [editor_plugins]
 

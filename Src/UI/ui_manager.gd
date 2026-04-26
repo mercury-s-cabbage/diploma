@@ -29,16 +29,16 @@ func _unhandled_input(event: InputEvent) -> void:
 func toggle_pause(ui: Node) -> void:
 	if is_paused:
 		if current_ui == ui:	
-			ui.visible = false
+			ui.hide_menu()
 			get_tree().paused = false
 			current_ui = null
 			is_paused = false
 		else:
 			current_ui.visible = false
-			ui.visible = true
+			ui.show_menu()
 			current_ui = ui
 	else:
-		ui.visible = true
+		ui.show_menu()
 		current_ui = ui
 		get_tree().paused = true
 		is_paused = true
