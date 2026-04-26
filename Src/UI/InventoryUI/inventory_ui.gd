@@ -77,4 +77,3 @@ func _on_inventory_changed() -> void:
 	var inventory_data = InventoryManager.inventory_list
 	print("new_inventory: ", InventoryManager.inventory_list)
 	create_inventory_list(inventory_data)
-		

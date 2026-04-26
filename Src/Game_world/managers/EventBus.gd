@@ -14,4 +14,5 @@ signal quest_step_changed(quest_id: String, step: int)
 signal quest_ended(quest_id: String)
 
 signal load_save(save_id: int)
+signal create_save()
 signal inventory_changed()
