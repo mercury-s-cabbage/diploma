@@ -1,6 +1,6 @@
 {
 	"picked_items": {
-		"Branch1": false,
-		"Branch2": false
+		"Branch1": true,
+		"Branch2": true
 	}
 }

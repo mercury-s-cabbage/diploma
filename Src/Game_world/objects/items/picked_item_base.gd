@@ -1,8 +1,10 @@
 extends Node2D
 
+@export var instance_id: String
 @export var item_data: ItemData
 @export var count: int = 1
 @onready var label: Label = $Label
+
 
 var player_inside := false
 
@@ -34,7 +36,7 @@ func _on_body_exited(body: Node2D) -> void:
 
 func pickup() -> void:
 	queue_free()
-	EventBus.emit_signal("item_acquired", item_data, count)
+	EventBus.emit_signal("item_acquired", item_data, count, instance_id)
 
 func _on_area_2d_mouse_entered() -> void:
 	if player_inside:

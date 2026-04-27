@@ -27,7 +27,7 @@ func _on_save_created(save_id: String, current_save_id: String) -> void:
 	if err != OK:
 		push_error("Failed to copy save: %s -> %s, error %d" % [from_path, to_path, err])	
 	
-func _on_item_acquired(item: ItemData, count: int) -> void:
+func _on_item_acquired(item: ItemData, count: int, _instance_id) -> void:
 	if inventory_list.has(item.id):
 		inventory_list[item.id] += count
 	else:

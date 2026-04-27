@@ -38,7 +38,7 @@ func _on_inventory_updated(inventory_list: Dictionary) -> void:
 		new_item.selected.connect(_on_item_selected)
 		items_container.add_child(new_item)
 
-func add_to_inventory(item: ItemData, count: int) -> void:
+func add_to_inventory(item: ItemData, count: int, _instance_id) -> void:
 	var existing_item := find_item_by_id(item.id)
 	if existing_item != null:
 		existing_item.count += count

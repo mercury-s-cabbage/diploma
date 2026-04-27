@@ -40,7 +40,6 @@ func load_quest_step(quest_id, step):
 		return
 
 	if not quest_data["steps"].has(str(step)):
-		print("not")
 		return
 	quest_ui.set_step_text(quest_data["steps"][str(step)]["description"])
 	

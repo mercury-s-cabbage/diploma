@@ -14,10 +14,6 @@ var zoom_step := 0.1
 
 
 func _gui_input(event: InputEvent) -> void:
-	print("SELF size=", size, " pos=", position, " global=", global_position)
-	print("VIEWPORT_BOX name=", viewport_box.name, " size=", viewport_box.size, " pos=", viewport_box.position, " global=", viewport_box.global_position)
-	print("MAP name=", map_content.name, " size=", map_content.size, " pos=", map_content.position, " global=", map_content.global_position)
-	print("MAP parent=", map_content.get_parent().name)
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
 			set_zoom(zoom + zoom_step, get_local_mouse_position())
