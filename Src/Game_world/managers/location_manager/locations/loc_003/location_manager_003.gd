@@ -3,7 +3,7 @@ extends Resource
 var location_data_file = "res://Src/Game_world/managers/location_manager/locations/loc_003/location_data_003.json"
 var location_data = {}
 
-func load_loc() -> String:  # ← Node вместо PackedScene
+func load_loc(current_state_file) -> String:  # ← Node вместо PackedScene
 	location_data = load_from_json(location_data_file) 
 	if not location_data is Dictionary or not location_data.has("SB_1"):
 		push_error("location_data недоступен или нет ключа 'SB_1': ", location_data)

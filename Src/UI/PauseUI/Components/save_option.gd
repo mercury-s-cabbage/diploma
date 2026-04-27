@@ -16,3 +16,4 @@ func _process(delta: float) -> void:
 
 func _on_pressed() -> void:
 	SaveManager.set_save(save_id)
+	EventBus.toggle_ui_pause.emit(get_tree().get_first_node_in_group("pause_ui"))

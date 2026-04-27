@@ -11,6 +11,7 @@ var is_paused = false
 
 func _ready() -> void:
 	EventBus.item_acquired.connect(_on_item_acquired)
+	EventBus.toggle_ui_pause.connect(toggle_pause)
 	process_mode = Node.PROCESS_MODE_ALWAYS
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -30,6 +31,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			get_viewport().set_input_as_handled()
 			
 func toggle_pause(ui: Node) -> void:
+	print("toggle_pause")
 	if is_paused:
 		if current_ui == ui:	
 			ui.hide_menu()
@@ -45,6 +47,7 @@ func toggle_pause(ui: Node) -> void:
 		current_ui = ui
 		get_tree().paused = true
 		is_paused = true
+	print(current_ui, ui)
 		
 func _on_item_acquired(item: ItemData, count: int) -> void:
 	if inventory_ui == null:

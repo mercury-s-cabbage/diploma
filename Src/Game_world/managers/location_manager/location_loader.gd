@@ -1,6 +1,7 @@
 extends Node
 
 const Utils = preload("res://Src/Game_world/managers/utils.gd")
+var current_save_id = "0"
 
 # данные всех менеджеров локаций: id, coords, size, path
 var data_path = "res://Src/Game_world/managers/location_manager/locations_managers.json"
@@ -19,6 +20,7 @@ var pending_loads: Dictionary = {}
 
 # при запуске загружаем данные локаций из json
 func _ready() -> void:
+	EventBus.set_save.connect(_on_save_setted)
 	locations_managers_data = Utils.load_from_json(data_path)["locations_managers"]
 
 # в _process отслеживаем, не загрузились ли инстансы локаций в их менеджеров
@@ -47,7 +49,6 @@ func _process(delta: float) -> void:
 	for loc_id in finished:
 		pending_loads.erase(loc_id)
 
-# ОСНОВНАЯ ФУНКЦИЯ!! Срабатывает на изменения позиции игрока
 func update_world_request(player_pos: Vector2):
 	# получаем список id локаций в ближайшей зоне (загрузки)
 	var load_zone = get_locations_in_area(player_pos, load_area_size)
@@ -91,7 +92,7 @@ func update_current_locations(new_locations_ids:  Array):
 					break
 			var loc_instance = res.new()
 			if loc_instance and loc_instance.has_method("load_loc"):
-				var scene_path = loc_instance.load_loc()
+				var scene_path = loc_instance.load_loc(current_save_id)
 				if scene_path:
 					pending_loads[loc_id] = scene_path
 					
@@ -117,6 +118,19 @@ func get_locations_in_area(player_pos: Vector2, area_size: Vector2) -> Array:
 	
 func set_world(world_node: Node2D) -> void:
 	world = world_node
+
+func _on_save_setted(save_id: String):
+	current_save_id = save_id
+	update_current_locations([])
+	
+func _on_save_created(save_id: String, current_save_id: String):
+	for loc in locations_managers_data["locations_managers"]:
+		var manager_script = load(loc["loc_path"])
+		if manager_script and manager_script.has_method("create_new_save"):
+			manager_script.create_new_save(save_id, current_save_id)
+		
+		
+
 	
 
 	

@@ -349,8 +349,8 @@ shape = SubResource("RectangleShape2D_hk53j")
 position = Vector2(118, 1748)
 shape = SubResource("RectangleShape2D_4otos")
 
-[node name="PickedItemBase" parent="." unique_id=850774426 instance=ExtResource("14_m8vib")]
+[node name="Branch2" parent="." unique_id=850774426 instance=ExtResource("14_m8vib")]
 position = Vector2(2372, 1936)
 
-[node name="PickedItemBase2" parent="." unique_id=135732193 instance=ExtResource("14_m8vib")]
+[node name="Branch1" parent="." unique_id=135732193 instance=ExtResource("14_m8vib")]
 position = Vector2(886, 1243)

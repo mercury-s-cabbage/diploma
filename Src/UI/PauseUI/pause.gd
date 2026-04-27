@@ -14,15 +14,11 @@ func _ready() -> void:
 	saves_list = Utils.load_from_json(saves_list_path).ids
 	visible = false
 	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
-	#EventBus.load_save.connect(_on_load_save)
 	EventBus.create_save.connect(_update_saves)
 
 func _update_saves():
 	saves_list = Utils.load_from_json(saves_list_path).ids
-	_open_saves()
-	
-func _on_load_save(id):
-	UiManager.toggle_pause($".")
+	_open_saves()	
 	
 func show_menu() -> void:
 	visible = true
@@ -52,10 +48,15 @@ func _close_saves():
 	main_menu.visible = true
 	saves_ui.visible = false
 
-func load_save(save_id: String):
-	SaveManager.set_save(save_id)
-
 func _on_new_save_pressed() -> void:
 	SaveManager.create_save(SaveManager.current_save)
 	EventBus.create_save.emit()
 	
+func _on_return_pressed() -> void:
+	EventBus.toggle_ui_pause.emit($".")
+
+func _on_exit_pressed() -> void:
+	get_tree().quit()
+
+func _on_settings_pressed() -> void:
+	pass # Replace with function body.

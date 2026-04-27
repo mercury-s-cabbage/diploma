@@ -21,3 +21,4 @@ signal set_save(save_id: String)
 
 # События UI
 signal update_inventory_ui(inventory_list: Dictionary)
+signal toggle_ui_pause(ui: Node2D)

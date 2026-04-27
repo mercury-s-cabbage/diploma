@@ -6,7 +6,7 @@ var location_data = {}
 var current_state = {}
 var scene_node: Node = null
 
-func load_loc() -> String:  # ← Node вместо PackedScene
+func load_loc(current_state_file) -> String:  # ← Node вместо PackedScene
 	location_data = load_from_json(location_data_file) 
 	current_state = load_from_json(current_state_file)
 	if not location_data is Dictionary or not location_data.has("SB_1"):
