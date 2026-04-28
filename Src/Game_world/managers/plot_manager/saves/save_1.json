@@ -8,11 +8,10 @@
 		},
 		"1": {
 			"area_entered": {
-				"banya": 0.0,
-				"main_building": 1
+				"banya": 1
 			}
 		},
-		"current_step": 1.0,
-		"status": 1.0
+		"current_step": 2,
+		"status": 2
 	}
 }

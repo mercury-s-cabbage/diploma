@@ -22,19 +22,16 @@ func _on_update_ui(progress: Dictionary):
 		quests_data.clear()
 		return
 
-	var active_ids: Array = []
-
 	for quest_id in progress.keys():
-		active_ids.append(quest_id)
-
 		var quest_progress: Dictionary = progress[quest_id]
 		var status: int = int(quest_progress.get("status", 0))
+		var current_step: int = int(quest_progress.get("current_step", 0))
 
-		if status == 0:
+		if status != 1:
 			if quest_ui_by_id.has(quest_id):
-				var existing_ui = quest_ui_by_id[quest_id]
-				if is_instance_valid(existing_ui):
-					existing_ui.queue_free()
+				var old_ui = quest_ui_by_id[quest_id]
+				if is_instance_valid(old_ui):
+					old_ui.queue_free()
 				quest_ui_by_id.erase(quest_id)
 				quests_data.erase(quest_id)
 			continue
@@ -49,7 +46,6 @@ func _on_update_ui(progress: Dictionary):
 		if not is_instance_valid(quest_ui):
 			continue
 
-		var current_step: int = int(quest_progress.get("current_step", 0))
 		var quest_data_cached: Dictionary = quests_data.get(quest_id, {})
 		if quest_data_cached.is_empty():
 			continue
