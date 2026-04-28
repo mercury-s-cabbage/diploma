@@ -32,6 +32,7 @@ ItemLibrary="*uid://f02hc1cqroys"
 SaveManager="*uid://0jkagaq380y8"
 PlayerManager="*uid://bhh56biqgytyh"
 LocationSbManager="*uid://hdfv2rjh5gi0"
+DiaryManager="*uid://fovnqmio317y"
 
 [editor_plugins]
 

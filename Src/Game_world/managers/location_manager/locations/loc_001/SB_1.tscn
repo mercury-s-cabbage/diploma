@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://c7t8hf0hfsom1" path="res://Src/Game_world/environment/decor/бочонок.tscn" id="9_wrbtc"]
 [ext_resource type="PackedScene" uid="uid://cqasv6dc3yfef" path="res://Src/Game_world/environment/decor/ворота.tscn" id="10_jhrta"]
 [ext_resource type="PackedScene" uid="uid://d2htis428hij" path="res://Src/Game_world/environment/decor/забор.tscn" id="11_hk53j"]
+[ext_resource type="PackedScene" uid="uid://da2je6jflp637" path="res://Src/Game_world/objects/other/diary_point.tscn" id="14_27yfs"]
 [ext_resource type="PackedScene" uid="uid://daeebrminxas5" path="res://Src/Game_world/objects/items/branch.tscn" id="14_m8vib"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hk53j"]
@@ -356,3 +357,6 @@ instance_id = "Branch2"
 [node name="Branch1" parent="." unique_id=135732193 instance=ExtResource("14_m8vib")]
 position = Vector2(886, 1243)
 instance_id = "Branch1"
+
+[node name="Diary_point" parent="." unique_id=207578194 instance=ExtResource("14_27yfs")]
+position = Vector2(2067, 1720)

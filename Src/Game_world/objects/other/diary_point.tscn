@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://da2je6jflp637"]
+
+[ext_resource type="Script" uid="uid://brj0n2gabeqw8" path="res://Src/Game_world/objects/other/diary_point.gd" id="1_41bpi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rplv3"]
+radius = 105.076164
+
+[node name="Diary_point" type="Area2D" unique_id=207578194]
+script = ExtResource("1_41bpi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1484453298]
+shape = SubResource("CircleShape2D_rplv3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

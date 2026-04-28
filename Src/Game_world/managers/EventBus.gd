@@ -6,9 +6,10 @@ extends Node
 
 signal item_acquired(item: ItemData, count: int, instance_id: String)
 signal area_entered(zone_id: String)
-signal start_quest(quest_id: String)
+signal diary_update(theme: String, id: String)
 
 # События квестов
+signal start_quest(quest_id: String)
 signal quest_started(quest_id: String, quest_data: Dictionary) 
 signal quest_step_changed(quest_id: String, step: int) 
 signal quest_ended(quest_id: String)
