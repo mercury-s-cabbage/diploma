@@ -1,0 +1,18 @@
+{
+	"001": {
+		"0": {
+			"area_entered": {
+				"field": 1.0,
+				"main_building": 1.0
+			}
+		},
+		"1": {
+			"area_entered": {
+				"banya": 0.0,
+				"field": 1
+			}
+		},
+		"current_step": 1.0,
+		"status": 1.0
+	}
+}

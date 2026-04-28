@@ -1,27 +1,67 @@
 extends Node
 
 @export var quests_directory: String = "res://Src/Game_world/managers/plot_manager/quests"
-@export var progress_file: String = "res://Src/Game_world/managers/plot_manager/progress.json"
+@export var progress_file_path: String = "res://Src/Game_world/managers/plot_manager/saves/save_"
 var progress: Dictionary
+var current_save = "0"
+
+const Utils = preload("res://Src/Game_world/managers/utils.gd")
 
 var available_quests: Dictionary = {}  # id -> path/to/quest.json Все существующие квесты в игре
 var active_quests: Dictionary = {}     # id -> QuestData (loaded) Квесты, которые игрок принял
 var tracked_signals: Dictionary = {} # сигналы, которые отслеживаются квестами в данный момент
-# tracked_signals:
-# {
-#   "_on_npc_talked": [
-#       {"quest_id": "001", "values": ["steve", "accept"]},
-#       {"quest_id": "002", "values": ["bob", "refuse"]}
-#   ]
-# }
 
 func _ready():
+	EventBus.set_save.connect(_on_save_setted)
+	EventBus.save_created.connect(_on_save_created)
+	EventBus.save_game.connect(_on_game_saved)
+	
+func _on_save_setted(save_id: String):
+	current_save = save_id
 	load_quest_paths(quests_directory)
-	progress = load_from_json(progress_file)
+	progress = Utils.load_from_json(progress_file_path + save_id + ".json")
+	EventBus.update_quest_ui.emit(progress)
+	
 	# подключаем сигналы, которые будут триггерить квесты
 	EventBus.area_entered.connect(_on_area_entered)
 	EventBus.start_quest.connect(_on_start_quest)
+	
+func _on_save_created(curr_save_id: String, prev_save_id: String):
+	var prev_path := progress_file_path + prev_save_id + ".json"
+	var curr_path := progress_file_path + curr_save_id + ".json"
 
+	var dir_path := progress_file_path.get_base_dir()
+	if not DirAccess.dir_exists_absolute(dir_path):
+		DirAccess.make_dir_recursive_absolute(dir_path)
+
+	var err := DirAccess.copy_absolute(prev_path, curr_path)
+	if err != OK:
+		push_error("Failed to copy save file from %s to %s. Error: %s" % [prev_path, curr_path, err])
+		return
+
+	current_save = curr_save_id
+	progress = Utils.load_from_json(curr_path)
+	EventBus.update_quest_ui.emit(progress)
+
+
+func _on_game_saved():
+	if progress.is_empty():
+		push_warning("Progress is empty, nothing to save.")
+		return
+
+	var save_path: String = progress_file_path + current_save + ".json"
+	var dir_path := progress_file_path.get_base_dir()
+
+	if not DirAccess.dir_exists_absolute(dir_path):
+		DirAccess.make_dir_recursive_absolute(dir_path)
+
+	var file := FileAccess.open(save_path, FileAccess.WRITE)
+	if file == null:
+		push_error("Failed to open save file for writing: %s" % save_path)
+		return
+
+	file.store_string(JSON.stringify(progress, "\t"))
+	file.close()
 # при загрузке создаем словарь id квеста -> путь к нему
 func load_quest_paths(dir_path: String):
 	var dir = DirAccess.open(dir_path)
@@ -99,7 +139,6 @@ func update_quest(quest_id: String):
 		return
 	register_quest_signals(active_quests[quest_id], new_step)
 	EventBus.emit_signal("quest_step_changed", quest_id, int(new_step))
-	#print("step changed: ", new_step)
 	
 func end_quest(quest_id: String):
 	remove_quest_signals(quest_id)
@@ -107,7 +146,6 @@ func end_quest(quest_id: String):
 	active_quests.erase(quest_id)
 	# TODO: на этом месте надо сохранять прогресс
 	EventBus.quest_ended.emit(quest_id)
-	print("end quest ", quest_id)
 	
 func _on_area_entered(zone_id: String):
 	if "_on_area_entered" in tracked_signals.keys():
@@ -115,20 +153,5 @@ func _on_area_entered(zone_id: String):
 			var quest_id = quest["quest_id"]
 			if quest["values"][0] == zone_id:
 				var step = str(int(progress[quest_id]["current_step"]))
-				print("aimed ", zone_id)
 				progress[quest_id][step]["area_entered"][zone_id] = 1
 				update_quest(quest_id)
-
-func load_from_json(path: String):
-	var file = FileAccess.open(path, FileAccess.READ)
-	if file:
-		var text = file.get_as_text()
-		file.close()
-		var data = JSON.parse_string(text)
-		if typeof(data) == TYPE_DICTIONARY:
-			return data
-		else:
-			push_error("JSON-файл имеет неверный формат")
-	else:
-		push_error("The file was not found or could not be opened: " + path)
-	return []
