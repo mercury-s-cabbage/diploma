@@ -1,0 +1,169 @@
+[gd_scene format=3 uid="uid://cue7qpfmyhlwd"]
+
+[ext_resource type="PackedScene" uid="uid://dt5lf5nwo5jsc" path="res://Src/UI/Hero_UI/Components/main_skill.tscn" id="1_w8sb8"]
+
+[node name="SkillsMap" type="Control" unique_id=1952183000]
+custom_minimum_size = Vector2(1000, 1000)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+
+[node name="Background" type="ColorRect" parent="." unique_id=1558800372]
+custom_minimum_size = Vector2(1000, 1000)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0.0627451)
+
+[node name="MainSkill2" parent="." unique_id=971310963 instance=ExtResource("1_w8sb8")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 529.0
+offset_top = 427.0
+offset_right = 574.0
+offset_bottom = 472.0
+mouse_filter = 1
+
+[node name="MainSkill5" parent="." unique_id=1945472989 instance=ExtResource("1_w8sb8")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 613.0
+offset_top = 320.0
+offset_right = 658.0
+offset_bottom = 365.0
+mouse_filter = 1
+
+[node name="MainSkill6" parent="." unique_id=2070888507 instance=ExtResource("1_w8sb8")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 764.0
+offset_top = 211.0
+offset_right = 809.0
+offset_bottom = 256.0
+mouse_filter = 1
+
+[node name="MainSkill7" parent="." unique_id=1851375631 instance=ExtResource("1_w8sb8")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 442.0
+offset_top = 320.0
+offset_right = 487.0
+offset_bottom = 365.0
+mouse_filter = 1
+
+[node name="MainSkill11" parent="." unique_id=74149776 instance=ExtResource("1_w8sb8")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 272.0
+offset_top = 166.0
+offset_right = 317.0
+offset_bottom = 211.0
+mouse_filter = 1
+
+[node name="MainSkill12" parent="." unique_id=781059550 instance=ExtResource("1_w8sb8")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 529.0
+offset_top = 211.0
+offset_right = 574.0
+offset_bottom = 256.0
+mouse_filter = 1
+
+[node name="MainSkill13" parent="." unique_id=1134712290 instance=ExtResource("1_w8sb8")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 719.0
+offset_top = 609.0
+offset_right = 764.0
+offset_bottom = 654.0
+mouse_filter = 1
+
+[node name="MainSkill14" parent="." unique_id=1922232746 instance=ExtResource("1_w8sb8")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 487.0
+offset_top = 561.0
+offset_right = 532.0
+offset_bottom = 606.0
+mouse_filter = 1
+
+[node name="MainSkill15" parent="." unique_id=2088017854 instance=ExtResource("1_w8sb8")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 356.0
+offset_top = 654.0
+offset_right = 401.0
+offset_bottom = 699.0
+mouse_filter = 1
+
+[node name="MainSkill16" parent="." unique_id=1096623826 instance=ExtResource("1_w8sb8")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 613.0
+offset_top = 699.0
+offset_right = 658.0
+offset_bottom = 744.0
+mouse_filter = 1
+
+[node name="MainSkill17" parent="." unique_id=1882529746 instance=ExtResource("1_w8sb8")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 889.0
+offset_top = 365.0
+offset_right = 934.0
+offset_bottom = 410.0
+mouse_filter = 1
+
+[node name="MainSkill9" parent="." unique_id=278905568 instance=ExtResource("1_w8sb8")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 272.0
+offset_top = 427.0
+offset_right = 317.0
+offset_bottom = 472.0
+mouse_filter = 1
+
+[node name="MainSkill4" parent="." unique_id=1958918663 instance=ExtResource("1_w8sb8")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 744.0
+offset_top = 427.0
+offset_right = 789.0
+offset_bottom = 472.0
+mouse_filter = 1

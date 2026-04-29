@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://dt5lf5nwo5jsc"]
+
+[ext_resource type="Script" uid="uid://ds1uehfw8e84h" path="res://Src/UI/Hero_UI/Components/side_skill.gd" id="1_m1dfb"]
+[ext_resource type="Texture2D" uid="uid://cctvpu66cmdm4" path="res://Src/UI/res/images/Ellipse 8.png" id="2_m1dfb"]
+[ext_resource type="Texture2D" uid="uid://cqkrl56wr0fu4" path="res://Src/UI/res/images/Ellipse 10.png" id="3_ctt5w"]
+[ext_resource type="Texture2D" uid="uid://djyyu3w0x6cls" path="res://Src/UI/res/images/Ellipse 9.png" id="4_m1dfb"]
+[ext_resource type="Texture2D" uid="uid://chij2e84ru0c5" path="res://Src/UI/res/images/Rectangle 25.png" id="5_ubo23"]
+[ext_resource type="FontFile" uid="uid://82q5gje0l353" path="res://Src/UI/res/Fonts/Mookmania.otf" id="6_torie"]
+[ext_resource type="FontFile" uid="uid://di5agfh20xmw2" path="res://Src/UI/res/Fonts/Bainsley_Roman.otf" id="7_bkv0h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2arsu"]
+texture = ExtResource("2_m1dfb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iymka"]
+texture = ExtResource("3_ctt5w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m1dfb"]
+texture = ExtResource("3_ctt5w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ctt5w"]
+texture = ExtResource("4_m1dfb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qkim2"]
+texture = ExtResource("5_ubo23")
+
+[sub_resource type="LabelSettings" id="LabelSettings_48wbl"]
+font = ExtResource("6_torie")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_m1dfb"]
+line_spacing = -4.0
+font = ExtResource("7_bkv0h")
+font_size = 20
+
+[node name="Control" type="Control" unique_id=751244848]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 34.0
+offset_bottom = 34.0
+script = ExtResource("1_m1dfb")
+
+[node name="SideSkill" type="Button" parent="." unique_id=103788181]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.018000001
+anchor_bottom = 0.027
+offset_right = 33.352
+offset_bottom = 33.001
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_styles/normal = SubResource("StyleBoxTexture_2arsu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_iymka")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m1dfb")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ctt5w")
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=488602641]
+visible = false
+layout_mode = 0
+offset_right = 247.0
+offset_bottom = 82.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_qkim2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=650445840]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/VBoxContainer" unique_id=737866071]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 0
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/MarginContainer" unique_id=54642991]
+custom_minimum_size = Vector2(300, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Название для скилла"
+label_settings = SubResource("LabelSettings_48wbl")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="MarginContainer2" type="MarginContainer" parent="Panel/VBoxContainer" unique_id=1858299142]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer/MarginContainer2" unique_id=1425337665]
+custom_minimum_size = Vector2(300, 10)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Название для скилла"
+label_settings = SubResource("LabelSettings_m1dfb")
+autowrap_mode = 3

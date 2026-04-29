@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://b7onyw54pvswr"]
+
+[ext_resource type="Texture2D" uid="uid://c0obmbkg61o0b" path="res://Src/UI/res/images/Rectangle 25 (1).png" id="1_431gl"]
+
+[resource]
+texture = ExtResource("1_431gl")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0

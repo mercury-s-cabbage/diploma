@@ -1,4 +1,14 @@
 {
-	"x": 1000,
-	"y": 2000
+	"x": 1942.05346679688,
+	"y": 2097.85498046875,
+	"strength": {
+		"current_level": 1,
+		"current_points": 13,
+		"max_points": 100
+	},
+	"dexterity": {
+		"current_level": 1,
+		"current_points": 98,
+		"max_points": 100
+	}
 }

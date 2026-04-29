@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cjd1pplafteqn" path="res://Src/UI/InventoryUI/Inventory_ui.tscn" id="2_cv0qr"]
 [ext_resource type="PackedScene" uid="uid://ev64uln88pho" path="res://Src/UI/PauseUI/pause.tscn" id="3_u7te1"]
 [ext_resource type="PackedScene" uid="uid://bkmbt1qekuow" path="res://Src/UI/QuestMapUI/quest_map_ui.tscn" id="4_wwdwr"]
+[ext_resource type="PackedScene" uid="uid://cx02cphf7k6ag" path="res://Src/UI/Hero_UI/Hero_UI.tscn" id="5_25j1w"]
 
 [node name="Main" type="Node2D" unique_id=975468242]
 script = ExtResource("1_cv0qr")
@@ -19,4 +20,7 @@ visible = false
 visible = false
 
 [node name="QuestMapUi" parent="." unique_id=442863293 instance=ExtResource("4_wwdwr")]
+visible = false
+
+[node name="HeroUi" parent="." unique_id=1683068464 instance=ExtResource("5_25j1w")]
 visible = false

@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://chvsukfspqthe"]
+
+[ext_resource type="StyleBox" uid="uid://kiv7jvjwpo1m" path="res://hubi_button.tres" id="1_d56pj"]
+[ext_resource type="StyleBox" uid="uid://baocbncn7tjfb" path="res://yaroslava_button.tres" id="2_d56pj"]
+[ext_resource type="StyleBox" uid="uid://cqjvm3ckepaf8" path="res://volk_button.tres" id="3_d56pj"]
+
+[node name="HeroesSwitch" type="HBoxContainer" unique_id=527310113]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -288.0
+offset_top = -100.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1597008875]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="Button" type="Button" parent="MarginContainer" unique_id=1783002768]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = ExtResource("1_d56pj")
+theme_override_styles/pressed = ExtResource("1_d56pj")
+theme_override_styles/hover = ExtResource("1_d56pj")
+
+[node name="MarginContainer3" type="MarginContainer" parent="." unique_id=10496635]
+layout_mode = 2
+theme_override_constants/margin_bottom = 20
+
+[node name="Button2" type="Button" parent="MarginContainer3" unique_id=73321498]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = ExtResource("2_d56pj")
+theme_override_styles/pressed = ExtResource("2_d56pj")
+theme_override_styles/hover = ExtResource("2_d56pj")
+
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=1864876602]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 150
+theme_override_constants/margin_bottom = 20
+
+[node name="Button3" type="Button" parent="MarginContainer2" unique_id=853088318]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = ExtResource("3_d56pj")
+theme_override_styles/pressed = ExtResource("3_d56pj")
+theme_override_styles/hover = ExtResource("3_d56pj")

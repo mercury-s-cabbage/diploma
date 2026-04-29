@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://1ro304li4fbi"]
+
+[ext_resource type="Texture2D" uid="uid://ufiw4wvxg1dn" path="res://Src/UI/res/images/Rectangle 27.png" id="1_6auh5"]
+[ext_resource type="Script" uid="uid://b02x3k66gg58h" path="res://Src/UI/Hero_UI/Components/characteristic.gd" id="1_bu62l"]
+[ext_resource type="LabelSettings" uid="uid://bys5y6g2nu3le" path="res://Src/UI/res/Label_settings/label_settings.tres" id="1_xnihj"]
+[ext_resource type="LabelSettings" uid="uid://dvu2vx124c05c" path="res://info_text.tres" id="4_8qn5l"]
+
+[node name="VBoxContainer" type="VBoxContainer" unique_id=1474698325]
+custom_minimum_size = Vector2(0, 40)
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 55.0
+grow_horizontal = 2
+script = ExtResource("1_bu62l")
+
+[node name="Label" type="Label" parent="." unique_id=592376619]
+layout_mode = 2
+text = "Название характеристики"
+label_settings = ExtResource("1_xnihj")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=1611578075]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_vertical = 2
+value = 20.0
+nine_patch_stretch = true
+texture_under = ExtResource("1_6auh5")
+texture_over = ExtResource("1_6auh5")
+texture_progress = ExtResource("1_6auh5")
+texture_progress_offset = Vector2(2, 2)
+tint_over = Color(1, 1, 1, 0)
+tint_progress = Color(0.20392157, 0.39215687, 0.24705882, 1)
+
+[node name="Label" type="Label" parent="TextureProgressBar" unique_id=1205502899]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "10%"
+label_settings = ExtResource("4_8qn5l")
+horizontal_alignment = 1
+vertical_alignment = 1

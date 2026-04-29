@@ -1,0 +1,353 @@
+[gd_scene format=3 uid="uid://cx02cphf7k6ag"]
+
+[ext_resource type="Shader" uid="uid://dhr48ufalvmpb" path="res://Src/UI/res/Shaders/blur_schader.gdshader" id="1_g2384"]
+[ext_resource type="Script" uid="uid://btci68nqyoj61" path="res://Src/UI/Hero_UI/hero_ui.gd" id="1_tm7xh"]
+[ext_resource type="PackedScene" uid="uid://cue7qpfmyhlwd" path="res://Src/UI/Hero_UI/Components/yaroslava_skills_map.tscn" id="2_3lfjv"]
+[ext_resource type="StyleBox" uid="uid://b7hhrp6sfpvau" path="res://Src/UI/res/Textures/base_box_texture.tres" id="2_g2384"]
+[ext_resource type="Script" uid="uid://c5mohvyh6belt" path="res://Src/UI/Hero_UI/scroll_container.gd" id="2_oijr2"]
+[ext_resource type="FontFile" uid="uid://82q5gje0l353" path="res://Src/UI/res/Fonts/Mookmania.otf" id="6_icnir"]
+[ext_resource type="PackedScene" uid="uid://1ro304li4fbi" path="res://Src/UI/Hero_UI/Components/Characteristic.tscn" id="6_u333t"]
+[ext_resource type="PackedScene" uid="uid://dml0leq1okhef" path="res://Src/UI/Hero_UI/Components/hubi_skills_map.tscn" id="8_aoid4"]
+[ext_resource type="PackedScene" uid="uid://chvsukfspqthe" path="res://Src/UI/Hero_UI/Components/heroes_switch.tscn" id="8_smt73"]
+[ext_resource type="PackedScene" uid="uid://dm66yoyn7xd2y" path="res://Src/UI/Hero_UI/Components/volk_skills_map.tscn" id="9_katt0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oijr2"]
+shader = ExtResource("1_g2384")
+shader_parameter/lod = 1.750000083125
+shader_parameter/darken_strength = 0.8330000395675
+
+[sub_resource type="LabelSettings" id="LabelSettings_smt73"]
+font = ExtResource("6_icnir")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_mnloc"]
+font = ExtResource("6_icnir")
+font_size = 30
+font_color = Color(0.6901961, 0.28627452, 0.28627452, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_aoid4"]
+font = ExtResource("6_icnir")
+font_size = 30
+font_color = Color(0.28235295, 0.2627451, 0.6627451, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_katt0"]
+font = ExtResource("6_icnir")
+font_size = 30
+font_color = Color(0.32156864, 0.5882353, 0.38039216, 1)
+
+[node name="HeroUi" type="CanvasLayer" unique_id=1683068464 groups=["hero_ui"]]
+process_mode = 3
+script = ExtResource("1_tm7xh")
+
+[node name="Yaroslava" type="Panel" parent="." unique_id=1880586992]
+visible = false
+material = SubResource("ShaderMaterial_oijr2")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Yaroslava" unique_id=660348547]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Yaroslava/HBoxContainer" unique_id=258215958]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 0
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+script = ExtResource("2_oijr2")
+
+[node name="SkillsMap2" parent="Yaroslava/HBoxContainer/ScrollContainer" unique_id=1952183000 instance=ExtResource("2_3lfjv")]
+layout_mode = 2
+
+[node name="StatsPanel" type="Panel" parent="Yaroslava/HBoxContainer" unique_id=315156051]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_g2384")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Yaroslava/HBoxContainer/StatsPanel" unique_id=124924483]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 600.0
+offset_bottom = 648.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Yaroslava/HBoxContainer/StatsPanel/VBoxContainer" unique_id=549474178]
+layout_mode = 2
+theme_override_constants/margin_top = 30
+
+[node name="Label" type="Label" parent="Yaroslava/HBoxContainer/StatsPanel/VBoxContainer/MarginContainer" unique_id=476246666]
+layout_mode = 2
+text = "Характеристики"
+label_settings = SubResource("LabelSettings_smt73")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="Yaroslava/HBoxContainer/StatsPanel/VBoxContainer" unique_id=1075952876]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+
+[node name="Label" type="Label" parent="Yaroslava/HBoxContainer/StatsPanel/VBoxContainer/MarginContainer2" unique_id=931009000]
+layout_mode = 2
+text = "Ярослава
+"
+label_settings = SubResource("LabelSettings_mnloc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stats" type="VBoxContainer" parent="Yaroslava/HBoxContainer/StatsPanel/VBoxContainer" unique_id=1021597224]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Yaroslava/HBoxContainer/StatsPanel/VBoxContainer/Stats" unique_id=559290853]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+
+[node name="Characteristic" parent="Yaroslava/HBoxContainer/StatsPanel/VBoxContainer/Stats/MarginContainer" unique_id=1561120717 instance=ExtResource("6_u333t")]
+layout_mode = 2
+char_name = "Сила"
+points = 11
+ColorBar = Color(0.5058824, 0.19607843, 0.19607843, 1)
+
+[node name="MarginContainer2" type="MarginContainer" parent="Yaroslava/HBoxContainer/StatsPanel/VBoxContainer/Stats" unique_id=1699606088]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+
+[node name="Characteristic" parent="Yaroslava/HBoxContainer/StatsPanel/VBoxContainer/Stats/MarginContainer2" unique_id=1497867689 instance=ExtResource("6_u333t")]
+layout_mode = 2
+char_name = "Ловкость"
+points = 76
+ColorBar = Color(0.5058824, 0.19607843, 0.19607843, 1)
+
+[node name="MarginContainer3" type="MarginContainer" parent="Yaroslava/HBoxContainer/StatsPanel/VBoxContainer/Stats" unique_id=357287072]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+
+[node name="Characteristic" parent="Yaroslava/HBoxContainer/StatsPanel/VBoxContainer/Stats/MarginContainer3" unique_id=1474698325 instance=ExtResource("6_u333t")]
+layout_mode = 2
+char_name = "Красноречие"
+points = 39
+ColorBar = Color(0.5058824, 0.19607843, 0.19607843, 1)
+
+[node name="Hubi" type="Panel" parent="." unique_id=1863978878]
+visible = false
+material = SubResource("ShaderMaterial_oijr2")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Hubi" unique_id=1019411135]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Hubi/HBoxContainer" unique_id=1760840717]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 0
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+script = ExtResource("2_oijr2")
+
+[node name="SkillsMap" parent="Hubi/HBoxContainer/ScrollContainer" unique_id=1729110100 instance=ExtResource("8_aoid4")]
+layout_mode = 2
+
+[node name="StatsPanel" type="Panel" parent="Hubi/HBoxContainer" unique_id=1351152662]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_g2384")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Hubi/HBoxContainer/StatsPanel" unique_id=1516967155]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 600.0
+offset_bottom = 648.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Hubi/HBoxContainer/StatsPanel/VBoxContainer" unique_id=784847641]
+layout_mode = 2
+theme_override_constants/margin_top = 30
+
+[node name="Label" type="Label" parent="Hubi/HBoxContainer/StatsPanel/VBoxContainer/MarginContainer" unique_id=905753597]
+layout_mode = 2
+text = "Характеристики"
+label_settings = SubResource("LabelSettings_smt73")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="Hubi/HBoxContainer/StatsPanel/VBoxContainer" unique_id=1865578728]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+
+[node name="Label" type="Label" parent="Hubi/HBoxContainer/StatsPanel/VBoxContainer/MarginContainer2" unique_id=1111638693]
+layout_mode = 2
+text = "Хуби
+"
+label_settings = SubResource("LabelSettings_aoid4")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stats" type="VBoxContainer" parent="Hubi/HBoxContainer/StatsPanel/VBoxContainer" unique_id=1546661612]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Hubi/HBoxContainer/StatsPanel/VBoxContainer/Stats" unique_id=1425379546]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+
+[node name="Characteristic" parent="Hubi/HBoxContainer/StatsPanel/VBoxContainer/Stats/MarginContainer" unique_id=590276631 instance=ExtResource("6_u333t")]
+layout_mode = 2
+char_name = "Сила"
+points = 80
+ColorBar = Color(0.21176471, 0.19607843, 0.5058824, 1)
+
+[node name="MarginContainer2" type="MarginContainer" parent="Hubi/HBoxContainer/StatsPanel/VBoxContainer/Stats" unique_id=1388598062]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+
+[node name="Characteristic" parent="Hubi/HBoxContainer/StatsPanel/VBoxContainer/Stats/MarginContainer2" unique_id=1880927829 instance=ExtResource("6_u333t")]
+layout_mode = 2
+char_name = "Ловкость"
+points = 76
+ColorBar = Color(0.21176471, 0.19607843, 0.5058824, 1)
+
+[node name="MarginContainer3" type="MarginContainer" parent="Hubi/HBoxContainer/StatsPanel/VBoxContainer/Stats" unique_id=1783354888]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+
+[node name="Characteristic" parent="Hubi/HBoxContainer/StatsPanel/VBoxContainer/Stats/MarginContainer3" unique_id=2101144720 instance=ExtResource("6_u333t")]
+layout_mode = 2
+char_name = "Красноречие"
+points = 2
+ColorBar = Color(0.21176471, 0.19607843, 0.5058824, 1)
+
+[node name="Volk" type="Panel" parent="." unique_id=1178885815]
+material = SubResource("ShaderMaterial_oijr2")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Volk" unique_id=1537067996]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Volk/HBoxContainer" unique_id=1434041199]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 0
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+script = ExtResource("2_oijr2")
+
+[node name="SkillsMap" parent="Volk/HBoxContainer/ScrollContainer" unique_id=745469207 instance=ExtResource("9_katt0")]
+layout_mode = 2
+
+[node name="StatsPanel" type="Panel" parent="Volk/HBoxContainer" unique_id=833082612]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_g2384")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Volk/HBoxContainer/StatsPanel" unique_id=222765119]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 600.0
+offset_bottom = 648.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer" unique_id=358182594]
+layout_mode = 2
+theme_override_constants/margin_top = 30
+
+[node name="Label" type="Label" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer/MarginContainer" unique_id=380976080]
+layout_mode = 2
+text = "Характеристики"
+label_settings = SubResource("LabelSettings_smt73")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer" unique_id=2051134126]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+
+[node name="Label" type="Label" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer/MarginContainer2" unique_id=1561292891]
+layout_mode = 2
+text = "Волк
+"
+label_settings = SubResource("LabelSettings_katt0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stats" type="VBoxContainer" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer" unique_id=629788385]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer/Stats" unique_id=95447748]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+
+[node name="Characteristic" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer/Stats/MarginContainer" unique_id=544511645 instance=ExtResource("6_u333t")]
+layout_mode = 2
+char_name = "Сила"
+points = 19
+ColorBar = Color(0.20392157, 0.39215687, 0.24705882, 1)
+
+[node name="MarginContainer2" type="MarginContainer" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer/Stats" unique_id=1807261735]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+
+[node name="Characteristic" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer/Stats/MarginContainer2" unique_id=1256563311 instance=ExtResource("6_u333t")]
+layout_mode = 2
+char_name = "Ловкость"
+points = 44
+ColorBar = Color(0.20392157, 0.39215687, 0.24705882, 1)
+
+[node name="MarginContainer3" type="MarginContainer" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer/Stats" unique_id=1942495626]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+
+[node name="Characteristic" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer/Stats/MarginContainer3" unique_id=267509402 instance=ExtResource("6_u333t")]
+layout_mode = 2
+char_name = "Красноречие"
+points = 23
+ColorBar = Color(0.20392157, 0.39215687, 0.24705882, 1)
+
+[node name="HeroesSwitch" parent="." unique_id=527310113 instance=ExtResource("8_smt73")]
+
+[connection signal="pressed" from="HeroesSwitch/MarginContainer/Button" to="." method="_on_hubi_button_pressed"]
+[connection signal="pressed" from="HeroesSwitch/MarginContainer3/Button2" to="." method="_on_yaroslava_button_pressed"]
+[connection signal="pressed" from="HeroesSwitch/MarginContainer2/Button3" to="." method="_on_volk_button_pressed"]
+
+[editable path="HeroesSwitch"]

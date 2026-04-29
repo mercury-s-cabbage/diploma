@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://dml0leq1okhef"]
+
+[ext_resource type="PackedScene" uid="uid://dt5lf5nwo5jsc" path="res://Src/UI/Hero_UI/Components/main_skill.tscn" id="1_u7iob"]
+[ext_resource type="PackedScene" uid="uid://78fxbysmy0lb" path="res://Src/UI/Hero_UI/Components/side_skill.tscn" id="2_h4mhp"]
+
+[node name="SkillsMap" type="Control" unique_id=1952183000]
+custom_minimum_size = Vector2(1000, 1000)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+
+[node name="Background" type="ColorRect" parent="." unique_id=1558800372]
+custom_minimum_size = Vector2(1000, 1000)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0.0627451)
+
+[node name="Line2D" type="Line2D" parent="." unique_id=1012132888]
+position = Vector2(356, 269)
+points = PackedVector2Array(-106, 113, 192, 121, 96, 73)
+width = 2.0
+antialiased = true
+
+[node name="Control" parent="." unique_id=265346212 instance=ExtResource("2_h4mhp")]
+layout_mode = 0
+offset_left = 609.0
+offset_top = 399.0
+offset_right = 643.0
+offset_bottom = 433.0
+tooltip_header_text = "Сайд навык"
+tooltip_description_text = "Описание сайд навыка"
+
+[node name="Control2" parent="." unique_id=1357130106 instance=ExtResource("2_h4mhp")]
+layout_mode = 0
+offset_left = 643.0
+offset_top = 337.0
+offset_right = 677.0
+offset_bottom = 371.0
+tooltip_header_text = "Сайд навык"
+tooltip_description_text = "Описание сайд навыка"
+is_active = true
+
+[node name="Control3" parent="." unique_id=751244848 instance=ExtResource("1_u7iob")]
+layout_mode = 0
+offset_left = 332.0
+offset_top = 399.0
+offset_right = 366.0
+offset_bottom = 433.0

@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dm66yoyn7xd2y"]
+
+[ext_resource type="PackedScene" uid="uid://dt5lf5nwo5jsc" path="res://Src/UI/Hero_UI/Components/main_skill.tscn" id="1_y4lwt"]
+[ext_resource type="StyleBox" uid="uid://b7onyw54pvswr" path="res://volk_box.tres" id="2_3352w"]
+
+[node name="SkillsMap" type="Control" unique_id=1952183000]
+custom_minimum_size = Vector2(1000, 1000)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+
+[node name="Background" type="ColorRect" parent="." unique_id=1558800372]
+custom_minimum_size = Vector2(1000, 1000)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 162.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Line2D" type="Line2D" parent="." unique_id=512337083]
+position = Vector2(557, 543)
+points = PackedVector2Array(83, 23, 186, 22)
+
+[node name="MainSkill2" parent="." unique_id=971310963 instance=ExtResource("1_y4lwt")]
+layout_mode = 0
+offset_left = 620.0
+offset_top = 549.0
+offset_right = 665.0
+offset_bottom = 594.0
+mouse_filter = 1
+background = ExtResource("2_3352w")
+tooltip_header_text = "Второй дом"
+tooltip_description_text = "Находясь в лесу, Волк получает бонус +20% к скорости "
+is_active = true
+
+[node name="MainSkill3" parent="." unique_id=751244848 instance=ExtResource("1_y4lwt")]
+layout_mode = 0
+offset_left = 736.0
+offset_top = 547.0
+offset_right = 781.0
+offset_bottom = 592.0
+mouse_filter = 1
+background = ExtResource("2_3352w")
+tooltip_header_text = "Что-то еще"
+tooltip_description_text = "Описание точки"
