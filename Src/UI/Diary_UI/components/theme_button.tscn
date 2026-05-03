@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bmvyuhaja4v54"]
+
+[ext_resource type="StyleBox" uid="uid://b7hhrp6sfpvau" path="res://Src/UI/res/Textures/base_box_texture.tres" id="1_luhqs"]
+[ext_resource type="Script" uid="uid://dsvee4krd27to" path="res://Src/UI/Diary_UI/components/theme_button.gd" id="1_sxfes"]
+[ext_resource type="StyleBox" uid="uid://558ab2lt46ec" path="res://Src/UI/res/Textures/focus_box_texture.tres" id="2_14vwk"]
+
+[node name="ThemeButton" type="Button" unique_id=2109333725]
+offset_right = 58.0
+offset_bottom = 24.0
+theme_override_styles/normal = ExtResource("1_luhqs")
+theme_override_styles/pressed = ExtResource("2_14vwk")
+theme_override_styles/hover = ExtResource("2_14vwk")
+script = ExtResource("1_sxfes")
+theme_id = "test"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

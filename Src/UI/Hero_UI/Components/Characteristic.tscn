@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ufiw4wvxg1dn" path="res://Src/UI/res/images/Rectangle 27.png" id="1_6auh5"]
 [ext_resource type="Script" uid="uid://b02x3k66gg58h" path="res://Src/UI/Hero_UI/Components/characteristic.gd" id="1_bu62l"]
 [ext_resource type="LabelSettings" uid="uid://bys5y6g2nu3le" path="res://Src/UI/res/Label_settings/label_settings.tres" id="1_xnihj"]
-[ext_resource type="LabelSettings" uid="uid://dvu2vx124c05c" path="res://info_text.tres" id="4_8qn5l"]
+[ext_resource type="LabelSettings" uid="uid://dvu2vx124c05c" path="res://Src/UI/res/Label_settings/info_text.tres" id="4_8qn5l"]
 
 [node name="VBoxContainer" type="VBoxContainer" unique_id=1474698325]
 custom_minimum_size = Vector2(0, 40)

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dm66yoyn7xd2y"]
 
 [ext_resource type="PackedScene" uid="uid://dt5lf5nwo5jsc" path="res://Src/UI/Hero_UI/Components/main_skill.tscn" id="1_y4lwt"]
-[ext_resource type="StyleBox" uid="uid://b7onyw54pvswr" path="res://volk_box.tres" id="2_3352w"]
+[ext_resource type="StyleBox" uid="uid://b7onyw54pvswr" path="res://Src/UI/res/Textures/volk_box.tres" id="2_3352w"]
 
 [node name="SkillsMap" type="Control" unique_id=1952183000]
 custom_minimum_size = Vector2(1000, 1000)

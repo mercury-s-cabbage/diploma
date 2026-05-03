@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cjd1pplafteqn"]
 
-[ext_resource type="Shader" uid="uid://dhr48ufalvmpb" path="res://Src/UI/res/Shaders/blur_schader.gdshader" id="1_5oprr"]
+[ext_resource type="Shader" uid="uid://dhr48ufalvmpb" path="res://Src/UI/res/Label_settings/Shaders/blur_schader.gdshader" id="1_5oprr"]
 [ext_resource type="Script" uid="uid://dgeuvjgy5d25k" path="res://Src/UI/InventoryUI/inventory_ui.gd" id="1_480j7"]
 [ext_resource type="Texture2D" uid="uid://cbsbdlw3m61lv" path="res://Src/UI/res/images/Rectangle 5.png" id="1_ylf4w"]
 [ext_resource type="StyleBox" uid="uid://b7hhrp6sfpvau" path="res://Src/UI/res/Textures/base_box_texture.tres" id="2_0bxrf"]

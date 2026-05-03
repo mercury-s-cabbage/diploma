@@ -4,6 +4,7 @@ extends Node
 @onready var pause_ui = get_tree().get_first_node_in_group("pause_ui")
 @onready var quest_ui = get_tree().get_first_node_in_group("quest_ui")
 @onready var hero_ui = get_tree().get_first_node_in_group("hero_ui")
+@onready var diary_ui = get_tree().get_first_node_in_group("diary_ui")
 
 var item_push = preload("res://Src/UI/Additional/aqired_items.tscn")
 
@@ -27,6 +28,10 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event.is_action_pressed("hero"):
 		if current_ui != hero_ui:
 			toggle_pause(hero_ui)
+			get_viewport().set_input_as_handled()
+	elif event.is_action_pressed("diary"):
+		if current_ui != diary_ui:
+			toggle_pause(diary_ui)
 			get_viewport().set_input_as_handled()
 	if event.is_action_pressed("escape"):
 		if current_ui != null:

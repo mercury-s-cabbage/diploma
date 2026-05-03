@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://chvsukfspqthe"]
 
-[ext_resource type="StyleBox" uid="uid://kiv7jvjwpo1m" path="res://hubi_button.tres" id="1_d56pj"]
-[ext_resource type="StyleBox" uid="uid://baocbncn7tjfb" path="res://yaroslava_button.tres" id="2_d56pj"]
-[ext_resource type="StyleBox" uid="uid://cqjvm3ckepaf8" path="res://volk_button.tres" id="3_d56pj"]
+[ext_resource type="StyleBox" uid="uid://kiv7jvjwpo1m" path="res://Src/UI/res/Textures/hubi_button.tres" id="1_d56pj"]
+[ext_resource type="StyleBox" uid="uid://baocbncn7tjfb" path="res://Src/UI/res/Textures/yaroslava_button.tres" id="2_d56pj"]
+[ext_resource type="StyleBox" uid="uid://cqjvm3ckepaf8" path="res://Src/UI/res/Textures/volk_button.tres" id="3_d56pj"]
 
 [node name="HeroesSwitch" type="HBoxContainer" unique_id=527310113]
 anchors_preset = 3

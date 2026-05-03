@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bisl0lt8dxx4k"]
+
+[ext_resource type="StyleBox" uid="uid://b7onyw54pvswr" path="res://Src/UI/res/Textures/volk_box.tres" id="1_yg4de"]
+[ext_resource type="Script" uid="uid://lufcmdytfux" path="res://Src/UI/Diary_UI/components/info_block.gd" id="2_5ubdh"]
+[ext_resource type="LabelSettings" uid="uid://dwfwdkejuruxp" path="res://Src/UI/res/Label_settings/text_settings.tres" id="2_7ehbq"]
+[ext_resource type="FontFile" uid="uid://di5agfh20xmw2" path="res://Src/UI/res/Fonts/Bainsley_Roman.otf" id="3_5ubdh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0856u"]
+line_spacing = -4.0
+font = ExtResource("3_5ubdh")
+
+[node name="InfoBlock" type="PanelContainer" unique_id=2041769025]
+anchors_preset = -1
+anchor_right = 0.39100003
+anchor_bottom = 0.31800002
+offset_right = -0.43203735
+offset_bottom = -0.06401062
+size_flags_vertical = 0
+theme_override_styles/panel = ExtResource("1_yg4de")
+script = ExtResource("2_5ubdh")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1691440688]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=497830103]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="info_text" type="Label" parent="VBoxContainer/MarginContainer" unique_id=1797645932]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+text = "Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия."
+label_settings = ExtResource("2_7ehbq")
+autowrap_mode = 3
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=372323821]
+layout_mode = 2
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="caption" type="Label" parent="VBoxContainer/MarginContainer2" unique_id=1171945338]
+layout_mode = 2
+text = "Из записей Волка"
+label_settings = SubResource("LabelSettings_0856u")
+horizontal_alignment = 2

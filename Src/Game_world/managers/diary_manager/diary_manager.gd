@@ -16,28 +16,22 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+# Считает количество найденных знаний по конкретной теме
 func get_topic_poins(topic: String) -> int:
-	if not diary_state.has(topic):
-		return 0
+	return 10
 
-	var topic_data = diary_state[topic]
-	if typeof(topic_data) != TYPE_DICTIONARY:
-		return 0
-
-	var points := 0
-	for id in topic_data.keys():
-		if topic_data[id]:
-			points += 1
-	return points
-
+# Делает активным новое знание
 func _on_diary_update(topic: String, id: String):
-	print("update")
 	diary_state[topic][id] = true
-	
+	EventBus.update_diary_ui.emit(diary_state)
+
+# Создает новый файл сохранения
 func _on_save_setted(save_id: String):
 	current_save = save_id
 	diary_state = Utils.load_from_json(path_to_saves + 	current_save + ".json")
-	
+	EventBus.update_diary_ui.emit(diary_state)
+
+# Сохраняет в файл все, что игрок узнал
 func _on_game_saved():
 	print(diary_state)
 	Utils.save_to_json(path_to_saves + current_save + ".json", diary_state)

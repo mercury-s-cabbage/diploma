@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://bkmbt1qekuow"]
 
 [ext_resource type="Script" uid="uid://jm1sdd3ghbgb" path="res://Src/UI/QuestMapUI/quest_map_ui.gd" id="1_6lsm2"]
-[ext_resource type="Shader" uid="uid://dhr48ufalvmpb" path="res://Src/UI/res/Shaders/blur_schader.gdshader" id="1_ocgpu"]
+[ext_resource type="Shader" uid="uid://dhr48ufalvmpb" path="res://Src/UI/res/Label_settings/Shaders/blur_schader.gdshader" id="1_ocgpu"]
 [ext_resource type="Script" uid="uid://b46e0nf87xshw" path="res://Src/UI/QuestMapUI/control.gd" id="3_ob4l7"]
 [ext_resource type="Texture2D" uid="uid://cfrlnetofa0h2" path="res://Src/UI/res/images/IMG_2603.jpg" id="4_ob4l7"]
 [ext_resource type="StyleBox" uid="uid://558ab2lt46ec" path="res://Src/UI/res/Textures/focus_box_texture.tres" id="5_otsu7"]
-[ext_resource type="LabelSettings" uid="uid://cdw3155hncd0p" path="res://Header_label.tres" id="6_gys8i"]
+[ext_resource type="LabelSettings" uid="uid://cdw3155hncd0p" path="res://Src/UI/res/Label_settings/Header_label.tres" id="6_gys8i"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6lsm2"]
 shader = ExtResource("1_ocgpu")

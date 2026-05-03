@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cmnahqn8ndhov"]
 
 [ext_resource type="Script" uid="uid://bv8oycghejyc5" path="res://Src/UI/QuestMapUI/Components/task.gd" id="1_mjdab"]
-[ext_resource type="LabelSettings" uid="uid://dn0yslhq6ky0k" path="res://Header_label2.tres" id="1_s80pg"]
+[ext_resource type="LabelSettings" uid="uid://dn0yslhq6ky0k" path="res://Src/UI/res/Label_settings/Header_label2.tres" id="1_s80pg"]
 [ext_resource type="LabelSettings" uid="uid://dwfwdkejuruxp" path="res://Src/UI/res/Label_settings/text_settings.tres" id="2_mjdab"]
-[ext_resource type="LabelSettings" uid="uid://bjfnjkylgu5f3" path="res://task_description.tres" id="3_37b6f"]
+[ext_resource type="LabelSettings" uid="uid://bjfnjkylgu5f3" path="res://Src/UI/res/Label_settings/task_description.tres" id="3_37b6f"]
 
 [node name="Task" type="Control" unique_id=452446161]
 layout_mode = 3

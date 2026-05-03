@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://omd1stvkxuex"]
 
 [ext_resource type="LabelSettings" uid="uid://bys5y6g2nu3le" path="res://Src/UI/res/Label_settings/label_settings.tres" id="1_3bghi"]
-[ext_resource type="Texture2D" uid="uid://b4ji2mbolj7qk" path="res://icon.svg" id="1_djnvg"]
+[ext_resource type="Texture2D" uid="uid://b4ji2mbolj7qk" path="res://Src/UI/res/icon.svg" id="1_djnvg"]
 [ext_resource type="LabelSettings" uid="uid://c1usg8fqbkeha" path="res://Src/UI/res/Label_settings/params_font_settings.tres" id="1_e6k1m"]
 [ext_resource type="StyleBox" uid="uid://b7hhrp6sfpvau" path="res://Src/UI/res/Textures/base_box_texture.tres" id="1_jdgjb"]
 [ext_resource type="Script" uid="uid://831cokuuu4j5" path="res://Src/UI/InventoryUI/Components/item.gd" id="2_jdgjb"]

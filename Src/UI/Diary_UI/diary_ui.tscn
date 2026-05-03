@@ -1,3 +1,115 @@
 [gd_scene format=3 uid="uid://x4mfppbixav3"]
 
+[ext_resource type="Shader" uid="uid://dhr48ufalvmpb" path="res://Src/UI/res/Label_settings/Shaders/blur_schader.gdshader" id="1_et6nr"]
+[ext_resource type="Script" uid="uid://b54pk8yvajwgg" path="res://Src/UI/Diary_UI/diary_ui.gd" id="1_r0g4k"]
+[ext_resource type="StyleBox" uid="uid://558ab2lt46ec" path="res://Src/UI/res/Textures/focus_box_texture.tres" id="2_c23ya"]
+[ext_resource type="PackedScene" uid="uid://bmvyuhaja4v54" path="res://Src/UI/Diary_UI/components/theme_button.tscn" id="4_r0g4k"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j55ym"]
+shader = ExtResource("1_et6nr")
+shader_parameter/lod = 1.0250000486875
+shader_parameter/darken_strength = 0.45600002166
+
 [node name="DiaryUi" type="CanvasLayer" unique_id=2137547221]
+process_mode = 3
+script = ExtResource("1_r0g4k")
+
+[node name="Panel" type="Panel" parent="." unique_id=175333207]
+material = SubResource("ShaderMaterial_j55ym")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=138967657]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/HBoxContainer" unique_id=811919112]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/HBoxContainer/ScrollContainer" unique_id=1223051030]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="column_1" type="VBoxContainer" parent="Panel/HBoxContainer/ScrollContainer/HBoxContainer" unique_id=575028353]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="column_2" type="VBoxContainer" parent="Panel/HBoxContainer/ScrollContainer/HBoxContainer" unique_id=1967216146]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="menu" type="VBoxContainer" parent="Panel/HBoxContainer" unique_id=1319118440]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Panel/HBoxContainer/menu" unique_id=1843164614]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_styles/panel = ExtResource("2_c23ya")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/HBoxContainer/menu/Panel" unique_id=37169015]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer/menu/Panel/MarginContainer" unique_id=699828716]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/HBoxContainer/menu/Panel/MarginContainer/VBoxContainer" unique_id=1498211264]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 2
+horizontal_scroll_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/HBoxContainer/menu/Panel/MarginContainer/VBoxContainer/ScrollContainer" unique_id=982750724]
+layout_mode = 2
+
+[node name="ThemeButton" parent="Panel/HBoxContainer/menu/Panel/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer" unique_id=2109333725 instance=ExtResource("4_r0g4k")]
+layout_mode = 2
+text = "Персонажи"
+theme_id = "characters"
+
+[node name="ThemeButton2" parent="Panel/HBoxContainer/menu/Panel/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer" unique_id=406796329 instance=ExtResource("4_r0g4k")]
+layout_mode = 2
+text = "Растения"
+theme_id = "herbs"
+
+[node name="ThemeButton3" parent="Panel/HBoxContainer/menu/Panel/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer" unique_id=1778103771 instance=ExtResource("4_r0g4k")]
+layout_mode = 2
+text = "Животные"
+theme_id = "animals"
+
+[node name="Религи" parent="Panel/HBoxContainer/menu/Panel/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer" unique_id=596023457 instance=ExtResource("4_r0g4k")]
+layout_mode = 2
+text = "Религия"
+theme_id = "religion"
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/HBoxContainer/menu/Panel/MarginContainer/VBoxContainer" unique_id=1618569843]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer/menu/Panel/MarginContainer/VBoxContainer/MarginContainer" unique_id=2049060713]
+layout_mode = 2
+size_flags_vertical = 3

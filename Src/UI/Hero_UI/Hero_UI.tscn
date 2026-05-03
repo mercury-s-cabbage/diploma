@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cx02cphf7k6ag"]
 
-[ext_resource type="Shader" uid="uid://dhr48ufalvmpb" path="res://Src/UI/res/Shaders/blur_schader.gdshader" id="1_g2384"]
+[ext_resource type="Shader" uid="uid://dhr48ufalvmpb" path="res://Src/UI/res/Label_settings/Shaders/blur_schader.gdshader" id="1_g2384"]
 [ext_resource type="Script" uid="uid://btci68nqyoj61" path="res://Src/UI/Hero_UI/hero_ui.gd" id="1_tm7xh"]
 [ext_resource type="PackedScene" uid="uid://cue7qpfmyhlwd" path="res://Src/UI/Hero_UI/Components/yaroslava_skills_map.tscn" id="2_3lfjv"]
 [ext_resource type="StyleBox" uid="uid://b7hhrp6sfpvau" path="res://Src/UI/res/Textures/base_box_texture.tres" id="2_g2384"]

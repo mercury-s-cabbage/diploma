@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cinbds7ee8l0a"]
+
+[ext_resource type="Script" uid="uid://cms3htuqfojcr" path="res://Src/UI/Diary_UI/components/page_label.gd" id="1_ys686"]
+[ext_resource type="FontFile" uid="uid://82q5gje0l353" path="res://Src/UI/res/Fonts/Mookmania.otf" id="2_3kfps"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3y5ud"]
+font = ExtResource("2_3kfps")
+font_size = 22
+
+[node name="PageLabel" type="MarginContainer" unique_id=216766277]
+custom_minimum_size = Vector2(0, 40)
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+script = ExtResource("1_ys686")
+
+[node name="Label" type="Label" parent="." unique_id=1307583624]
+layout_mode = 2
+text = "Название раздела"
+label_settings = SubResource("LabelSettings_3y5ud")
+
+[connection signal="mouse_entered" from="." to="." method="_on_label_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_label_mouse_exited"]
+[connection signal="gui_input" from="Label" to="." method="_on_label_gui_input"]
+[connection signal="mouse_entered" from="Label" to="." method="_on_label_mouse_entered"]
+[connection signal="mouse_exited" from="Label" to="." method="_on_label_mouse_exited"]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ev64uln88pho"]
 
-[ext_resource type="Shader" uid="uid://dhr48ufalvmpb" path="res://Src/UI/res/Shaders/blur_schader.gdshader" id="1_ptfqg"]
+[ext_resource type="Shader" uid="uid://dhr48ufalvmpb" path="res://Src/UI/res/Label_settings/Shaders/blur_schader.gdshader" id="1_ptfqg"]
 [ext_resource type="Script" uid="uid://c4uupg2acv2gw" path="res://Src/UI/PauseUI/pause.gd" id="1_u6r87"]
 [ext_resource type="LabelSettings" uid="uid://y14013kds65h" path="res://Src/UI/res/Label_settings/main_header_settings.tres" id="3_0hthd"]
 [ext_resource type="StyleBox" uid="uid://558ab2lt46ec" path="res://Src/UI/res/Textures/focus_box_texture.tres" id="3_f7h02"]
