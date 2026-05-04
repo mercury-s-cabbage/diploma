@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bv111bnff7td5"]
+
+[ext_resource type="Texture2D" uid="uid://cekhep8ltgqri" path="res://Src/Game_world/objects/items/images/IMG_3247.PNG" id="1_7jer5"]
+[ext_resource type="Script" uid="uid://nyg6rqr2oalr" path="res://Src/Game_world/objects/items/PickedItemResource.gd" id="2_kwrw1"]
+
+[resource]
+script = ExtResource("2_kwrw1")
+id = "sable_skin"
+name = "Соболиная шкурка"
+icon = ExtResource("1_7jer5")
+rarity = "Очень редкий"
+price = 100
+description = "Мягкое золото."
+metadata/_custom_type_script = "uid://nyg6rqr2oalr"

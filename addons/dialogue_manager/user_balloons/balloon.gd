@@ -19,8 +19,11 @@ extends CanvasLayer
 ## The action to use to skip typing the dialogue
 @export var skip_action: StringName = &"ui_cancel"
 
+@export var image: Texture2D
+
 ## A sound player for voice lines (if they exist).
 @onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
+@onready var icon = %Hero_icon
 
 ## Temporary game states
 var temporary_game_states: Array = []
@@ -131,6 +134,14 @@ func apply_dialogue_line() -> void:
 
 	character_label.visible = not dialogue_line.character.is_empty()
 	character_label.text = tr(dialogue_line.character, "dialogue")
+	
+	# тут внесла изменения
+	var portrait_path = "res://addons/dialogue_manager/user_balloons/sprites/%s.PNG" % dialogue_line.character
+	print(portrait_path)
+	if FileAccess.file_exists(portrait_path):
+		icon.texture = load(portrait_path)
+	else:
+		icon.texture = null
 
 	dialogue_label.hide()
 	dialogue_label.dialogue_line = dialogue_line

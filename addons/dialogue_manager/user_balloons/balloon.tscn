@@ -2,8 +2,15 @@
 
 [ext_resource type="Script" uid="uid://brifm0lcm8mh1" path="res://addons/dialogue_manager/user_balloons/balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
-[ext_resource type="StyleBox" uid="uid://b7onyw54pvswr" path="res://Src/UI/res/Textures/volk_box.tres" id="2_ft57y"]
+[ext_resource type="Shader" uid="uid://dhr48ufalvmpb" path="res://Src/UI/res/Label_settings/Shaders/blur_schader.gdshader" id="2_adiul"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
+[ext_resource type="StyleBox" uid="uid://b7hhrp6sfpvau" path="res://Src/UI/res/Textures/base_box_texture.tres" id="3_adiul"]
+[ext_resource type="FontFile" uid="uid://di5agfh20xmw2" path="res://Src/UI/res/Fonts/Bainsley_Roman.otf" id="3_layeh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_layeh"]
+shader = ExtResource("2_adiul")
+shader_parameter/lod = 0.5670000269325
+shader_parameter/darken_strength = 0.3950000187625
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -53,6 +60,7 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [sub_resource type="Theme" id="Theme_qq3yp"]
+default_font = ExtResource("3_layeh")
 default_font_size = 20
 Button/styles/disabled = SubResource("StyleBoxFlat_spyqn")
 Button/styles/focus = SubResource("StyleBoxFlat_ri4m3")
@@ -104,6 +112,27 @@ _data = {
 layer = 100
 script = ExtResource("1_36de5")
 
+[node name="Panel" type="Panel" parent="." unique_id=1370790620]
+material = SubResource("ShaderMaterial_layeh")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Hero_icon" type="TextureRect" parent="." unique_id=353497563]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 600)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -800.0
+offset_right = 615.0491
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+expand_mode = 5
+
 [node name="Balloon" type="Control" parent="." unique_id=359403728]
 unique_name_in_owner = true
 layout_mode = 3
@@ -128,7 +157,7 @@ grow_vertical = 0
 clip_children = 2
 layout_mode = 2
 mouse_filter = 1
-theme_override_styles/panel = ExtResource("2_ft57y")
+theme_override_styles/panel = ExtResource("3_adiul")
 
 [node name="MarginContainer" type="MarginContainer" parent="Balloon/MarginContainer/PanelContainer" unique_id=1030936092]
 layout_mode = 2
@@ -172,16 +201,15 @@ autoplay = &"progress"
 [node name="ResponsesMenu" type="VBoxContainer" parent="Balloon" unique_id=966297223 node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 6
+anchor_left = 1.0
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -290.5
+offset_left = -581.0
 offset_top = -35.0
-offset_right = 290.5
 offset_bottom = 35.0
-grow_horizontal = 2
+grow_horizontal = 0
 grow_vertical = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 2
@@ -191,6 +219,7 @@ response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu" unique_id=914537232]
 layout_mode = 2
+theme_override_styles/normal = ExtResource("3_adiul")
 text = "Response example"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1116280512]

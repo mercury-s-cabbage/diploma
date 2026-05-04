@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cxwavbj100u62"]
+
+[ext_resource type="Texture2D" uid="uid://c7fpqhe4de81r" path="res://Src/Game_world/objects/items/images/IMG_3261.PNG" id="1_u3bwj"]
+[ext_resource type="Script" uid="uid://nyg6rqr2oalr" path="res://Src/Game_world/objects/items/PickedItemResource.gd" id="2_d1by5"]
+
+[resource]
+script = ExtResource("2_d1by5")
+id = "ribbon_blue"
+name = "Голубой хадак"
+icon = ExtResource("1_u3bwj")
+rarity = "Редкий"
+price = 10
+description = "Голубой, как небо. Дарует гармонию и спокойствие, если повязать на коновязь."
+metadata/_custom_type_script = "uid://nyg6rqr2oalr"

@@ -324,13 +324,10 @@ rotation = 3.1415927
 scale = Vector2(1, -1)
 
 [node name="Бочонок3" parent="Забор9" unique_id=173035121 instance=ExtResource("9_wrbtc")]
-position = Vector2(1929, 1890)
-
-[node name="Бочонок4" parent="Забор9" unique_id=1177265422 instance=ExtResource("9_wrbtc")]
-position = Vector2(2274, 1698)
+position = Vector2(1974, 1936)
 
 [node name="Бочонок5" parent="Забор9" unique_id=198944647 instance=ExtResource("9_wrbtc")]
-position = Vector2(1844.9999, 1937.9999)
+position = Vector2(1870.9999, 1965.9999)
 scale = Vector2(0.85, 0.85)
 
 [node name="Ворота" parent="Забор9" unique_id=1183562552 instance=ExtResource("10_jhrta")]

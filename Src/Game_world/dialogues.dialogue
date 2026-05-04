@@ -1,10 +1,10 @@
 ~ start
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
+Ярослава: Привет! Это стартовый пример диалога.
+Ярослава: Меня зовут Ярослава.
+- Приятно познакомиться!
+	Волк: О, какие мы вежливые.
+- Красивое имя
+	Хуби: Я тоже так думаю
 - Start again => start
 - End the conversation => END
 Nathan: For more information see the online documentation.

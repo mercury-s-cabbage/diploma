@@ -24,11 +24,11 @@ theme_override_constants/separation = 0
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 4
-theme_override_constants/margin_bottom = 4
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_bottom = 0
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/MarginContainer2" unique_id=1703198754]
-custom_minimum_size = Vector2(40, 40)
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4

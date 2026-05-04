@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://l6akyey0y4bs"]
+
+[ext_resource type="Texture2D" uid="uid://brqxw3w02qkm0" path="res://Src/Game_world/objects/items/images/IMG_3260.PNG" id="1_66ghn"]
+[ext_resource type="Script" uid="uid://nyg6rqr2oalr" path="res://Src/Game_world/objects/items/PickedItemResource.gd" id="1_ds4it"]
+
+[resource]
+script = ExtResource("1_ds4it")
+id = "ribbon_yellow"
+name = "Желтый хадак"
+icon = ExtResource("1_66ghn")
+rarity = "Редкий"
+price = 10
+description = "Желтый хадак символизирует солнце и может принести достаток, если повязать его на коновязь."
+metadata/_custom_type_script = "uid://nyg6rqr2oalr"

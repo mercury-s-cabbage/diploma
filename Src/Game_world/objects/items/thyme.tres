@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cc4ralt62ma76"]
+
+[ext_resource type="Texture2D" uid="uid://bef0bpr34ttdx" path="res://Src/Game_world/objects/items/images/IMG_3267.PNG" id="1_h4xui"]
+[ext_resource type="Script" uid="uid://nyg6rqr2oalr" path="res://Src/Game_world/objects/items/PickedItemResource.gd" id="2_g1kcs"]
+
+[resource]
+script = ExtResource("2_g1kcs")
+id = "thyme"
+name = "Пучок сушеного чабреца"
+icon = ExtResource("1_h4xui")
+price = 8
+description = "И от злых духов защитит, и от кашля, и от неприятного запаха."
+metadata/_custom_type_script = "uid://nyg6rqr2oalr"

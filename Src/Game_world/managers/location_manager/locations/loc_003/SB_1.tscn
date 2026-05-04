@@ -3,6 +3,12 @@
 [ext_resource type="Script" uid="uid://dm3dmb6tlgja3" path="res://Src/Game_world/managers/location_manager/locations/loc_003/sb_1.gd" id="1_aachs"]
 [ext_resource type="Texture2D" uid="uid://c4ho5p61pu0p5" path="res://Src/Game_world/managers/location_manager/locations/loc_003/backgrounds/IMG_2672.JPG" id="2_amdgv"]
 [ext_resource type="Texture2D" uid="uid://c6jvvw37ltfqs" path="res://Src/Game_world/environment/houses/images/склад лайн (2).png" id="3_3muq8"]
+[ext_resource type="Texture2D" uid="uid://bn3uh3fk532vr" path="res://Src/Game_world/environment/houses/images/IMG_3050.PNG" id="4_mdnq6"]
+[ext_resource type="PackedScene" uid="uid://dof1cdtdumfep" path="res://Src/Game_world/environment/trees/Ель_1.tscn" id="5_46m0g"]
+[ext_resource type="PackedScene" uid="uid://8u6bi8lrr7dk" path="res://Src/Game_world/environment/trees/Ель_2.tscn" id="6_1bik1"]
+[ext_resource type="PackedScene" uid="uid://b454riybtorj0" path="res://Src/Game_world/environment/trees/Ель_4.tscn" id="7_rf5ug"]
+[ext_resource type="PackedScene" uid="uid://d33rqkb0qhxhg" path="res://Src/Game_world/environment/trees/Ель_3.tscn" id="8_y456p"]
+[ext_resource type="Texture2D" uid="uid://crodwx6ktost2" path="res://Src/Game_world/environment/decor/images/IMG_3078.PNG" id="9_1bik1"]
 
 [node name="Sb1" type="Node2D" unique_id=908777010]
 y_sort_enabled = true
@@ -18,3 +24,30 @@ texture = ExtResource("2_amdgv")
 position = Vector2(3744, 1956)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_3muq8")
+
+[node name="Img3050" type="Sprite2D" parent="." unique_id=261802687]
+position = Vector2(1400, 2648)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("4_mdnq6")
+
+[node name="Ель1" parent="." unique_id=1225936164 instance=ExtResource("5_46m0g")]
+position = Vector2(4504, 200)
+
+[node name="Ель2" parent="." unique_id=1951626880 instance=ExtResource("6_1bik1")]
+position = Vector2(4920, 288)
+
+[node name="Ель4" parent="." unique_id=1260124021 instance=ExtResource("7_rf5ug")]
+position = Vector2(4656, 352)
+
+[node name="Ель3" parent="." unique_id=457219278 instance=ExtResource("8_y456p")]
+position = Vector2(504, 1624)
+
+[node name="Ель5" parent="." unique_id=842149265 instance=ExtResource("6_1bik1")]
+position = Vector2(3016, 3120)
+
+[node name="Ель6" parent="." unique_id=993366963 instance=ExtResource("5_46m0g")]
+position = Vector2(3224, 1528)
+
+[node name="Img3078" type="Sprite2D" parent="." unique_id=1237006915]
+position = Vector2(2640, 2408)
+texture = ExtResource("9_1bik1")

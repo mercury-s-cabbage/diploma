@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://rua4a1g8jss0"]
+
+[ext_resource type="Texture2D" uid="uid://33a01xs1dpib" path="res://Src/Game_world/objects/items/images/IMG_3270.PNG" id="1_7g8o6"]
+[ext_resource type="Script" uid="uid://nyg6rqr2oalr" path="res://Src/Game_world/objects/items/PickedItemResource.gd" id="2_oujny"]
+
+[resource]
+script = ExtResource("2_oujny")
+id = "shagai_classic"
+name = "Кости шагай"
+icon = ExtResource("1_7g8o6")
+rarity = "Редкий"
+price = 11
+description = "Бараньи лодыжки используются как кости для игры в шагай наадан. Коли рука у тебя счастливая, принесут деньжат, а коли нет — наваристый суп..."
+metadata/_custom_type_script = "uid://nyg6rqr2oalr"

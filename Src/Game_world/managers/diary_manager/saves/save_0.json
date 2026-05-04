@@ -1,19 +1,17 @@
 {
 	"herbs": {
-		"thyme":
-			{
-				"1": false,
-				"2": false,
-			},
-		"chamomile": 
-			{
-				"1": false,
-				"2": false,
-			},
-		"calendula": 
-			{
-				"1": false,
-				"2": false,
-			},
+		"0": true,
+		"calendula": {
+			"1": false,
+			"2": false
+		},
+		"chamomile": {
+			"1": false,
+			"2": false
+		},
+		"thyme": {
+			"1": false,
+			"2": false
+		}
 	}
 }

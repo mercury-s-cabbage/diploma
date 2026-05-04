@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://cqasv6dc3yfef"]
 
-[ext_resource type="Texture2D" uid="uid://dteca4itgohp0" path="res://Src/Game_world/environment/decor/images/IMG_1742 (2).PNG" id="1_whkyr"]
+[ext_resource type="Texture2D" uid="uid://deu5xlh87i5mh" path="res://Src/Game_world/environment/decor/images/gates.PNG" id="1_x251c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ioodm"]
-texture = ExtResource("1_whkyr")
+texture = ExtResource("1_x251c")
 texture_region_size = Vector2i(56, 33)
 2:0/0 = 0
 2:0/0/y_sort_origin = 378
@@ -120,6 +120,13 @@ texture_region_size = Vector2i(56, 33)
 6:14/0 = 0
 6:14/0/y_sort_origin = 8
 6:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-28, -16.5, -28, -4.125, -4.666668, 8.25, 7, 2.75)
+5:1/0 = 0
+1:10/0 = 0
+1:11/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+4:13/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_bhnrn"]
 tile_shape = 1
