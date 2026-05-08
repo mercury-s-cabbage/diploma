@@ -10,4 +10,8 @@ name = "Пучок сушеного чабреца"
 icon = ExtResource("1_h4xui")
 price = 8
 description = "И от злых духов защитит, и от кашля, и от неприятного запаха."
+stats = {
+"Качество": "10",
+"Редкость": "Обычный"
+}
 metadata/_custom_type_script = "uid://nyg6rqr2oalr"

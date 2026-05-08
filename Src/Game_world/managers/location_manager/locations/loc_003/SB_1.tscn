@@ -9,6 +9,17 @@
 [ext_resource type="PackedScene" uid="uid://b454riybtorj0" path="res://Src/Game_world/environment/trees/Ель_4.tscn" id="7_rf5ug"]
 [ext_resource type="PackedScene" uid="uid://d33rqkb0qhxhg" path="res://Src/Game_world/environment/trees/Ель_3.tscn" id="8_y456p"]
 [ext_resource type="Texture2D" uid="uid://crodwx6ktost2" path="res://Src/Game_world/environment/decor/images/IMG_3078.PNG" id="9_1bik1"]
+[ext_resource type="PackedScene" uid="uid://d2htis428hij" path="res://Src/Game_world/environment/decor/забор.tscn" id="9_rf5ug"]
+[ext_resource type="PackedScene" uid="uid://c7t8hf0hfsom1" path="res://Src/Game_world/environment/decor/бочонок.tscn" id="11_y456p"]
+[ext_resource type="Texture2D" uid="uid://b5ch6fwi8532h" path="res://Src/Game_world/objects/characters/temporary/photo_2026-05-04_21-15-59-Photoroom.png" id="12_og2p6"]
+[ext_resource type="Texture2D" uid="uid://b11b4rxc4irsr" path="res://Src/Game_world/objects/characters/temporary/photo_2026-05-04_21-02-52-Photoroom.png" id="13_atr7c"]
+[ext_resource type="Texture2D" uid="uid://cqy6m6tyagsi2" path="res://Src/Game_world/objects/characters/temporary/photo_2026-05-04_21-25-27-Photoroom.png" id="14_qmxbe"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_atr7c"]
+radius = 328.09753
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qmxbe"]
+radius = 218.3575
 
 [node name="Sb1" type="Node2D" unique_id=908777010]
 y_sort_enabled = true
@@ -20,18 +31,17 @@ y_sort_enabled = true
 position = Vector2(2500, 1750)
 texture = ExtResource("2_amdgv")
 
-[node name="СкладЛайн(2)" type="Sprite2D" parent="." unique_id=1406285535]
-position = Vector2(3744, 1956)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_3muq8")
-
 [node name="Img3050" type="Sprite2D" parent="." unique_id=261802687]
-position = Vector2(1400, 2648)
+position = Vector2(1088.0001, 2576)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("4_mdnq6")
 
 [node name="Ель1" parent="." unique_id=1225936164 instance=ExtResource("5_46m0g")]
 position = Vector2(4504, 200)
+
+[node name="Ель17" parent="." unique_id=1746359464 instance=ExtResource("5_46m0g")]
+position = Vector2(280, 1880)
+scale = Vector2(0.8, 0.8)
 
 [node name="Ель2" parent="." unique_id=1951626880 instance=ExtResource("6_1bik1")]
 position = Vector2(4920, 288)
@@ -40,14 +50,170 @@ position = Vector2(4920, 288)
 position = Vector2(4656, 352)
 
 [node name="Ель3" parent="." unique_id=457219278 instance=ExtResource("8_y456p")]
-position = Vector2(504, 1624)
+position = Vector2(496.00003, 2280)
+scale = Vector2(-1.2, 1.2)
+
+[node name="Ель21" parent="." unique_id=1298465575 instance=ExtResource("8_y456p")]
+position = Vector2(4792, 3400)
+scale = Vector2(-1.2, 1.2)
+
+[node name="Ель22" parent="." unique_id=1575166742 instance=ExtResource("8_y456p")]
+position = Vector2(4792, 3400)
+scale = Vector2(-1.2, 1.2)
+
+[node name="Ель13" parent="." unique_id=651860637 instance=ExtResource("8_y456p")]
+position = Vector2(176, 3400.0002)
+scale = Vector2(1.2, 1.2)
+
+[node name="Ель10" parent="." unique_id=1858089177 instance=ExtResource("8_y456p")]
+position = Vector2(184, 1256)
 
 [node name="Ель5" parent="." unique_id=842149265 instance=ExtResource("6_1bik1")]
 position = Vector2(3016, 3120)
 
+[node name="Ель14" parent="." unique_id=49763771 instance=ExtResource("6_1bik1")]
+position = Vector2(56, 2328)
+
 [node name="Ель6" parent="." unique_id=993366963 instance=ExtResource("5_46m0g")]
-position = Vector2(3224, 1528)
+position = Vector2(1472, 552)
+
+[node name="Ель15" parent="." unique_id=942132199 instance=ExtResource("5_46m0g")]
+position = Vector2(72, 1640)
+
+[node name="Ель8" parent="." unique_id=1198574722 instance=ExtResource("5_46m0g")]
+position = Vector2(160, 464)
+
+[node name="Ель7" parent="." unique_id=104941796 instance=ExtResource("5_46m0g")]
+position = Vector2(3136, 416)
+scale = Vector2(-1, 1)
+
+[node name="Ель16" parent="." unique_id=262898517 instance=ExtResource("5_46m0g")]
+position = Vector2(2032, 1280)
+scale = Vector2(-1, 1)
+
+[node name="Ель18" parent="." unique_id=56827459 instance=ExtResource("5_46m0g")]
+position = Vector2(1024, 232)
+scale = Vector2(-1, 1)
+
+[node name="Ель11" parent="." unique_id=1353393366 instance=ExtResource("5_46m0g")]
+position = Vector2(632, 336)
+scale = Vector2(-1, 1)
+
+[node name="Ель9" parent="." unique_id=1299554364 instance=ExtResource("5_46m0g")]
+position = Vector2(712, 1128)
+scale = Vector2(-1, 1)
+
+[node name="Ель12" parent="." unique_id=239211863 instance=ExtResource("5_46m0g")]
+position = Vector2(472, 760)
+scale = Vector2(-1.3, 1.3)
+
+[node name="Ель19" parent="." unique_id=448123738 instance=ExtResource("5_46m0g")]
+position = Vector2(4288, 3408)
+scale = Vector2(-1.3, 1.3)
+
+[node name="Ель20" parent="." unique_id=1686921815 instance=ExtResource("5_46m0g")]
+position = Vector2(4728.0005, 2912.0002)
+scale = Vector2(1.3, 1.3)
+
+[node name="Ель23" parent="." unique_id=968356638 instance=ExtResource("5_46m0g")]
+position = Vector2(2496.0005, 3408.0002)
+scale = Vector2(1.3, 1.3)
 
 [node name="Img3078" type="Sprite2D" parent="." unique_id=1237006915]
-position = Vector2(2640, 2408)
+position = Vector2(3016, 2160)
 texture = ExtResource("9_1bik1")
+
+[node name="Забор" parent="." unique_id=246540053 instance=ExtResource("9_rf5ug")]
+position = Vector2(3880, 944)
+
+[node name="Забор2" parent="." unique_id=434040717 instance=ExtResource("9_rf5ug")]
+position = Vector2(4136, 1080)
+
+[node name="Забор12" parent="." unique_id=129731661 instance=ExtResource("9_rf5ug")]
+position = Vector2(3088, 2008)
+
+[node name="Забор13" parent="." unique_id=1845979669 instance=ExtResource("9_rf5ug")]
+position = Vector2(2312, 1592)
+
+[node name="Забор14" parent="." unique_id=1826482719 instance=ExtResource("9_rf5ug")]
+position = Vector2(2560, 1728)
+
+[node name="Забор3" parent="." unique_id=1056005763 instance=ExtResource("9_rf5ug")]
+position = Vector2(4384, 1217)
+
+[node name="Забор4" parent="." unique_id=707892582 instance=ExtResource("9_rf5ug")]
+position = Vector2(4632, 1352)
+
+[node name="Забор5" parent="." unique_id=129583832 instance=ExtResource("9_rf5ug")]
+position = Vector2(3584, 880)
+scale = Vector2(-1, 1)
+
+[node name="Забор6" parent="." unique_id=1538274111 instance=ExtResource("9_rf5ug")]
+position = Vector2(3328, 1016)
+scale = Vector2(-1, 1)
+
+[node name="Забор7" parent="." unique_id=1919243756 instance=ExtResource("9_rf5ug")]
+position = Vector2(3064, 1144)
+scale = Vector2(-1, 1)
+
+[node name="Забор8" parent="." unique_id=1410268500 instance=ExtResource("9_rf5ug")]
+position = Vector2(2496, 1456)
+scale = Vector2(-1, 1)
+
+[node name="Забор9" parent="." unique_id=1476787692 instance=ExtResource("9_rf5ug")]
+position = Vector2(4824, 1480)
+scale = Vector2(-1, 1)
+
+[node name="Забор10" parent="." unique_id=1758225255 instance=ExtResource("9_rf5ug")]
+position = Vector2(4576, 1608)
+scale = Vector2(-1, 1)
+
+[node name="Забор11" parent="." unique_id=1630191019 instance=ExtResource("9_rf5ug")]
+position = Vector2(4320, 1752)
+scale = Vector2(-1, 1)
+
+[node name="СкладЛайн(2)" type="Sprite2D" parent="Забор11" unique_id=1406285535]
+position = Vector2(592, 192)
+rotation = 3.1415927
+scale = Vector2(0.5, -0.5)
+texture = ExtResource("3_3muq8")
+
+[node name="Бочонок" parent="." unique_id=173035121 instance=ExtResource("11_y456p")]
+position = Vector2(2776, 1344)
+
+[node name="Бочонок2" parent="." unique_id=1538638874 instance=ExtResource("11_y456p")]
+position = Vector2(3816, 2440)
+
+[node name="Бочонок3" parent="." unique_id=602513256 instance=ExtResource("11_y456p")]
+position = Vector2(3712, 2488)
+
+[node name="Photo20260504211559Photoroom" type="Sprite2D" parent="." unique_id=497696176]
+position = Vector2(3775.9998, 879.99994)
+scale = Vector2(0.1951753, 0.1951753)
+texture = ExtResource("12_og2p6")
+
+[node name="Photo20260504210252Photoroom" type="Sprite2D" parent="." unique_id=1736777]
+position = Vector2(1336, 2888.0002)
+scale = Vector2(0.23086135, 0.23086135)
+texture = ExtResource("13_atr7c")
+
+[node name="quest_2_zone" type="Area2D" parent="." unique_id=1293785897]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="quest_2_zone" unique_id=806153949]
+position = Vector2(1032, 496)
+shape = SubResource("CircleShape2D_atr7c")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1988279434]
+position = Vector2(40, 640)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=213641803]
+position = Vector2(2120, 1952)
+shape = SubResource("CircleShape2D_qmxbe")
+
+[node name="Photo20260504212527Photoroom" type="Sprite2D" parent="." unique_id=1679284599]
+position = Vector2(2141.6563, 2394.3438)
+scale = Vector2(0.24616225, 0.24616225)
+texture = ExtResource("14_qmxbe")
+
+[connection signal="body_entered" from="quest_2_zone" to="." method="_on_quest_2_zone_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

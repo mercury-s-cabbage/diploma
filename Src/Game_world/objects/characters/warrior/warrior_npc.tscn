@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://cqnemu0cwhqsp"]
+
+[ext_resource type="Script" uid="uid://qie3c0bi7stp" path="res://Src/Game_world/objects/characters/warrior/sub_viewport.gd" id="1_n3i72"]
+[ext_resource type="PackedScene" uid="uid://itu00g3myalv" path="res://Src/Game_world/objects/characters/warrior/warrior.glb" id="1_rbb4f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xd7k4"]
+radius = 54.0
+
+[node name="ch" type="CharacterBody2D" unique_id=1814981563]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=94717087]
+shape = SubResource("CircleShape2D_xd7k4")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1705187669]
+offset_left = -253.0
+offset_top = -444.0
+offset_right = 259.0
+offset_bottom = 68.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=461643393]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+script = ExtResource("1_n3i72")
+
+[node name="warrior_npc" parent="SubViewportContainer/SubViewport" unique_id=1717199268 instance=ExtResource("1_rbb4f")]
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=513106313]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7553332, 1.4863279)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport" unique_id=1985277135]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7272037, 1.4628302)
+
+[editable path="SubViewportContainer/SubViewport/warrior_npc"]

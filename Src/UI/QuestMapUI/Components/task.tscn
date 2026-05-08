@@ -2,47 +2,59 @@
 
 [ext_resource type="Script" uid="uid://bv8oycghejyc5" path="res://Src/UI/QuestMapUI/Components/task.gd" id="1_mjdab"]
 [ext_resource type="LabelSettings" uid="uid://dn0yslhq6ky0k" path="res://Src/UI/res/Label_settings/Header_label2.tres" id="1_s80pg"]
+[ext_resource type="StyleBox" uid="uid://bjxvpnqi60f6s" path="res://Src/UI/res/Textures/yaroslava_box_texture.tres" id="2_37b6f"]
 [ext_resource type="LabelSettings" uid="uid://dwfwdkejuruxp" path="res://Src/UI/res/Label_settings/text_settings.tres" id="2_mjdab"]
 [ext_resource type="LabelSettings" uid="uid://bjfnjkylgu5f3" path="res://Src/UI/res/Label_settings/task_description.tres" id="3_37b6f"]
 
-[node name="Task" type="Control" unique_id=452446161]
-layout_mode = 3
-anchors_preset = 10
-anchor_right = 1.0
-offset_right = -704.0
-offset_bottom = 304.0
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_37b6f"]
+content_margin_left = 4.0
+content_margin_top = 0.0
+content_margin_right = 4.0
+content_margin_bottom = 0.0
+color = Color(1, 1, 1, 1)
+
+[node name="Panel" type="PanelContainer" unique_id=1733181706]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -162.0
+offset_right = 162.0
+offset_bottom = 382.0
 grow_horizontal = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("2_37b6f")
 script = ExtResource("1_mjdab")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1890614550]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 110.0
-grow_horizontal = 2
+layout_mode = 2
+size_flags_vertical = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=631763031]
 layout_mode = 2
 theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 20
+theme_override_constants/margin_top = 15
 
 [node name="Name" type="Label" parent="VBoxContainer/MarginContainer" unique_id=2115043641]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(300, 30)
 layout_mode = 2
 size_flags_vertical = 0
 text = "Название задания из нескольких строк"
 label_settings = ExtResource("1_s80pg")
+horizontal_alignment = 1
 autowrap_mode = 3
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=148895907]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_37b6f")
 
 [node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=1412314672]
 layout_mode = 2
 theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
+theme_override_constants/margin_top = 5
 
 [node name="main_text" type="Label" parent="VBoxContainer/MarginContainer2" unique_id=253301782]
-custom_minimum_size = Vector2(0, 30)
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 text = "Основной текст задания большого размера, чтобы было удобно смотреть изменения при масштабировании окна"
 label_settings = ExtResource("2_mjdab")
@@ -52,9 +64,11 @@ autowrap_mode = 3
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 0
+theme_override_constants/margin_bottom = 10
 
 [node name="add_text" type="Label" parent="VBoxContainer/MarginContainer3" unique_id=1941056009]
-custom_minimum_size = Vector2(0, 30)
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 text = "Основной текст задания большого размера, чтобы было удобно смотреть изменения при масштабировании окна"
 label_settings = ExtResource("3_37b6f")

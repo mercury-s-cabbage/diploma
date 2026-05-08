@@ -16,7 +16,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		var baloon = preload("res://addons/dialogue_manager/user_balloons/balloon.tscn")
 		EventBus.area_entered.emit("main_building")
-		DialogueManager.show_dialogue_balloon_scene(baloon, load("res://Src/Game_world/dialogues.dialogue"))
+		#DialogueManager.show_dialogue_balloon_scene(baloon, load("res://Src/Game_world/dialogues.dialogue"))
 
 
 func _on_transparency_zone_body_entered(body: Node2D) -> void:

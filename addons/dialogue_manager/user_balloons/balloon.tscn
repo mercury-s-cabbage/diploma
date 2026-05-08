@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
 [ext_resource type="StyleBox" uid="uid://b7hhrp6sfpvau" path="res://Src/UI/res/Textures/base_box_texture.tres" id="3_adiul"]
 [ext_resource type="FontFile" uid="uid://di5agfh20xmw2" path="res://Src/UI/res/Fonts/Bainsley_Roman.otf" id="3_layeh"]
+[ext_resource type="Texture2D" uid="uid://mhjv4paldwg1" path="res://Src/UI/res/images/Rectangle 44.png" id="4_layeh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_layeh"]
 shader = ExtResource("2_adiul")
@@ -71,6 +72,13 @@ MarginContainer/constants/margin_left = 30
 MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 15
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_qkmqt")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nom4j"]
+texture = ExtResource("4_layeh")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
 
 [sub_resource type="Animation" id="Animation_nlsx6"]
 length = 0.001
@@ -157,7 +165,7 @@ grow_vertical = 0
 clip_children = 2
 layout_mode = 2
 mouse_filter = 1
-theme_override_styles/panel = ExtResource("3_adiul")
+theme_override_styles/panel = SubResource("StyleBoxTexture_nom4j")
 
 [node name="MarginContainer" type="MarginContainer" parent="Balloon/MarginContainer/PanelContainer" unique_id=1030936092]
 layout_mode = 2
@@ -174,15 +182,18 @@ unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 text = "Character"
 fit_content = true
 scroll_active = false
+tab_size = 10
 
 [node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1225160028 instance=ExtResource("2_a8ve6")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 25
 text = "Dialogue..."
 
 [node name="Control" type="Control" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1162966119]
@@ -201,15 +212,16 @@ autoplay = &"progress"
 [node name="ResponsesMenu" type="VBoxContainer" parent="Balloon" unique_id=966297223 node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -581.0
+offset_left = -290.5
 offset_top = -35.0
+offset_right = 290.5
 offset_bottom = 35.0
-grow_horizontal = 0
+grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 2

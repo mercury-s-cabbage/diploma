@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cs18pyfycbhlq"]
+
+[ext_resource type="Script" uid="uid://dgp0ludos5ejo" path="res://Src/UI/Additional/accepted_quest.gd" id="1_pns8m"]
+[ext_resource type="StyleBox" uid="uid://558ab2lt46ec" path="res://Src/UI/res/Textures/focus_box_texture.tres" id="2_ac5gg"]
+[ext_resource type="LabelSettings" uid="uid://cdw3155hncd0p" path="res://Src/UI/res/Label_settings/Header_label.tres" id="6_jfw3h"]
+
+[node name="AcceptedQuest" type="CanvasLayer" unique_id=1720462630]
+script = ExtResource("1_pns8m")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1806835683]
+custom_minimum_size = Vector2(500, 300)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -256.0
+offset_right = 256.0
+offset_bottom = 300.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_top = 30
+
+[node name="Panel" type="Panel" parent="MarginContainer" unique_id=356868839]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_ac5gg")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer" unique_id=1196655336]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="quest_name" type="Label" parent="MarginContainer/MarginContainer" unique_id=117811307]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+text = "Принят квест"
+label_settings = ExtResource("6_jfw3h")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

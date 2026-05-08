@@ -17,6 +17,7 @@ func _ready():
 	EventBus.save_created.connect(_on_save_created)
 	EventBus.save_game.connect(_on_game_saved)
 	EventBus.area_entered.connect(_on_area_entered)
+	EventBus.item_acquired.connect(_on_item_acquired)
 	EventBus.start_quest.connect(_on_start_quest)
 
 func _on_save_setted(save_id: String):
@@ -206,6 +207,12 @@ func end_quest(quest_id: String):
 	EventBus.quest_ended.emit(quest_id)
 	EventBus.update_quest_ui.emit(progress)
 	_on_game_saved()
+	
+func _on_item_acquired(item: ItemData, count: int, instance_id: String):
+	if not tracked_signals.has("_on_item_acquired"):
+		return
+		
+	print("quest_step")
 
 func _on_area_entered(zone_id: String):
 	if not tracked_signals.has("_on_area_entered"):

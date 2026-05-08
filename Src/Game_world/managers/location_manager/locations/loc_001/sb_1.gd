@@ -28,6 +28,5 @@ func _save_location(loc_id):
 		Utils.save_to_json(data_path, current_state)
 		
 func _on_item_acquired(_item: ItemData, _count: int, instance_id: String):
-	if current_state.picked_items[instance_id]:
+	if current_state.picked_items.has(instance_id) and current_state.picked_items[instance_id]:
 		current_state.picked_items[instance_id] = false
-		print("item add")

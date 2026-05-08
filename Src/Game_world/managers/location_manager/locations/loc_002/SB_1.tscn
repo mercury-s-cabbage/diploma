@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://c7t8hf0hfsom1" path="res://Src/Game_world/environment/decor/бочонок.tscn" id="11_7ipm5"]
 [ext_resource type="PackedScene" uid="uid://daeebrminxas5" path="res://Src/Game_world/objects/items/branch.tscn" id="12_i3q7c"]
 [ext_resource type="PackedScene" uid="uid://bcr4i70k4s2to" path="res://Src/Game_world/environment/decor/сэргэ.tscn" id="13_7ipm5"]
+[ext_resource type="Texture2D" uid="uid://dllk1fm5u725v" path="res://Src/Game_world/environment/decor/images/IMG_3077.PNG" id="14_i3q7c"]
+[ext_resource type="Texture2D" uid="uid://d0fr6nmnei2b8" path="res://Src/Game_world/objects/characters/temporary/photo_2026-05-04_21-19-03-Photoroom.png" id="15_xwtmq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r78sl"]
 size = Vector2(5118.1084, 198.28345)
@@ -23,11 +25,11 @@ size = Vector2(251.45059, 3613.7703)
 [sub_resource type="CircleShape2D" id="CircleShape2D_rmd0y"]
 radius = 626.6076
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rmd0y"]
-size = Vector2(1391.1019, 1043.9242)
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_bstin"]
 radius = 723.9013
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xwtmq"]
+radius = 291.219
 
 [node name="Sb1" type="Node2D" unique_id=1049502826]
 y_sort_enabled = true
@@ -256,15 +258,6 @@ shape = SubResource("RectangleShape2D_bstin")
 position = Vector2(4792.015, 2344.408)
 shape = SubResource("CircleShape2D_rmd0y")
 
-[node name="field" type="Area2D" parent="." unique_id=749167868]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="field" unique_id=953807220]
-position = Vector2(3136.4941, 1537.8854)
-rotation = 0.64481807
-scale = Vector2(0.90330565, 1)
-skew = 0.34906584
-shape = SubResource("RectangleShape2D_rmd0y")
-
 [node name="banya" type="Area2D" parent="." unique_id=1486979390]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="banya" unique_id=1402991931]
@@ -285,22 +278,48 @@ position = Vector2(2220.3198, 663.23193)
 position = Vector2(2180.7563, 721.3014)
 scale = Vector2(0.8, 0.8)
 
-[node name="PickedItemBase" parent="." unique_id=850774426 instance=ExtResource("12_i3q7c")]
+[node name="Branch3" parent="." unique_id=850774426 instance=ExtResource("12_i3q7c")]
 position = Vector2(1756.7448, 1854.2639)
+instance_id = "Branch3"
 
-[node name="PickedItemBase2" parent="." unique_id=1514591378 instance=ExtResource("12_i3q7c")]
+[node name="Branch4" parent="." unique_id=1514591378 instance=ExtResource("12_i3q7c")]
 position = Vector2(2208.4785, 879.4382)
 rotation = 2.146755
 scale = Vector2(0.9, 0.9)
+instance_id = "Branch4"
 
-[node name="PickedItemBase3" parent="." unique_id=2107317137 instance=ExtResource("12_i3q7c")]
+[node name="Branch5" parent="." unique_id=2107317137 instance=ExtResource("12_i3q7c")]
 position = Vector2(2937.4692, 519.88336)
 rotation = -0.715585
 scale = Vector2(1.1, 1.1)
+instance_id = "Branch5"
 
 [node name="Сэргэ" parent="." unique_id=1887882670 instance=ExtResource("13_7ipm5")]
-position = Vector2(1667.9395, 960.0473)
+position = Vector2(4281.4385, 3157.1792)
 scale = Vector2(0.5, 0.5)
 
-[connection signal="body_entered" from="field" to="." method="_on_area_2d_body_entered"]
+[node name="Сэргэ2" parent="." unique_id=228647449 instance=ExtResource("13_7ipm5")]
+position = Vector2(4097.639, 3054.2515)
+scale = Vector2(0.5, 0.5)
+
+[node name="Сэргэ3" parent="." unique_id=2143185035 instance=ExtResource("13_7ipm5")]
+position = Vector2(3921.1921, 2958.676)
+scale = Vector2(0.5, 0.5)
+
+[node name="Img3077" type="Sprite2D" parent="." unique_id=1390274482]
+position = Vector2(3885.0051, 3050.3777)
+texture = ExtResource("14_i3q7c")
+
+[node name="Photo20260504211903Photoroom" type="Sprite2D" parent="." unique_id=2140129568]
+position = Vector2(654.67883, 1149.6628)
+scale = Vector2(0.20219056, 0.20219056)
+texture = ExtResource("15_xwtmq")
+
+[node name="001" type="Area2D" parent="." unique_id=1941657825]
+
+[node name="001_quest_zone" type="CollisionShape2D" parent="001" unique_id=250956159]
+position = Vector2(2991.8672, 2257.636)
+shape = SubResource("CircleShape2D_xwtmq")
+
 [connection signal="body_entered" from="banya" to="." method="_on_banya_body_entered"]
+[connection signal="body_entered" from="001" to="." method="_on_001_body_entered"]

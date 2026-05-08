@@ -1,1 +1,7 @@
-{}
+{
+	"picked_items": {
+		"Branch3": false,
+		"Branch4": false,
+		"Branch5": true
+	}
+}

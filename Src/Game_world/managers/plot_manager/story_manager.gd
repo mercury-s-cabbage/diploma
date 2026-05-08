@@ -6,10 +6,12 @@ const Utils = preload("res://Src/Game_world/managers/utils.gd")
 
 var default_sb_file: String = "res://Src/Game_world/managers/plot_manager/sb_triggers_default.json"
 var sb_info: Dictionary
+var sb_name: String
 
 func _ready() -> void:
 	sb_info = Utils.load_from_json(default_sb_file)
 	StoryBeat = define_current_sb()
+	sb_name = sb_info[str(StoryBeat)]["name"]
 	current_triggers = sb_info[str(StoryBeat+1)]["depends"]
 	EventBus.quest_ended.connect(_on_quest_ended)
 
@@ -37,5 +39,6 @@ func _on_quest_ended(quest_id: String):
 func change_sb(new_sb: int):
 	sb_info[str(StoryBeat)]["status"] = 2
 	StoryBeat = new_sb
+	sb_name = sb_info[str(StoryBeat)]["name"]
 	sb_info[str(new_sb)]["status"] = 1
 	

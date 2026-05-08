@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cfwvyvlv7pskn"]
+
+[ext_resource type="StyleBox" uid="uid://baocbncn7tjfb" path="res://Src/UI/res/Textures/yaroslava_button.tres" id="1_5g4p5"]
+
+[node name="HeroChange" type="CanvasLayer" unique_id=1019820244]
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2098802720]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_right = 40.0
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1760697438]
+custom_minimum_size = Vector2(40, 180)
+layout_mode = 2
+alignment = 2
+
+[node name="Yaroslava" type="Button" parent="MarginContainer/VBoxContainer" unique_id=499041018]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_styles/normal = ExtResource("1_5g4p5")
+
+[node name="Yaroslava2" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1002960115]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_styles/normal = ExtResource("1_5g4p5")
+
+[node name="Yaroslava3" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1109287968]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_styles/normal = ExtResource("1_5g4p5")

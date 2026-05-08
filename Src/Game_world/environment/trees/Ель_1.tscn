@@ -7,7 +7,6 @@ radius = 27.073973
 
 [node name="Ель1" type="Node2D" unique_id=1225936164]
 z_as_relative = false
-y_sort_enabled = true
 
 [node name="Ель1" type="Sprite2D" parent="." unique_id=627276906]
 z_as_relative = false

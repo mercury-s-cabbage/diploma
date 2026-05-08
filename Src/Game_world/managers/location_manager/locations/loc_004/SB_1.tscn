@@ -3,8 +3,22 @@
 [ext_resource type="Script" uid="uid://bmsda3u6bik32" path="res://Src/Game_world/managers/location_manager/locations/loc_004/sb_1.gd" id="1_jgka6"]
 [ext_resource type="Texture2D" uid="uid://umhwaeeoy35r" path="res://Src/Game_world/managers/location_manager/locations/loc_004/backgrounds/IMG_2673.JPG" id="2_0j124"]
 [ext_resource type="Texture2D" uid="uid://bs3an0pxp7hm1" path="res://Src/Game_world/environment/houses/images/учительский корпус (2).png" id="3_le5hp"]
+[ext_resource type="PackedScene" uid="uid://d33rqkb0qhxhg" path="res://Src/Game_world/environment/trees/Ель_3.tscn" id="4_yxds7"]
+[ext_resource type="PackedScene" uid="uid://8u6bi8lrr7dk" path="res://Src/Game_world/environment/trees/Ель_2.tscn" id="5_u8do8"]
+[ext_resource type="PackedScene" uid="uid://dof1cdtdumfep" path="res://Src/Game_world/environment/trees/Ель_1.tscn" id="6_6e3oa"]
+[ext_resource type="PackedScene" uid="uid://b454riybtorj0" path="res://Src/Game_world/environment/trees/Ель_4.tscn" id="7_gby56"]
+[ext_resource type="PackedScene" uid="uid://cqasv6dc3yfef" path="res://Src/Game_world/environment/decor/ворота.tscn" id="8_6e3oa"]
+[ext_resource type="PackedScene" uid="uid://d2htis428hij" path="res://Src/Game_world/environment/decor/забор.tscn" id="9_gby56"]
+[ext_resource type="Texture2D" uid="uid://csvy031hydsgb" path="res://Src/Game_world/objects/characters/temporary/photo_2026-05-04_20-53-19-Photoroom.png" id="10_gby56"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gby56"]
+size = Vector2(5008, 250)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0830g"]
+size = Vector2(245, 3456)
 
 [node name="Sb1" type="Node2D" unique_id=310812620]
+y_sort_enabled = true
 script = ExtResource("1_jgka6")
 
 [node name="Img2673" type="Sprite2D" parent="." unique_id=652926892]
@@ -15,3 +29,200 @@ texture = ExtResource("2_0j124")
 [node name="УчительскийКорпус(2)" type="Sprite2D" parent="." unique_id=715224624]
 position = Vector2(1336, 1040)
 texture = ExtResource("3_le5hp")
+
+[node name="Photo20260504205319Photoroom" type="Sprite2D" parent="." unique_id=83551423]
+position = Vector2(2600, 472)
+scale = Vector2(0.1792269, 0.1792269)
+texture = ExtResource("10_gby56")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=669770001]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=19080532]
+position = Vector2(2496, 3376)
+shape = SubResource("RectangleShape2D_gby56")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1527190469]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=955099492]
+position = Vector2(4882.5, 1688)
+shape = SubResource("RectangleShape2D_0830g")
+
+[node name="Лес" type="Node2D" parent="." unique_id=526332607]
+y_sort_enabled = true
+
+[node name="Ель3" parent="Лес" unique_id=457219278 instance=ExtResource("4_yxds7")]
+position = Vector2(4648, 3360)
+
+[node name="Ель25" parent="Лес" unique_id=1738425385 instance=ExtResource("4_yxds7")]
+position = Vector2(4648, 1760)
+
+[node name="Ель12" parent="Лес" unique_id=513564745 instance=ExtResource("4_yxds7")]
+position = Vector2(768, 3432)
+
+[node name="Ель13" parent="Лес" unique_id=2022437577 instance=ExtResource("4_yxds7")]
+position = Vector2(3176, 3176)
+
+[node name="Ель2" parent="Лес" unique_id=1951626880 instance=ExtResource("5_u8do8")]
+position = Vector2(4240, 3328)
+
+[node name="Ель17" parent="Лес" unique_id=1643825918 instance=ExtResource("5_u8do8")]
+position = Vector2(4816, 2232)
+
+[node name="Ель23" parent="Лес" unique_id=1185370400 instance=ExtResource("5_u8do8")]
+position = Vector2(2104, 2528)
+scale = Vector2(0.8, 1)
+
+[node name="Ель26" parent="Лес" unique_id=1010940612 instance=ExtResource("5_u8do8")]
+position = Vector2(2544, 2816)
+scale = Vector2(0.8, 1)
+
+[node name="Ель18" parent="Лес" unique_id=340427496 instance=ExtResource("5_u8do8")]
+position = Vector2(2904, 1304)
+
+[node name="Ель19" parent="Лес" unique_id=1509181795 instance=ExtResource("5_u8do8")]
+position = Vector2(4832, 272)
+
+[node name="Ель10" parent="Лес" unique_id=1933404642 instance=ExtResource("5_u8do8")]
+position = Vector2(3664.0002, 3360)
+scale = Vector2(1.2, 1.2)
+
+[node name="Ель11" parent="Лес" unique_id=312033231 instance=ExtResource("5_u8do8")]
+position = Vector2(1280.0002, 3384)
+scale = Vector2(1.2, 1.2)
+
+[node name="Ель20" parent="Лес" unique_id=1460442333 instance=ExtResource("5_u8do8")]
+position = Vector2(392, 1968.0002)
+scale = Vector2(1.2, 1.2)
+
+[node name="Ель21" parent="Лес" unique_id=629074952 instance=ExtResource("5_u8do8")]
+position = Vector2(2232, 368)
+scale = Vector2(1.2, 1.2)
+
+[node name="Ель1" parent="Лес" unique_id=1225936164 instance=ExtResource("6_6e3oa")]
+position = Vector2(592, 3096)
+
+[node name="Ель27" parent="Лес" unique_id=1541438546 instance=ExtResource("6_6e3oa")]
+position = Vector2(1112, 2496)
+
+[node name="Ель5" parent="Лес" unique_id=1231131706 instance=ExtResource("6_6e3oa")]
+position = Vector2(3896, 2992.0002)
+scale = Vector2(1.2, 1.2)
+
+[node name="Ель16" parent="Лес" unique_id=1662527867 instance=ExtResource("6_6e3oa")]
+position = Vector2(2808, 3424.0002)
+scale = Vector2(1.5, 1.5)
+
+[node name="Ель15" parent="Лес" unique_id=1050610751 instance=ExtResource("6_6e3oa")]
+position = Vector2(3368, 2784)
+scale = Vector2(1.2, 1.2)
+
+[node name="Ель24" parent="Лес" unique_id=913478953 instance=ExtResource("6_6e3oa")]
+position = Vector2(4224, 1944)
+scale = Vector2(1.2, 1.2)
+
+[node name="Ель6" parent="Лес" unique_id=2011444580 instance=ExtResource("6_6e3oa")]
+position = Vector2(296, 3360.0002)
+rotation = 3.1415927
+scale = Vector2(1.2, -1.2)
+
+[node name="Ель9" parent="Лес" unique_id=499758155 instance=ExtResource("6_6e3oa")]
+position = Vector2(1720, 3368.0002)
+rotation = 3.1415927
+scale = Vector2(1.2, -1.2)
+
+[node name="Ель4" parent="Лес" unique_id=1260124021 instance=ExtResource("7_gby56")]
+position = Vector2(2352, 3168)
+
+[node name="Ель22" parent="Лес" unique_id=2047420759 instance=ExtResource("7_gby56")]
+position = Vector2(4552, 208)
+
+[node name="Ель7" parent="Лес" unique_id=1867408369 instance=ExtResource("7_gby56")]
+position = Vector2(2104, 3216)
+scale = Vector2(1.1, 1.1)
+
+[node name="Ель14" parent="Лес" unique_id=1145939503 instance=ExtResource("7_gby56")]
+position = Vector2(1024, 3160)
+scale = Vector2(1.1, 1.1)
+
+[node name="Ель8" parent="Лес" unique_id=310890962 instance=ExtResource("7_gby56")]
+position = Vector2(1968, 3048)
+
+[node name="Ворота" parent="Лес" unique_id=1183562552 instance=ExtResource("8_6e3oa")]
+position = Vector2(2792, 272)
+
+[node name="Забор" parent="Лес" unique_id=246540053 instance=ExtResource("9_gby56")]
+position = Vector2(3104, 600)
+
+[node name="Забор2" parent="Лес" unique_id=360028736 instance=ExtResource("9_gby56")]
+position = Vector2(3360, 744)
+
+[node name="Забор14" parent="Лес" unique_id=2107188740 instance=ExtResource("9_gby56")]
+position = Vector2(3584, -224)
+
+[node name="Забор15" parent="Лес" unique_id=2005414780 instance=ExtResource("9_gby56")]
+position = Vector2(3840, -80)
+
+[node name="Забор16" parent="Лес" unique_id=1447428147 instance=ExtResource("9_gby56")]
+position = Vector2(4096, 56)
+
+[node name="Забор17" parent="Лес" unique_id=775220198 instance=ExtResource("9_gby56")]
+position = Vector2(4360, 200)
+
+[node name="Забор18" parent="Лес" unique_id=1429532476 instance=ExtResource("9_gby56")]
+position = Vector2(4608, 336)
+
+[node name="Забор3" parent="Лес" unique_id=1540585481 instance=ExtResource("9_gby56")]
+position = Vector2(3616, 896)
+
+[node name="Забор4" parent="Лес" unique_id=1062758058 instance=ExtResource("9_gby56")]
+position = Vector2(2608, 328)
+
+[node name="Забор5" parent="Лес" unique_id=1396069370 instance=ExtResource("9_gby56")]
+position = Vector2(2784, 192)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Забор6" parent="Лес" unique_id=229682570 instance=ExtResource("9_gby56")]
+position = Vector2(3040, 72)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Забор7" parent="Лес" unique_id=893836739 instance=ExtResource("9_gby56")]
+position = Vector2(3288, -72)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Забор11" parent="Лес" unique_id=771238731 instance=ExtResource("9_gby56")]
+position = Vector2(3288, -72)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Забор12" parent="Лес" unique_id=631571601 instance=ExtResource("9_gby56")]
+position = Vector2(3536, -208)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Забор13" parent="Лес" unique_id=1303102611 instance=ExtResource("9_gby56")]
+position = Vector2(3536, -208)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Забор8" parent="Лес" unique_id=1607287662 instance=ExtResource("9_gby56")]
+position = Vector2(4088, 872)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Забор9" parent="Лес" unique_id=1503860819 instance=ExtResource("9_gby56")]
+position = Vector2(4352, 736)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Забор10" parent="Лес" unique_id=1293170841 instance=ExtResource("9_gby56")]
+position = Vector2(4600, 592)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Забор19" parent="Лес" unique_id=29145970 instance=ExtResource("9_gby56")]
+position = Vector2(4856, 464)
+rotation = 3.1415927
+scale = Vector2(1, -1)

@@ -2,7 +2,6 @@
 	"001": {
 		"0": {
 			"area_entered": {
-				"field": 1.0,
 				"main_building": 1.0
 			}
 		},
@@ -11,7 +10,18 @@
 				"banya": 1.0
 			}
 		},
-		"current_step": 0,
+		"current_step": 2,
 		"status": 1
+	},
+	"002": {
+		"0": {
+			"item_aquired": {
+				"goal": 5.0,
+				"total": 0.0,
+				"type": "branch"
+			}
+		},
+		"current_step": 0,
+		"status": 0
 	}
 }

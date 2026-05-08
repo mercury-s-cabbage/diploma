@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cy6j1uy83ojq6"
-path="res://.godot/imported/idle.png-c4b6fd9269037807808e2faeee753680.ctex"
+uid="uid://bti4ias8elgfi"
+path="res://.godot/imported/Баир.png-d5cd05adfdc1cbb5ca053ca9f17174c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Src/Game_world/objects/characters/hero/assets/idle.png"
-dest_files=["res://.godot/imported/idle.png-c4b6fd9269037807808e2faeee753680.ctex"]
+source_file="res://addons/dialogue_manager/user_balloons/sprites/Баир.png"
+dest_files=["res://.godot/imported/Баир.png-d5cd05adfdc1cbb5ca053ca9f17174c4.ctex"]
 
 [params]
 

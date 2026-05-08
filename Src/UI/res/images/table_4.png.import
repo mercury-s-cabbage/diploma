@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvtf7dt20al4c"
-path="res://.godot/imported/hit.png-df0008ed974f09d862822dc925686735.ctex"
+uid="uid://sawhbbaknmsc"
+path="res://.godot/imported/table_4.png-c4430d309e952ac8853e54e160b0ccf9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Src/Game_world/objects/characters/hero/assets/hit.png"
-dest_files=["res://.godot/imported/hit.png-df0008ed974f09d862822dc925686735.ctex"]
+source_file="res://Src/UI/res/images/table_4.png"
+dest_files=["res://.godot/imported/table_4.png-c4430d309e952ac8853e54e160b0ccf9.ctex"]
 
 [params]
 

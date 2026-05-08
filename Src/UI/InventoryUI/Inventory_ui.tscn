@@ -6,7 +6,7 @@
 [ext_resource type="StyleBox" uid="uid://b7hhrp6sfpvau" path="res://Src/UI/res/Textures/base_box_texture.tres" id="2_0bxrf"]
 [ext_resource type="LabelSettings" uid="uid://de1i5peasmwj8" path="res://Src/UI/res/Label_settings/menu_label.tres" id="2_jfugs"]
 [ext_resource type="Texture2D" uid="uid://d272f5ymnigty" path="res://Src/UI/res/images/Rectangle 12.png" id="3_pnvpb"]
-[ext_resource type="FontFile" uid="uid://82q5gje0l353" path="res://Src/UI/res/Fonts/Mookmania.otf" id="5_klcnh"]
+[ext_resource type="FontFile" uid="uid://di5agfh20xmw2" path="res://Src/UI/res/Fonts/Bainsley_Roman.otf" id="5_4g380"]
 [ext_resource type="LabelSettings" uid="uid://dwfwdkejuruxp" path="res://Src/UI/res/Label_settings/text_settings.tres" id="6_4g380"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5oprr"]
@@ -15,8 +15,8 @@ shader_parameter/lod = 2.20400010469
 shader_parameter/darken_strength = 0.61600002926
 
 [sub_resource type="LabelSettings" id="LabelSettings_4g380"]
-font = ExtResource("5_klcnh")
-font_size = 20
+font = ExtResource("5_4g380")
+font_size = 30
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jfugs"]
 texture = ExtResource("1_ylf4w")
@@ -189,9 +189,9 @@ size_flags_horizontal = 3
 [node name="MarginContainer" type="MarginContainer" parent="Main_panel/main_canvas/left_margins/left_canvas/item_description_margin/item_description_canvas/Panel/VBoxContainer2" unique_id=2043881253]
 layout_mode = 2
 theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 20
+theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
+theme_override_constants/margin_bottom = 5
 
 [node name="Item_name" type="Label" parent="Main_panel/main_canvas/left_margins/left_canvas/item_description_margin/item_description_canvas/Panel/VBoxContainer2/MarginContainer" unique_id=1834867670]
 custom_minimum_size = Vector2(0, 40)

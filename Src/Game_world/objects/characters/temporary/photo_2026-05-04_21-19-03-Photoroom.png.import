@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2o2akig8yfv5"
-path="res://.godot/imported/run.png-126b0313feabd24f9044ff9d0ad9a05c.ctex"
+uid="uid://d0fr6nmnei2b8"
+path="res://.godot/imported/photo_2026-05-04_21-19-03-Photoroom.png-85ee519d2043463d36cb2b17f86f3894.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Src/Game_world/objects/characters/hero/assets/run.png"
-dest_files=["res://.godot/imported/run.png-126b0313feabd24f9044ff9d0ad9a05c.ctex"]
+source_file="res://Src/Game_world/objects/characters/temporary/photo_2026-05-04_21-19-03-Photoroom.png"
+dest_files=["res://.godot/imported/photo_2026-05-04_21-19-03-Photoroom.png-85ee519d2043463d36cb2b17f86f3894.ctex"]
 
 [params]
 

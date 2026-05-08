@@ -1,18 +1,37 @@
 {
   "id": "001",
-  "name": "Тестовый квест",
-  "description": "Пробежимся по всем шагам",
-  "k_steps": 2,
+  "name": "Долг платежом красен",
+  "description": "Перед отъездом хорошо бы обновить снаряжение, да провизией закупиться. Жаль, денег на расходы совсем не осталось. Время пройтись по старым знакомым и намекнуть им, что пора вернуть долги",
+  "k_steps": 5,
+  "owner": "Yasia",
   "steps": 
 	{  
 		"0": {
-			"description": "Дойди до главного корпуса",
+			"description": "Поговорить с Русланом",
 			"signals": {
-						  "area_entered": [["main_building"],["field"]]
+						  "area_entered": [["main_building"]]
 						}
 			},
 		"1": {
-			"description": "Дойди до бани",
+			"description": "Поговорить с Баженой",
+			"signals": {
+				  		"area_entered": [["banya"]]
+						}
+			},
+		"3": {
+			"description": "Поговорить с Володей",
+			"signals": {
+				  		"area_entered": [["banya"]]
+						}
+			},
+		"4": {
+			"description": "Поговорить с Баиром",
+			"signals": {
+				  		"area_entered": [["banya"]]
+						}
+			},
+			"4": {
+			"description": "Забрать деньги у Прохора",
 			"signals": {
 				  		"area_entered": [["banya"]]
 						}

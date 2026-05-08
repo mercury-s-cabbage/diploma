@@ -83,6 +83,11 @@ y_sort_enabled = false
 position = Vector2(3338, 1272)
 scale = Vector2(-1.3, 1.3)
 
+[node name="Ель55" parent="Trees" unique_id=1744689926 instance=ExtResource("2_fvsdi")]
+y_sort_enabled = false
+position = Vector2(4750, 3442)
+scale = Vector2(-1.3, 1.3)
+
 [node name="Ель46" parent="Trees" unique_id=894457972 instance=ExtResource("2_fvsdi")]
 y_sort_enabled = false
 position = Vector2(4076.0002, 129)
@@ -150,6 +155,9 @@ scale = Vector2(0.7, 0.7)
 [node name="Ель49" parent="Trees" unique_id=1251226460 instance=ExtResource("4_qpjy5")]
 position = Vector2(700.00006, 2235)
 
+[node name="Ель53" parent="Trees" unique_id=482590568 instance=ExtResource("4_qpjy5")]
+position = Vector2(2226, 3442)
+
 [node name="Ель50" parent="Trees" unique_id=1620089423 instance=ExtResource("5_kqfrr")]
 position = Vector2(116.00003, 2320)
 scale = Vector2(0.7, 0.7)
@@ -157,6 +165,9 @@ scale = Vector2(0.7, 0.7)
 [node name="Ель10" parent="Trees" unique_id=1154296873 instance=ExtResource("5_kqfrr")]
 position = Vector2(1170, 2034.0002)
 scale = Vector2(1.3, 1.3)
+
+[node name="Ель52" parent="Trees" unique_id=1383824740 instance=ExtResource("5_kqfrr")]
+position = Vector2(638, 3467)
 
 [node name="Ель47" parent="Trees" unique_id=826866829 instance=ExtResource("5_kqfrr")]
 position = Vector2(155.00006, 1768.0001)
@@ -218,6 +229,10 @@ scale = Vector2(-0.6, 0.6)
 [node name="Ель51" parent="Trees" unique_id=1713636842 instance=ExtResource("6_vfcek")]
 position = Vector2(1273, 711)
 scale = Vector2(-0.6, 0.6)
+
+[node name="Ель54" parent="Trees" unique_id=16892797 instance=ExtResource("6_vfcek")]
+position = Vector2(2553, 3573)
+scale = Vector2(-1, 1)
 
 [node name="Ель26" parent="Trees" unique_id=2025756302 instance=ExtResource("6_vfcek")]
 position = Vector2(4417, 575)

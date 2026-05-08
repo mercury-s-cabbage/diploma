@@ -5,12 +5,12 @@
 [ext_resource type="Material" uid="uid://bif2aobtogtvt" path="res://Src/Game_world/objects/characters/knife/assets/knife/blinn1.res" id="3_ordmj"]
 [ext_resource type="Material" uid="uid://3cqrxw6qyx45" path="res://Src/Game_world/objects/characters/knife/assets/knife/blinn3.res" id="4_8evi2"]
 
-[node name="knife" instance=ExtResource("1_6ggvq")]
+[node name="knife" unique_id=1446075996 instance=ExtResource("1_6ggvq")]
 
-[node name="Armature" parent="." index="0"]
+[node name="Armature" parent="." index="0" unique_id=2050658634]
 transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0.17542458, 0)
 
-[node name="Skeleton3D" parent="Armature" index="0"]
+[node name="Skeleton3D" parent="Armature" index="0" unique_id=1786171960]
 bones/0/position = Vector3(1.2345698, -3.3233712, -149.72998)
 bones/0/rotation = Quaternion(-0.57957447, -0.0861756, 0.081996165, 0.80619097)
 bones/1/rotation = Quaternion(0.013177985, 0.056428064, -0.0021871645, 0.99831736)
@@ -101,134 +101,134 @@ bones/53/rotation = Quaternion(-0.31307375, -0.048880998, 0.00238889, 0.94846714
 bones/54/rotation = Quaternion(0.7170201, 0.028904773, -0.07577722, 0.69231826)
 bones/55/rotation = Quaternion(0.37447822, 0.06144183, -0.0097151855, 0.92514676)
 
-[node name="arm_low" parent="Armature/Skeleton3D" index="0"]
+[node name="arm_low" parent="Armature/Skeleton3D" index="0" unique_id=143224001]
 surface_material_override/0 = ExtResource("2_iipjy")
 
-[node name="attach_low" parent="Armature/Skeleton3D" index="1"]
+[node name="attach_low" parent="Armature/Skeleton3D" index="1" unique_id=1460395247]
 surface_material_override/0 = ExtResource("2_iipjy")
 
-[node name="bavet_low" parent="Armature/Skeleton3D" index="2"]
+[node name="bavet_low" parent="Armature/Skeleton3D" index="2" unique_id=1864978899]
 surface_material_override/0 = ExtResource("3_ordmj")
 
-[node name="belt_low" parent="Armature/Skeleton3D" index="3"]
+[node name="belt_low" parent="Armature/Skeleton3D" index="3" unique_id=486848675]
 surface_material_override/0 = ExtResource("3_ordmj")
 
-[node name="bouclier_low" parent="Armature/Skeleton3D" index="4"]
+[node name="bouclier_low" parent="Armature/Skeleton3D" index="4" unique_id=393258680]
 surface_material_override/0 = ExtResource("3_ordmj")
 
-[node name="chains02_low" parent="Armature/Skeleton3D" index="5"]
+[node name="chains02_low" parent="Armature/Skeleton3D" index="5" unique_id=136716001]
 surface_material_override/0 = ExtResource("3_ordmj")
 
-[node name="chains_low" parent="Armature/Skeleton3D" index="6"]
+[node name="chains_low" parent="Armature/Skeleton3D" index="6" unique_id=1854660622]
 surface_material_override/0 = ExtResource("3_ordmj")
 
-[node name="chest_low" parent="Armature/Skeleton3D" index="7"]
+[node name="chest_low" parent="Armature/Skeleton3D" index="7" unique_id=1372548853]
 surface_material_override/0 = ExtResource("3_ordmj")
 
-[node name="cheville_low" parent="Armature/Skeleton3D" index="8"]
+[node name="cheville_low" parent="Armature/Skeleton3D" index="8" unique_id=1938457057]
 surface_material_override/0 = ExtResource("3_ordmj")
 
-[node name="cross_low" parent="Armature/Skeleton3D" index="9"]
+[node name="cross_low" parent="Armature/Skeleton3D" index="9" unique_id=806858816]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="donut_low" parent="Armature/Skeleton3D" index="10"]
+[node name="donut_low" parent="Armature/Skeleton3D" index="10" unique_id=1750159403]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="Ears_low" parent="Armature/Skeleton3D" index="11"]
+[node name="Ears_low" parent="Armature/Skeleton3D" index="11" unique_id=97037611]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="elbow_low" parent="Armature/Skeleton3D" index="12"]
+[node name="elbow_low" parent="Armature/Skeleton3D" index="12" unique_id=2032277073]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="epaulette_low" parent="Armature/Skeleton3D" index="13"]
+[node name="epaulette_low" parent="Armature/Skeleton3D" index="13" unique_id=1348402968]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="face_low" parent="Armature/Skeleton3D" index="14"]
+[node name="face_low" parent="Armature/Skeleton3D" index="14" unique_id=296283692]
 surface_material_override/0 = ExtResource("3_ordmj")
 
-[node name="feet_low" parent="Armature/Skeleton3D" index="15"]
+[node name="feet_low" parent="Armature/Skeleton3D" index="15" unique_id=1051470626]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="fingers_low" parent="Armature/Skeleton3D" index="16"]
+[node name="fingers_low" parent="Armature/Skeleton3D" index="16" unique_id=2047302035]
 surface_material_override/0 = ExtResource("2_iipjy")
 
-[node name="Forhead_low" parent="Armature/Skeleton3D" index="17"]
+[node name="Forhead_low" parent="Armature/Skeleton3D" index="17" unique_id=403741011]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="glove_low" parent="Armature/Skeleton3D" index="18"]
+[node name="glove_low" parent="Armature/Skeleton3D" index="18" unique_id=1802035395]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="hand_low" parent="Armature/Skeleton3D" index="19"]
+[node name="hand_low" parent="Armature/Skeleton3D" index="19" unique_id=1947770293]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="Helmet_low" parent="Armature/Skeleton3D" index="20"]
+[node name="Helmet_low" parent="Armature/Skeleton3D" index="20" unique_id=877239754]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="hips_low" parent="Armature/Skeleton3D" index="21"]
+[node name="hips_low" parent="Armature/Skeleton3D" index="21" unique_id=1206240734]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="hold_low" parent="Armature/Skeleton3D" index="22"]
+[node name="hold_low" parent="Armature/Skeleton3D" index="22" unique_id=1794692021]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="Jaw_low" parent="Armature/Skeleton3D" index="23"]
+[node name="Jaw_low" parent="Armature/Skeleton3D" index="23" unique_id=423244597]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="knee_low" parent="Armature/Skeleton3D" index="24"]
+[node name="knee_low" parent="Armature/Skeleton3D" index="24" unique_id=2114651018]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="leg_low" parent="Armature/Skeleton3D" index="25"]
+[node name="leg_low" parent="Armature/Skeleton3D" index="25" unique_id=1442188757]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="manche_low" parent="Armature/Skeleton3D" index="26"]
+[node name="manche_low" parent="Armature/Skeleton3D" index="26" unique_id=1573034901]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="Mohawks_low" parent="Armature/Skeleton3D" index="27"]
+[node name="Mohawks_low" parent="Armature/Skeleton3D" index="27" unique_id=1807142165]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="neck_low" parent="Armature/Skeleton3D" index="28"]
+[node name="neck_low" parent="Armature/Skeleton3D" index="28" unique_id=661329609]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="o_low" parent="Armature/Skeleton3D" index="29"]
+[node name="o_low" parent="Armature/Skeleton3D" index="29" unique_id=1465132737]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="patch_low" parent="Armature/Skeleton3D" index="30"]
+[node name="patch_low" parent="Armature/Skeleton3D" index="30" unique_id=1107698876]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="robe_low" parent="Armature/Skeleton3D" index="31"]
+[node name="robe_low" parent="Armature/Skeleton3D" index="31" unique_id=329287907]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="short_low" parent="Armature/Skeleton3D" index="32"]
+[node name="short_low" parent="Armature/Skeleton3D" index="32" unique_id=1029705996]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="shoulder_low" parent="Armature/Skeleton3D" index="33"]
+[node name="shoulder_low" parent="Armature/Skeleton3D" index="33" unique_id=661821867]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="sidepatch_low" parent="Armature/Skeleton3D" index="34"]
+[node name="sidepatch_low" parent="Armature/Skeleton3D" index="34" unique_id=1273733392]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="strap_low" parent="Armature/Skeleton3D" index="35"]
+[node name="strap_low" parent="Armature/Skeleton3D" index="35" unique_id=1386043531]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="thumps_low" parent="Armature/Skeleton3D" index="36"]
+[node name="thumps_low" parent="Armature/Skeleton3D" index="36" unique_id=1799450786]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="tickle_low" parent="Armature/Skeleton3D" index="37"]
+[node name="tickle_low" parent="Armature/Skeleton3D" index="37" unique_id=1337413869]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="twist01_low" parent="Armature/Skeleton3D" index="38"]
+[node name="twist01_low" parent="Armature/Skeleton3D" index="38" unique_id=1421018520]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="twist_low" parent="Armature/Skeleton3D" index="39"]
+[node name="twist_low" parent="Armature/Skeleton3D" index="39" unique_id=1198333087]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="under_low" parent="Armature/Skeleton3D" index="40"]
+[node name="under_low" parent="Armature/Skeleton3D" index="40" unique_id=2121186325]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="up_low" parent="Armature/Skeleton3D" index="41"]
+[node name="up_low" parent="Armature/Skeleton3D" index="41" unique_id=63625908]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="wing01_low" parent="Armature/Skeleton3D" index="42"]
+[node name="wing01_low" parent="Armature/Skeleton3D" index="42" unique_id=102734706]
 surface_material_override/0 = ExtResource("4_8evi2")
 
-[node name="wing02_low" parent="Armature/Skeleton3D" index="43"]
+[node name="wing02_low" parent="Armature/Skeleton3D" index="43" unique_id=556821862]
 surface_material_override/0 = ExtResource("4_8evi2")

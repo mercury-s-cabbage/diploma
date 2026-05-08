@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://cvkvwxy0uidx4"]
+
+[ext_resource type="StyleBox" uid="uid://b7hhrp6sfpvau" path="res://Src/UI/res/Textures/base_box_texture.tres" id="1_5v5k4"]
+[ext_resource type="Script" uid="uid://cp68ynfwubab1" path="res://Src/UI/Additional/quest_step.gd" id="1_d3n8t"]
+[ext_resource type="LabelSettings" uid="uid://dwfwdkejuruxp" path="res://Src/UI/res/Label_settings/text_settings.tres" id="2_0psnf"]
+
+[node name="QuestStep" type="CanvasLayer" unique_id=1952791163]
+script = ExtResource("1_d3n8t")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1874573186]
+custom_minimum_size = Vector2(400, 120)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="MarginContainer" unique_id=1318449197]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_5v5k4")
+
+[node name="Label" type="Label" parent="MarginContainer/Panel" unique_id=99136803]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 384.0
+offset_bottom = 88.0
+text = "Какой-то текст для проверки многострочного ввода"
+label_settings = ExtResource("2_0psnf")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
