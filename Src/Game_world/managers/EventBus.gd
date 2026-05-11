@@ -15,11 +15,15 @@ signal quest_step_changed(quest_id: String, step: int)
 signal quest_ended(quest_id: String)
 
 # События сохранений
-signal save_game()
-signal create_save()
-signal save_created(save_id: String, current_save_id: String)
-signal set_save(save_id: String)
+#signal save_game()
+#signal create_save()
+#signal save_created(save_id: String, current_save_id: String)
+#signal set_save(save_id: String)
 signal save_location(loc_id: String)
+signal save_game_request()
+signal create_save_request()
+signal load_save_request(save_id: String)
+
 
 # События UI
 signal update_inventory_ui(inventory_list: Dictionary)

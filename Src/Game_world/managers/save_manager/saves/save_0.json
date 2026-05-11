@@ -1,0 +1,70 @@
+{
+	"Diary": {
+		"herbs": {
+			"calendula": {
+				"1": false,
+				"2": false
+			},
+			"chamomile": {
+				"1": false,
+				"2": false
+			},
+			"thyme": {
+				"1": false,
+				"2": false
+			}
+		}
+	},
+	"Inventory": {
+		"branch": 6.0,
+		"ribbon_blue": 1.0,
+		"ribbon_yellow": 1.0,
+		"sable_skin": 3.0,
+		"shagai_classic": 1.0,
+		"thyme": 3.0
+	},
+	"Locations": {
+		"save_id": "0"
+	},
+	"PlayerData": {
+		"dexterity": {
+			"current_level": 1.0,
+			"current_points": 98.0,
+			"max_points": 100.0
+		},
+		"strength": {
+			"current_level": 1.0,
+			"current_points": 13.0,
+			"max_points": 100.0
+		},
+		"x": 2189.94213867188,
+		"y": 5172.994140625
+	},
+	"QuestsProgress": {
+		"001": {
+			"0": {
+				"area_entered": {
+					"main_building": 1.0
+				}
+			},
+			"1": {
+				"area_entered": {
+					"banya": 1.0
+				}
+			},
+			"current_step": 2,
+			"status": 1
+		},
+		"002": {
+			"0": {
+				"item_aquired": {
+					"goal": 5.0,
+					"total": 0.0,
+					"type": "branch"
+				}
+			},
+			"current_step": 0,
+			"status": 1
+		}
+	}
+}

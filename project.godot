@@ -28,10 +28,9 @@ StoryManager="*uid://bvsoiij17iptd"
 InventoryManager="*uid://breoq5dyserpl"
 UiManager="*uid://gqfiy1r1dtqx"
 ItemLibrary="*uid://f02hc1cqroys"
-SaveManager="*uid://0jkagaq380y8"
 PlayerManager="*uid://bhh56biqgytyh"
-LocationSbManager="*uid://hdfv2rjh5gi0"
 DiaryManager="*uid://fovnqmio317y"
+SaveManager="*uid://0jkagaq380y8"
 DialogueManager="*uid://c3rodes2l3gxb"
 
 [dialogue_manager]

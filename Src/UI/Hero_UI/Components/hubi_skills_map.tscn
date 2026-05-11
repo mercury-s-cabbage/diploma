@@ -2,6 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://dt5lf5nwo5jsc" path="res://Src/UI/Hero_UI/Components/main_skill.tscn" id="1_u7iob"]
 [ext_resource type="PackedScene" uid="uid://78fxbysmy0lb" path="res://Src/UI/Hero_UI/Components/side_skill.tscn" id="2_h4mhp"]
+[ext_resource type="StyleBox" uid="uid://bn7pqa5thqtn1" path="res://Src/UI/res/Textures/hubi_box.tres" id="2_phr0b"]
+[ext_resource type="StyleBox" uid="uid://kiv7jvjwpo1m" path="res://Src/UI/res/Textures/hubi_button.tres" id="3_4f1ug"]
 
 [node name="SkillsMap" type="Control" unique_id=1952183000]
 custom_minimum_size = Vector2(1000, 1000)
@@ -28,32 +30,537 @@ color = Color(1, 1, 1, 0.0627451)
 
 [node name="Line2D" type="Line2D" parent="." unique_id=1012132888]
 position = Vector2(356, 269)
-points = PackedVector2Array(-106, 113, 192, 121, 96, 73)
-width = 2.0
+points = PackedVector2Array(189, 200, 306, 152)
+width = 5.0
+antialiased = true
+
+[node name="Line2D4" type="Line2D" parent="." unique_id=557596529]
+position = Vector2(356, 269)
+points = PackedVector2Array(189, 200, 165, 74)
+width = 5.0
+antialiased = true
+
+[node name="Line2D11" type="Line2D" parent="." unique_id=978362294]
+position = Vector2(356, 269)
+points = PackedVector2Array(131, -46, 165, 74)
+width = 5.0
+antialiased = true
+
+[node name="Line2D24" type="Line2D" parent="." unique_id=1496654557]
+position = Vector2(356, 269)
+points = PackedVector2Array(67, 31, 165, 74)
+width = 5.0
+antialiased = true
+
+[node name="Line2D18" type="Line2D" parent="." unique_id=361404331]
+position = Vector2(356, 269)
+points = PackedVector2Array(131, -46, 94, -143)
+width = 5.0
+antialiased = true
+
+[node name="Line2D5" type="Line2D" parent="." unique_id=991817442]
+position = Vector2(356, 269)
+points = PackedVector2Array(189, 200, 34, 174)
+width = 5.0
+antialiased = true
+
+[node name="Line2D12" type="Line2D" parent="." unique_id=1938927622]
+position = Vector2(356, 269)
+points = PackedVector2Array(-30, 38, 34, 174)
+width = 5.0
+antialiased = true
+
+[node name="Line2D19" type="Line2D" parent="." unique_id=147040629]
+position = Vector2(356, 269)
+points = PackedVector2Array(-30, 38, -143, -10)
+width = 5.0
+antialiased = true
+
+[node name="Line2D20" type="Line2D" parent="." unique_id=1804071398]
+position = Vector2(356, 269)
+points = PackedVector2Array(-30, 38, -73, -102)
+width = 5.0
+antialiased = true
+
+[node name="Line2D13" type="Line2D" parent="." unique_id=1074992931]
+position = Vector2(356, 269)
+points = PackedVector2Array(-179, 165, 34, 174)
+width = 5.0
+antialiased = true
+
+[node name="Line2D23" type="Line2D" parent="." unique_id=1121219356]
+position = Vector2(356, 269)
+points = PackedVector2Array(-7, 257, 34, 174)
+width = 5.0
+antialiased = true
+
+[node name="Line2D21" type="Line2D" parent="." unique_id=1410996731]
+position = Vector2(356, 269)
+points = PackedVector2Array(-179, 165, -237, 95)
+width = 5.0
+antialiased = true
+
+[node name="Line2D22" type="Line2D" parent="." unique_id=958771128]
+position = Vector2(356, 269)
+points = PackedVector2Array(-179, 165, -292, 195)
+width = 5.0
+antialiased = true
+
+[node name="Line2D6" type="Line2D" parent="." unique_id=1417497681]
+position = Vector2(356, 269)
+points = PackedVector2Array(189, 200, 96, 320)
+width = 5.0
+antialiased = true
+
+[node name="Line2D28" type="Line2D" parent="." unique_id=142812668]
+position = Vector2(356, 269)
+points = PackedVector2Array(173, 382, 96, 320)
+width = 5.0
+antialiased = true
+
+[node name="Line2D15" type="Line2D" parent="." unique_id=420111006]
+position = Vector2(356, 269)
+points = PackedVector2Array(-84, 356, 96, 320)
+width = 5.0
+antialiased = true
+
+[node name="Line2D25" type="Line2D" parent="." unique_id=1764760523]
+position = Vector2(356, 269)
+points = PackedVector2Array(-84, 356, 96, 320)
+width = 5.0
+antialiased = true
+
+[node name="Line2D26" type="Line2D" parent="." unique_id=1566571352]
+position = Vector2(356, 269)
+points = PackedVector2Array(-84, 356, -179, 342)
+width = 5.0
+antialiased = true
+
+[node name="Line2D27" type="Line2D" parent="." unique_id=192161937]
+position = Vector2(356, 269)
+points = PackedVector2Array(-84, 356, -130, 434)
+width = 5.0
+antialiased = true
+
+[node name="Line2D14" type="Line2D" parent="." unique_id=722379549]
+position = Vector2(356, 269)
+points = PackedVector2Array(97, 320, 36, 468)
+width = 5.0
+antialiased = true
+
+[node name="Line2D29" type="Line2D" parent="." unique_id=187143528]
+position = Vector2(356, 269)
+points = PackedVector2Array(95, 521, 36, 468)
+width = 5.0
+antialiased = true
+
+[node name="Line2D7" type="Line2D" parent="." unique_id=217466216]
+position = Vector2(356, 269)
+points = PackedVector2Array(189, 200, 335, 286)
+width = 5.0
+antialiased = true
+
+[node name="Line2D8" type="Line2D" parent="." unique_id=416903308]
+position = Vector2(356, 269)
+points = PackedVector2Array(526, 316, 374.97037, 292.27808, 335, 286)
+width = 5.0
+antialiased = true
+
+[node name="Line2D33" type="Line2D" parent="." unique_id=1794892834]
+position = Vector2(356, 269)
+points = PackedVector2Array(452, 221, 335, 286)
+width = 5.0
+antialiased = true
+
+[node name="Line2D30" type="Line2D" parent="." unique_id=2797435]
+position = Vector2(356, 269)
+points = PackedVector2Array(526, 316, 654, 279)
+width = 5.0
+antialiased = true
+
+[node name="Line2D31" type="Line2D" parent="." unique_id=155492684]
+position = Vector2(356, 269)
+points = PackedVector2Array(526, 316, 636, 381)
+width = 5.0
+antialiased = true
+
+[node name="Line2D9" type="Line2D" parent="." unique_id=394571333]
+position = Vector2(356, 269)
+points = PackedVector2Array(425, 447, 335, 286)
+width = 5.0
+antialiased = true
+
+[node name="Line2D32" type="Line2D" parent="." unique_id=1146528679]
+position = Vector2(356, 269)
+points = PackedVector2Array(425, 447, 530, 504)
+width = 5.0
+antialiased = true
+
+[node name="Line2D2" type="Line2D" parent="." unique_id=159379243]
+position = Vector2(356, 269)
+points = PackedVector2Array(304, 72, 306, 152)
+width = 5.0
+antialiased = true
+
+[node name="Line2D10" type="Line2D" parent="." unique_id=310889104]
+position = Vector2(356, 269)
+points = PackedVector2Array(417, 17, 306, 152)
+width = 5.0
+antialiased = true
+
+[node name="Line2D16" type="Line2D" parent="." unique_id=761525688]
+position = Vector2(356, 269)
+points = PackedVector2Array(417, 17, 440, -87)
+width = 5.0
+antialiased = true
+
+[node name="Line2D17" type="Line2D" parent="." unique_id=820937348]
+position = Vector2(356, 269)
+points = PackedVector2Array(417, 17, 509, -36)
+width = 5.0
+antialiased = true
+
+[node name="Line2D3" type="Line2D" parent="." unique_id=1150417605]
+position = Vector2(356, 269)
+points = PackedVector2Array(388, 138, 306, 152)
+width = 5.0
 antialiased = true
 
 [node name="Control" parent="." unique_id=265346212 instance=ExtResource("2_h4mhp")]
 layout_mode = 0
-offset_left = 609.0
-offset_top = 399.0
-offset_right = 643.0
-offset_bottom = 433.0
+offset_left = 727.0
+offset_top = 391.0
+offset_right = 761.0
+offset_bottom = 425.0
+tooltip_header_text = "Сайд навык"
+tooltip_description_text = "Описание сайд навыка"
+
+[node name="Control31" parent="." unique_id=751244848 instance=ExtResource("2_h4mhp")]
+layout_mode = 0
+offset_left = 727.0
+offset_top = 391.0
+offset_right = 761.0
+offset_bottom = 425.0
+tooltip_header_text = "Сайд навык"
+tooltip_description_text = "Описание сайд навыка"
+
+[node name="Control32" parent="." unique_id=674645069 instance=ExtResource("2_h4mhp")]
+layout_mode = 0
+offset_left = 992.0
+offset_top = 527.0
+offset_right = 1026.0
+offset_bottom = 561.0
+tooltip_header_text = "Сайд навык"
+tooltip_description_text = "Описание сайд навыка"
+
+[node name="Control33" parent="." unique_id=690652404 instance=ExtResource("2_h4mhp")]
+layout_mode = 0
+offset_left = 972.0
+offset_top = 637.0
+offset_right = 1006.0
+offset_bottom = 671.0
+tooltip_header_text = "Сайд навык"
+tooltip_description_text = "Описание сайд навыка"
+
+[node name="Control34" parent="." unique_id=991332550 instance=ExtResource("2_h4mhp")]
+layout_mode = 0
+offset_left = 870.0
+offset_top = 762.0
+offset_right = 904.0
+offset_bottom = 796.0
+tooltip_header_text = "Сайд навык"
+tooltip_description_text = "Описание сайд навыка"
+
+[node name="Control35" parent="." unique_id=2083203616 instance=ExtResource("2_h4mhp")]
+layout_mode = 0
+offset_left = 790.0
+offset_top = 473.0
+offset_right = 824.0
+offset_bottom = 507.0
 tooltip_header_text = "Сайд навык"
 tooltip_description_text = "Описание сайд навыка"
 
 [node name="Control2" parent="." unique_id=1357130106 instance=ExtResource("2_h4mhp")]
 layout_mode = 0
 offset_left = 643.0
-offset_top = 337.0
+offset_top = 325.0
 offset_right = 677.0
-offset_bottom = 371.0
+offset_bottom = 359.0
+tooltip_header_text = "Сайд навык"
+tooltip_description_text = "Описание сайд навыка"
+
+[node name="Control26" parent="." unique_id=1597143894 instance=ExtResource("2_h4mhp")]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 281.0
+offset_right = 440.0
+offset_bottom = 315.0
+background = ExtResource("2_phr0b")
+tooltip_header_text = "Сайд навык"
+tooltip_description_text = "Описание сайд навыка"
+
+[node name="Control17" parent="." unique_id=1737299161 instance=ExtResource("2_h4mhp")]
+layout_mode = 0
+offset_left = 778.0
+offset_top = 167.0
+offset_right = 812.0
+offset_bottom = 201.0
+tooltip_header_text = "Сайд навык"
+tooltip_description_text = "Описание сайд навыка"
+
+[node name="Control19" parent="." unique_id=638375889 instance=ExtResource("2_h4mhp")]
+layout_mode = 0
+offset_left = 436.0
+offset_top = 111.0
+offset_right = 470.0
+offset_bottom = 145.0
+background = ExtResource("3_4f1ug")
+tooltip_header_text = "Сайд навык"
+tooltip_description_text = "Описание сайд навыка"
+
+[node name="Control20" parent="." unique_id=1829635790 instance=ExtResource("2_h4mhp")]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 242.0
+offset_right = 229.0
+offset_bottom = 276.0
 tooltip_header_text = "Сайд навык"
 tooltip_description_text = "Описание сайд навыка"
 is_active = true
 
-[node name="Control3" parent="." unique_id=751244848 instance=ExtResource("1_u7iob")]
+[node name="Control21" parent="." unique_id=23037743 instance=ExtResource("2_h4mhp")]
 layout_mode = 0
-offset_left = 332.0
-offset_top = 399.0
-offset_right = 366.0
-offset_bottom = 433.0
+offset_left = 195.0
+offset_top = 242.0
+offset_right = 229.0
+offset_bottom = 276.0
+background = ExtResource("2_phr0b")
+tooltip_header_text = "Сайд навык"
+tooltip_description_text = "Описание сайд навыка"
+
+[node name="Control22" parent="." unique_id=1875966186 instance=ExtResource("2_h4mhp")]
+layout_mode = 0
+offset_left = 267.0
+offset_top = 150.0
+offset_right = 301.0
+offset_bottom = 184.0
+background = ExtResource("2_phr0b")
+tooltip_header_text = "Сайд навык"
+tooltip_description_text = "Описание сайд навыка"
+
+[node name="Control23" parent="." unique_id=114529446 instance=ExtResource("2_h4mhp")]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 348.0
+offset_right = 138.0
+offset_bottom = 382.0
+background = ExtResource("2_phr0b")
+tooltip_header_text = "Сайд навык"
+tooltip_description_text = "Описание сайд навыка"
+
+[node name="Control24" parent="." unique_id=773238645 instance=ExtResource("2_h4mhp")]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 448.0
+offset_right = 83.0
+offset_bottom = 482.0
+background = ExtResource("2_phr0b")
+tooltip_header_text = "Сайд навык"
+tooltip_description_text = "Описание сайд навыка"
+
+[node name="Control25" parent="." unique_id=299199179 instance=ExtResource("2_h4mhp")]
+layout_mode = 0
+offset_left = 331.0
+offset_top = 508.0
+offset_right = 365.0
+offset_bottom = 542.0
+tooltip_header_text = "Сайд навык"
+tooltip_description_text = "Описание сайд навыка"
+
+[node name="Control27" parent="." unique_id=1115679526 instance=ExtResource("2_h4mhp")]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 596.0
+offset_right = 195.0
+offset_bottom = 630.0
+background = ExtResource("2_phr0b")
+tooltip_header_text = "Сайд навык"
+tooltip_description_text = "Описание сайд навыка"
+
+[node name="Control28" parent="." unique_id=494508725 instance=ExtResource("2_h4mhp")]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 687.0
+offset_right = 242.0
+offset_bottom = 721.0
+tooltip_header_text = "Сайд навык"
+tooltip_description_text = "Описание сайд навыка"
+is_active = true
+
+[node name="Control29" parent="." unique_id=760891224 instance=ExtResource("2_h4mhp")]
+layout_mode = 0
+offset_left = 515.0
+offset_top = 630.0
+offset_right = 549.0
+offset_bottom = 664.0
+tooltip_header_text = "Сайд навык"
+tooltip_description_text = "Описание сайд навыка"
+
+[node name="Control30" parent="." unique_id=1871982993 instance=ExtResource("2_h4mhp")]
+layout_mode = 0
+offset_left = 436.0
+offset_top = 778.0
+offset_right = 470.0
+offset_bottom = 812.0
+tooltip_header_text = "Сайд навык"
+tooltip_description_text = "Описание сайд навыка"
+
+[node name="Control18" parent="." unique_id=1255385924 instance=ExtResource("2_h4mhp")]
+layout_mode = 0
+offset_left = 847.0
+offset_top = 218.0
+offset_right = 881.0
+offset_bottom = 252.0
+tooltip_header_text = "Сайд навык"
+tooltip_description_text = "Описание сайд навыка"
+
+[node name="Control3" parent="." unique_id=1543515315 instance=ExtResource("1_u7iob")]
+layout_mode = 0
+offset_left = 527.0
+offset_top = 456.0
+offset_right = 561.0
+offset_bottom = 490.0
+background = ExtResource("2_phr0b")
+tooltip_header_text = "Гармония во всем"
+tooltip_description_text = "\"Все в природе взаимосвязано, и задача человека - не давать этой гармонии нарушаться\""
+is_active = true
+
+[node name="Control4" parent="." unique_id=590272855 instance=ExtResource("1_u7iob")]
+layout_mode = 0
+offset_left = 643.0
+offset_top = 403.0
+offset_right = 677.0
+offset_bottom = 437.0
+background = ExtResource("3_4f1ug")
+tooltip_header_text = "Гармония во всем"
+tooltip_description_text = "\"Все в природе взаимосвязано, и задача человека - не давать этой гармонии нарушаться\""
+
+[node name="Control5" parent="." unique_id=1882905981 instance=ExtResource("1_u7iob")]
+layout_mode = 0
+offset_left = 503.0
+offset_top = 325.0
+offset_right = 537.0
+offset_bottom = 359.0
+background = ExtResource("3_4f1ug")
+tooltip_header_text = "Гармония во всем"
+tooltip_description_text = "\"Все в природе взаимосвязано, и задача человека - не давать этой гармонии нарушаться\""
+
+[node name="Control12" parent="." unique_id=543664445 instance=ExtResource("1_u7iob")]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 206.0
+offset_right = 504.0
+offset_bottom = 240.0
+background = ExtResource("3_4f1ug")
+tooltip_header_text = "Гармония во всем"
+tooltip_description_text = "\"Все в природе взаимосвязано, и задача человека - не давать этой гармонии нарушаться\""
+
+[node name="Control6" parent="." unique_id=2120184208 instance=ExtResource("1_u7iob")]
+layout_mode = 0
+offset_left = 372.0
+offset_top = 426.0
+offset_right = 406.0
+offset_bottom = 460.0
+background = ExtResource("3_4f1ug")
+tooltip_header_text = "Гармония во всем"
+tooltip_description_text = "\"Все в природе взаимосвязано, и задача человека - не давать этой гармонии нарушаться\""
+
+[node name="Control13" parent="." unique_id=1629344098 instance=ExtResource("1_u7iob")]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 288.0
+offset_right = 342.0
+offset_bottom = 322.0
+background = ExtResource("3_4f1ug")
+tooltip_header_text = "Гармония во всем"
+tooltip_description_text = "\"Все в природе взаимосвязано, и задача человека - не давать этой гармонии нарушаться\""
+
+[node name="Control14" parent="." unique_id=149454443 instance=ExtResource("1_u7iob")]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 420.0
+offset_right = 195.0
+offset_bottom = 454.0
+background = ExtResource("3_4f1ug")
+tooltip_header_text = "Гармония во всем"
+tooltip_description_text = "\"Все в природе взаимосвязано, и задача человека - не давать этой гармонии нарушаться\""
+
+[node name="Control7" parent="." unique_id=1267234988 instance=ExtResource("1_u7iob")]
+layout_mode = 0
+offset_left = 436.0
+offset_top = 574.0
+offset_right = 470.0
+offset_bottom = 608.0
+background = ExtResource("2_phr0b")
+tooltip_header_text = "Гармония во всем"
+tooltip_description_text = "\"Все в природе взаимосвязано, и задача человека - не давать этой гармонии нарушаться\""
+
+[node name="Control15" parent="." unique_id=1481605432 instance=ExtResource("1_u7iob")]
+layout_mode = 0
+offset_left = 372.0
+offset_top = 721.0
+offset_right = 406.0
+offset_bottom = 755.0
+background = ExtResource("3_4f1ug")
+tooltip_header_text = "Гармония во всем"
+tooltip_description_text = "\"Все в природе взаимосвязано, и задача человека - не давать этой гармонии нарушаться\""
+
+[node name="Control16" parent="." unique_id=1938446956 instance=ExtResource("1_u7iob")]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 608.0
+offset_right = 294.0
+offset_bottom = 642.0
+background = ExtResource("3_4f1ug")
+tooltip_header_text = "Гармония во всем"
+tooltip_description_text = "\"Все в природе взаимосвязано, и задача человека - не давать этой гармонии нарушаться\""
+
+[node name="Control8" parent="." unique_id=1893523667 instance=ExtResource("1_u7iob")]
+layout_mode = 0
+offset_left = 672.0
+offset_top = 538.0
+offset_right = 706.0
+offset_bottom = 572.0
+background = ExtResource("3_4f1ug")
+tooltip_header_text = "Гармония во всем"
+tooltip_description_text = "\"Все в природе взаимосвязано, и задача человека - не давать этой гармонии нарушаться\""
+
+[node name="Control9" parent="." unique_id=672084242 instance=ExtResource("1_u7iob")]
+layout_mode = 0
+offset_left = 761.0
+offset_top = 699.0
+offset_right = 795.0
+offset_bottom = 733.0
+background = ExtResource("3_4f1ug")
+tooltip_header_text = "Гармония во всем"
+tooltip_description_text = "\"Все в природе взаимосвязано, и задача человека - не давать этой гармонии нарушаться\""
+
+[node name="Control10" parent="." unique_id=1137357435 instance=ExtResource("1_u7iob")]
+layout_mode = 0
+offset_left = 864.0
+offset_top = 567.0
+offset_right = 898.0
+offset_bottom = 601.0
+background = ExtResource("3_4f1ug")
+tooltip_header_text = "Гармония во всем"
+tooltip_description_text = "\"Все в природе взаимосвязано, и задача человека - не давать этой гармонии нарушаться\""
+
+[node name="Control11" parent="." unique_id=1970008540 instance=ExtResource("1_u7iob")]
+layout_mode = 0
+offset_left = 756.0
+offset_top = 269.0
+offset_right = 790.0
+offset_bottom = 303.0
+background = ExtResource("3_4f1ug")
+tooltip_header_text = "Гармония во всем"
+tooltip_description_text = "\"Все в природе взаимосвязано, и задача человека - не давать этой гармонии нарушаться\""

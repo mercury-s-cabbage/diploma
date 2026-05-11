@@ -1,28 +1,28 @@
 {
-  "locations_managers": [
+  "locations": [
 	{
 	  "id": "loc_001",
 	  "coords": [0, 0],
 	  "size": [5000, 3500],
-	  "loc_path": "res://Src/Game_world/managers/location_manager/locations/loc_001/location_manager_001.gd"
+	  "scene_path": "res://Src/Game_world/managers/location_manager/locations/loc_001/loc_scene.tscn"
 	},
 	{
 	  "id": "loc_002",
 	  "coords": [5000, 0],
 	  "size": [5000, 3500],
-	  "loc_path": "res://Src/Game_world/managers/location_manager/locations/loc_002/location_manager_002.gd"
+	  "scene_path": "res://Src/Game_world/managers/location_manager/locations/loc_002/loc_scene.tscn"
 	},
 	{
 	  "id": "loc_003",
 	  "coords": [0, 3500],
 	  "size": [5000, 3600],
-	  "loc_path": "res://Src/Game_world/managers/location_manager/locations/loc_003/location_manager_003.gd"
+	  "scene_path": "res://Src/Game_world/managers/location_manager/locations/loc_003/loc_scene.tscn"
 	},
 	{
 	  "id": "loc_004",
 	  "coords": [5000, 3500],
 	  "size": [5000, 3500],
-	  "loc_path": "res://Src/Game_world/managers/location_manager/locations/loc_004/location_manager_004.gd"
+	  "scene_path": "res://Src/Game_world/managers/location_manager/locations/loc_004/loc_scene.tscn"
 	}
   ]
 }

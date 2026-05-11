@@ -8,7 +8,7 @@ func _ready():
 	LocationLoader.set_world($World)
 	
 	#временно: пока пользователь не может сам выбирать сохранение
-	SaveManager.set_save("0")
+	EventBus.load_save_request.emit("0")
 	
 	#временно: потом квест будет эмитится после прохождения стартовой кат-сцены и обучения
 	#EventBus.start_quest.emit("001")

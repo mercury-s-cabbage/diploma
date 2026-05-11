@@ -78,7 +78,6 @@ func load_quest(quest_id):
 	var quest_data: Dictionary = Utils.load_from_json("res://Src/Game_world/managers/plot_manager/quests/%s.json" %quest_id)
 	quests_data[quest_id] = quest_data
 	quest_ui_by_id[quest_id] = new_quest
-	print(quests_data)
 
 	new_quest.quest_name = quest_data.name
 	new_quest.main_text = quest_data.description

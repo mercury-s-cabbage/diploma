@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ue2pjbfffyao"]
 
-[ext_resource type="Script" uid="uid://bmsda3u6bik32" path="res://Src/Game_world/managers/location_manager/locations/loc_004/sb_1.gd" id="1_jgka6"]
+[ext_resource type="Script" uid="uid://bmsda3u6bik32" path="res://Src/Game_world/managers/location_manager/locations/loc_004/loc_script.gd" id="1_jgka6"]
 [ext_resource type="Texture2D" uid="uid://umhwaeeoy35r" path="res://Src/Game_world/managers/location_manager/locations/loc_004/backgrounds/IMG_2673.JPG" id="2_0j124"]
 [ext_resource type="Texture2D" uid="uid://bs3an0pxp7hm1" path="res://Src/Game_world/environment/houses/images/учительский корпус (2).png" id="3_le5hp"]
 [ext_resource type="PackedScene" uid="uid://d33rqkb0qhxhg" path="res://Src/Game_world/environment/trees/Ель_3.tscn" id="4_yxds7"]

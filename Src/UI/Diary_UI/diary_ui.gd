@@ -36,6 +36,9 @@ func _on_diary_theme_pressed(theme_id: String):
 	if theme_id in current_progress:
 		for page in current_progress[theme_id]:
 			var page_ins = page_label.instantiate()
+			print(diary_texts)
+			print(theme_id)
+			print(page)
 			page_ins.page_name = diary_texts[theme_id][page]["name"]
 			page_ins.page_id = page
 			page_ins.theme_id = theme_id

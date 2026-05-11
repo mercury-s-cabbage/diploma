@@ -20,6 +20,11 @@ shader_parameter/darken_strength = 0.8330000395675
 font = ExtResource("6_icnir")
 font_size = 40
 
+[sub_resource type="LabelSettings" id="LabelSettings_katt0"]
+font = ExtResource("6_icnir")
+font_size = 30
+font_color = Color(0.32156864, 0.5882353, 0.38039216, 1)
+
 [sub_resource type="LabelSettings" id="LabelSettings_mnloc"]
 font = ExtResource("6_icnir")
 font_size = 30
@@ -30,14 +35,111 @@ font = ExtResource("6_icnir")
 font_size = 30
 font_color = Color(0.28235295, 0.2627451, 0.6627451, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_katt0"]
-font = ExtResource("6_icnir")
-font_size = 30
-font_color = Color(0.32156864, 0.5882353, 0.38039216, 1)
-
 [node name="HeroUi" type="CanvasLayer" unique_id=1683068464 groups=["hero_ui"]]
 process_mode = 3
 script = ExtResource("1_tm7xh")
+
+[node name="Volk" type="Panel" parent="." unique_id=1178885815]
+visible = false
+material = SubResource("ShaderMaterial_oijr2")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Volk" unique_id=1537067996]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Volk/HBoxContainer" unique_id=1434041199]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 0
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+script = ExtResource("2_oijr2")
+
+[node name="SkillsMap" parent="Volk/HBoxContainer/ScrollContainer" unique_id=745469207 instance=ExtResource("9_katt0")]
+layout_mode = 2
+
+[node name="StatsPanel" type="Panel" parent="Volk/HBoxContainer" unique_id=833082612]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_g2384")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Volk/HBoxContainer/StatsPanel" unique_id=222765119]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 600.0
+offset_bottom = 648.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer" unique_id=358182594]
+layout_mode = 2
+theme_override_constants/margin_top = 30
+
+[node name="Label" type="Label" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer/MarginContainer" unique_id=380976080]
+layout_mode = 2
+text = "Характеристики"
+label_settings = SubResource("LabelSettings_smt73")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer" unique_id=2051134126]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+
+[node name="Label" type="Label" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer/MarginContainer2" unique_id=1561292891]
+layout_mode = 2
+text = "Волк
+"
+label_settings = SubResource("LabelSettings_katt0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stats" type="VBoxContainer" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer" unique_id=629788385]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer/Stats" unique_id=95447748]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+
+[node name="Characteristic" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer/Stats/MarginContainer" unique_id=544511645 instance=ExtResource("6_u333t")]
+layout_mode = 2
+char_name = "Сила"
+points = 19
+ColorBar = Color(0.20392157, 0.39215687, 0.24705882, 1)
+
+[node name="MarginContainer2" type="MarginContainer" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer/Stats" unique_id=1807261735]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+
+[node name="Characteristic" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer/Stats/MarginContainer2" unique_id=1256563311 instance=ExtResource("6_u333t")]
+layout_mode = 2
+char_name = "Ловкость"
+points = 44
+ColorBar = Color(0.20392157, 0.39215687, 0.24705882, 1)
+
+[node name="MarginContainer3" type="MarginContainer" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer/Stats" unique_id=1942495626]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+
+[node name="Characteristic" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer/Stats/MarginContainer3" unique_id=267509402 instance=ExtResource("6_u333t")]
+layout_mode = 2
+char_name = "Красноречие"
+points = 23
+ColorBar = Color(0.20392157, 0.39215687, 0.24705882, 1)
 
 [node name="Yaroslava" type="Panel" parent="." unique_id=1880586992]
 visible = false
@@ -142,7 +244,6 @@ points = 39
 ColorBar = Color(0.5058824, 0.19607843, 0.19607843, 1)
 
 [node name="Hubi" type="Panel" parent="." unique_id=1863978878]
-visible = false
 material = SubResource("ShaderMaterial_oijr2")
 anchors_preset = 15
 anchor_right = 1.0
@@ -242,107 +343,6 @@ layout_mode = 2
 char_name = "Красноречие"
 points = 2
 ColorBar = Color(0.21176471, 0.19607843, 0.5058824, 1)
-
-[node name="Volk" type="Panel" parent="." unique_id=1178885815]
-material = SubResource("ShaderMaterial_oijr2")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Volk" unique_id=1537067996]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 0
-
-[node name="ScrollContainer" type="ScrollContainer" parent="Volk/HBoxContainer" unique_id=1434041199]
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 0
-horizontal_scroll_mode = 3
-vertical_scroll_mode = 3
-script = ExtResource("2_oijr2")
-
-[node name="SkillsMap" parent="Volk/HBoxContainer/ScrollContainer" unique_id=745469207 instance=ExtResource("9_katt0")]
-layout_mode = 2
-
-[node name="StatsPanel" type="Panel" parent="Volk/HBoxContainer" unique_id=833082612]
-custom_minimum_size = Vector2(600, 0)
-layout_mode = 2
-theme_override_styles/panel = ExtResource("2_g2384")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Volk/HBoxContainer/StatsPanel" unique_id=222765119]
-layout_mode = 0
-offset_left = 4.0
-offset_right = 600.0
-offset_bottom = 648.0
-
-[node name="MarginContainer" type="MarginContainer" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer" unique_id=358182594]
-layout_mode = 2
-theme_override_constants/margin_top = 30
-
-[node name="Label" type="Label" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer/MarginContainer" unique_id=380976080]
-layout_mode = 2
-text = "Характеристики"
-label_settings = SubResource("LabelSettings_smt73")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MarginContainer2" type="MarginContainer" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer" unique_id=2051134126]
-layout_mode = 2
-theme_override_constants/margin_top = 10
-
-[node name="Label" type="Label" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer/MarginContainer2" unique_id=1561292891]
-layout_mode = 2
-text = "Волк
-"
-label_settings = SubResource("LabelSettings_katt0")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Stats" type="VBoxContainer" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer" unique_id=629788385]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer/Stats" unique_id=95447748]
-layout_mode = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 30
-
-[node name="Characteristic" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer/Stats/MarginContainer" unique_id=544511645 instance=ExtResource("6_u333t")]
-layout_mode = 2
-char_name = "Сила"
-points = 19
-ColorBar = Color(0.20392157, 0.39215687, 0.24705882, 1)
-
-[node name="MarginContainer2" type="MarginContainer" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer/Stats" unique_id=1807261735]
-layout_mode = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 30
-
-[node name="Characteristic" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer/Stats/MarginContainer2" unique_id=1256563311 instance=ExtResource("6_u333t")]
-layout_mode = 2
-char_name = "Ловкость"
-points = 44
-ColorBar = Color(0.20392157, 0.39215687, 0.24705882, 1)
-
-[node name="MarginContainer3" type="MarginContainer" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer/Stats" unique_id=1942495626]
-layout_mode = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 30
-
-[node name="Characteristic" parent="Volk/HBoxContainer/StatsPanel/VBoxContainer/Stats/MarginContainer3" unique_id=267509402 instance=ExtResource("6_u333t")]
-layout_mode = 2
-char_name = "Красноречие"
-points = 23
-ColorBar = Color(0.20392157, 0.39215687, 0.24705882, 1)
 
 [node name="HeroesSwitch" parent="." unique_id=527310113 instance=ExtResource("8_smt73")]
 

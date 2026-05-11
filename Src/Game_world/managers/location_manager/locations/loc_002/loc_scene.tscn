@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b1ydjnrsa3tg7"]
 
 [ext_resource type="Texture2D" uid="uid://s3a57ssysrj6" path="res://Src/Game_world/managers/location_manager/locations/loc_002/backgrounds/loc_2_1.JPG" id="1_6ph8l"]
-[ext_resource type="Script" uid="uid://c7gug8v88kvxk" path="res://Src/Game_world/managers/location_manager/locations/loc_002/sb_1.gd" id="1_bstin"]
+[ext_resource type="Script" uid="uid://c7gug8v88kvxk" path="res://Src/Game_world/managers/location_manager/locations/loc_002/loc_script.gd" id="1_bstin"]
 [ext_resource type="PackedScene" uid="uid://8u6bi8lrr7dk" path="res://Src/Game_world/environment/trees/Ель_2.tscn" id="2_525xr"]
 [ext_resource type="Texture2D" uid="uid://dtwbu6g6f0kgg" path="res://Src/Game_world/environment/houses/images/Баня.png" id="5_p63c8"]
 [ext_resource type="PackedScene" uid="uid://b454riybtorj0" path="res://Src/Game_world/environment/trees/Ель_4.tscn" id="5_r78sl"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://c7t8hf0hfsom1" path="res://Src/Game_world/environment/decor/бочонок.tscn" id="11_7ipm5"]
 [ext_resource type="PackedScene" uid="uid://daeebrminxas5" path="res://Src/Game_world/objects/items/branch.tscn" id="12_i3q7c"]
 [ext_resource type="PackedScene" uid="uid://bcr4i70k4s2to" path="res://Src/Game_world/environment/decor/сэргэ.tscn" id="13_7ipm5"]
-[ext_resource type="Texture2D" uid="uid://dllk1fm5u725v" path="res://Src/Game_world/environment/decor/images/IMG_3077.PNG" id="14_i3q7c"]
+[ext_resource type="PackedScene" uid="uid://c4j5xc6rvsuyn" path="res://Src/Game_world/environment/decor/камень.tscn" id="15_xf38n"]
 [ext_resource type="Texture2D" uid="uid://d0fr6nmnei2b8" path="res://Src/Game_world/objects/characters/temporary/photo_2026-05-04_21-19-03-Photoroom.png" id="15_xwtmq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r78sl"]
@@ -306,10 +306,6 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(3921.1921, 2958.676)
 scale = Vector2(0.5, 0.5)
 
-[node name="Img3077" type="Sprite2D" parent="." unique_id=1390274482]
-position = Vector2(3885.0051, 3050.3777)
-texture = ExtResource("14_i3q7c")
-
 [node name="Photo20260504211903Photoroom" type="Sprite2D" parent="." unique_id=2140129568]
 position = Vector2(654.67883, 1149.6628)
 scale = Vector2(0.20219056, 0.20219056)
@@ -320,6 +316,9 @@ texture = ExtResource("15_xwtmq")
 [node name="001_quest_zone" type="CollisionShape2D" parent="001" unique_id=250956159]
 position = Vector2(2991.8672, 2257.636)
 shape = SubResource("CircleShape2D_xwtmq")
+
+[node name="Камень" parent="." unique_id=1820764830 instance=ExtResource("15_xf38n")]
+position = Vector2(3724.019, 2884.8315)
 
 [connection signal="body_entered" from="banya" to="." method="_on_banya_body_entered"]
 [connection signal="body_entered" from="001" to="." method="_on_001_body_entered"]

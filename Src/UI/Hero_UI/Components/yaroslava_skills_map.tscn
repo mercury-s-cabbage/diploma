@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dt5lf5nwo5jsc" path="res://Src/UI/Hero_UI/Components/main_skill.tscn" id="1_w8sb8"]
 [ext_resource type="StyleBox" uid="uid://bjxvpnqi60f6s" path="res://Src/UI/res/Textures/yaroslava_box_texture.tres" id="2_pm15e"]
+[ext_resource type="PackedScene" uid="uid://78fxbysmy0lb" path="res://Src/UI/Hero_UI/Components/side_skill.tscn" id="3_qnfvf"]
 
 [node name="SkillsMap" type="Control" unique_id=1952183000]
 custom_minimum_size = Vector2(1000, 1000)
@@ -26,110 +27,490 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(1, 1, 1, 0.0627451)
 
-[node name="MainSkill2" parent="." unique_id=971310963 instance=ExtResource("1_w8sb8")]
+[node name="Line2D" type="Line2D" parent="." unique_id=31963506]
+points = PackedVector2Array(547, 445, 633, 383)
+width = 5.0
+
+[node name="Line2D6" type="Line2D" parent="." unique_id=177308366]
+points = PackedVector2Array(547, 445, 492, 353)
+width = 5.0
+
+[node name="Line2D10" type="Line2D" parent="." unique_id=938777965]
+points = PackedVector2Array(491, 260, 492, 353)
+width = 5.0
+
+[node name="Line2D12" type="Line2D" parent="." unique_id=1623862897]
+points = PackedVector2Array(491, 260, 438, 216)
+width = 5.0
+
+[node name="Line2D17" type="Line2D" parent="." unique_id=1325528146]
+points = PackedVector2Array(491, 348, 426, 372)
+width = 5.0
+
+[node name="Line2D15" type="Line2D" parent="." unique_id=15106962]
+points = PackedVector2Array(491, 260, 502, 189)
+width = 5.0
+
+[node name="Line2D13" type="Line2D" parent="." unique_id=725440223]
+position = Vector2(-87, -22)
+points = PackedVector2Array(393, 310, 360, 262)
+width = 5.0
+
+[node name="Line2D14" type="Line2D" parent="." unique_id=1438837979]
+position = Vector2(-87, -22)
+points = PackedVector2Array(393, 310, 332, 311)
+width = 5.0
+
+[node name="Line2D11" type="Line2D" parent="." unique_id=12845527]
+points = PackedVector2Array(311, 296, 492, 353)
+width = 5.0
+
+[node name="Line2D7" type="Line2D" parent="." unique_id=1294769684]
+points = PackedVector2Array(547, 445, 415, 563)
+width = 5.0
+
+[node name="Line2D19" type="Line2D" parent="." unique_id=1256478171]
+points = PackedVector2Array(278, 572, 415, 563)
+width = 5.0
+
+[node name="Line2D35" type="Line2D" parent="." unique_id=1107196527]
+position = Vector2(7.382614, 0)
+scale = Vector2(0.973913, 1)
+points = PackedVector2Array(278, 572, 173, 567)
+width = 5.0
+
+[node name="Line2D36" type="Line2D" parent="." unique_id=1433239]
+position = Vector2(7.382614, 0)
+scale = Vector2(0.973913, 1)
+points = PackedVector2Array(278, 572, 208.04463, 636)
+width = 5.0
+
+[node name="Line2D33" type="Line2D" parent="." unique_id=1777791410]
+points = PackedVector2Array(336, 508, 415, 563)
+width = 5.0
+
+[node name="Line2D34" type="Line2D" parent="." unique_id=1982069448]
+points = PackedVector2Array(392, 469, 415, 563)
+width = 5.0
+
+[node name="Line2D20" type="Line2D" parent="." unique_id=290670057]
+points = PackedVector2Array(348, 706, 270, 763)
+width = 5.0
+
+[node name="Line2D37" type="Line2D" parent="." unique_id=454804251]
+points = PackedVector2Array(348, 706, 416, 567)
+width = 5.0
+
+[node name="Line2D18" type="Line2D" parent="." unique_id=489620465]
+points = PackedVector2Array(547, 445, 546, 591)
+width = 5.0
+
+[node name="Line2D24" type="Line2D" parent="." unique_id=32087870]
+points = PackedVector2Array(502, 675, 546, 591)
+width = 5.0
+
+[node name="Line2D25" type="Line2D" parent="." unique_id=908351801]
+points = PackedVector2Array(580, 675, 546, 591)
+width = 5.0
+
+[node name="Line2D3" type="Line2D" parent="." unique_id=207736832]
+points = PackedVector2Array(633, 293, 633, 383)
+width = 5.0
+
+[node name="Line2D8" type="Line2D" parent="." unique_id=1010245368]
+points = PackedVector2Array(698, 336, 637, 378)
+width = 5.0
+
+[node name="Line2D9" type="Line2D" parent="." unique_id=394581550]
+points = PackedVector2Array(698, 336, 803, 270)
+width = 5.0
+
+[node name="Line2D5" type="Line2D" parent="." unique_id=566377]
+points = PackedVector2Array(735, 417, 637, 378)
+width = 5.0
+
+[node name="Line2D28" type="Line2D" parent="." unique_id=1858319454]
+points = PackedVector2Array(769, 482, 658, 478)
+width = 5.0
+
+[node name="Line2D2" type="Line2D" parent="." unique_id=381845477]
+points = PackedVector2Array(547, 445, 656, 480)
+width = 5.0
+
+[node name="Line2D21" type="Line2D" parent="." unique_id=2043657079]
+points = PackedVector2Array(547, 445, 656, 480)
+width = 5.0
+
+[node name="Line2D22" type="Line2D" parent="." unique_id=1319871121]
+points = PackedVector2Array(810, 575, 656, 480)
+width = 5.0
+
+[node name="Line2D26" type="Line2D" parent="." unique_id=2112068477]
+points = PackedVector2Array(810, 575, 900, 587)
+width = 5.0
+
+[node name="Line2D27" type="Line2D" parent="." unique_id=492784270]
+points = PackedVector2Array(810, 575, 880, 656)
+width = 5.0
+
+[node name="Line2D23" type="Line2D" parent="." unique_id=409801617]
+points = PackedVector2Array(702, 641, 656, 480)
+width = 5.0
+
+[node name="Line2D30" type="Line2D" parent="." unique_id=903486098]
+points = PackedVector2Array(702, 641, 716, 745)
+width = 5.0
+
+[node name="Line2D31" type="Line2D" parent="." unique_id=2118934491]
+points = PackedVector2Array(702, 641, 769, 700)
+width = 5.0
+
+[node name="Line2D29" type="Line2D" parent="." unique_id=1968938081]
+position = Vector2(719.625, 649.7778)
+scale = Vector2(-0.017857144, -0.0058479533)
+points = PackedVector2Array(702, 641, 656, 480)
+width = 5.0
+
+[node name="MainSkill3" parent="." unique_id=751244848 instance=ExtResource("1_w8sb8")]
 layout_mode = 0
-offset_left = 529.0
-offset_top = 427.0
-offset_right = 574.0
-offset_bottom = 472.0
+offset_left = 618.0
+offset_top = 363.0
+offset_right = 663.0
+offset_bottom = 408.0
 mouse_filter = 1
 background = ExtResource("2_pm15e")
-tooltip_header_text = "Смелость"
-tooltip_description_text = "Смелость"
+tooltip_header_text = "Проигрыши учат"
+tooltip_description_text = "\"Руслан говорил, что не стоит бояться проигрышей. Только проигрывая сильному сопернику мы чему-то учимся\""
+
+[node name="MainSkill7" parent="." unique_id=250719985 instance=ExtResource("1_w8sb8")]
+layout_mode = 0
+offset_left = 685.0
+offset_top = 319.0
+offset_right = 730.0
+offset_bottom = 364.0
+mouse_filter = 1
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Проигрыши учат"
+tooltip_description_text = "\"Руслан говорил, что не стоит бояться проигрышей. Только проигрывая сильному сопернику мы чему-то учимся\""
+
+[node name="MainSkill4" parent="." unique_id=1421567120 instance=ExtResource("1_w8sb8")]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 466.0
+offset_right = 685.0
+offset_bottom = 511.0
+mouse_filter = 1
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Проигрыши учат"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 5% (макс. 85%) во всех битвах с участием победившего врага."
+
+[node name="MainSkill13" parent="." unique_id=1636382759 instance=ExtResource("1_w8sb8")]
+layout_mode = 0
+offset_left = 794.0
+offset_top = 558.0
+offset_right = 839.0
+offset_bottom = 603.0
+mouse_filter = 1
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Проигрыши учат"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 5% (макс. 85%) во всех битвах с участием победившего врага."
+
+[node name="MainSkill14" parent="." unique_id=1513387206 instance=ExtResource("1_w8sb8")]
+layout_mode = 0
+offset_left = 685.0
+offset_top = 627.0
+offset_right = 730.0
+offset_bottom = 672.0
+mouse_filter = 1
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Проигрыши учат"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 5% (макс. 85%) во всех битвах с участием победившего врага."
+
+[node name="MainSkill5" parent="." unique_id=746979765 instance=ExtResource("1_w8sb8")]
+layout_mode = 0
+offset_left = 474.0
+offset_top = 332.0
+offset_right = 519.0
+offset_bottom = 377.0
+mouse_filter = 1
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Проигрыши учат"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 5% (макс. 85%) во всех битвах с участием победившего врага."
+
+[node name="MainSkill8" parent="." unique_id=1961395465 instance=ExtResource("1_w8sb8")]
+layout_mode = 0
+offset_left = 286.0
+offset_top = 273.0
+offset_right = 331.0
+offset_bottom = 318.0
+mouse_filter = 1
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Проигрыши учат"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 5% (макс. 85%) во всех битвах с участием победившего врага."
+
+[node name="MainSkill9" parent="." unique_id=741578214 instance=ExtResource("1_w8sb8")]
+layout_mode = 0
+offset_left = 474.0
+offset_top = 237.0
+offset_right = 519.0
+offset_bottom = 282.0
+mouse_filter = 1
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Проигрыши учат"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 5% (макс. 85%) во всех битвах с участием победившего врага."
+
+[node name="MainSkill6" parent="." unique_id=774946867 instance=ExtResource("1_w8sb8")]
+layout_mode = 0
+offset_left = 397.0
+offset_top = 548.0
+offset_right = 442.0
+offset_bottom = 593.0
+mouse_filter = 1
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Проигрыши учат"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 5% (макс. 85%) во всех битвах с участием победившего врага."
+
+[node name="MainSkill11" parent="." unique_id=1324819013 instance=ExtResource("1_w8sb8")]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 548.0
+offset_right = 304.0
+offset_bottom = 593.0
+mouse_filter = 1
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Проигрыши учат"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 5% (макс. 85%) во всех битвах с участием победившего врага."
+
+[node name="MainSkill12" parent="." unique_id=538249111 instance=ExtResource("1_w8sb8")]
+layout_mode = 0
+offset_left = 331.0
+offset_top = 685.0
+offset_right = 376.0
+offset_bottom = 730.0
+mouse_filter = 1
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Проигрыши учат"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 5% (макс. 85%) во всех битвах с участием победившего врага."
+
+[node name="MainSkill10" parent="." unique_id=1993326627 instance=ExtResource("1_w8sb8")]
+layout_mode = 0
+offset_left = 525.0
+offset_top = 577.0
+offset_right = 570.0
+offset_bottom = 622.0
+mouse_filter = 1
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Проигрыши учат"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 5% (макс. 85%) во всех битвах с участием победившего врага."
+
+[node name="MainSkill2" parent="." unique_id=971310963 instance=ExtResource("1_w8sb8")]
+layout_mode = 0
+offset_left = 535.0
+offset_top = 428.0
+offset_right = 580.0
+offset_bottom = 473.0
+mouse_filter = 1
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Дело чести"
+tooltip_description_text = "\"Если ты обладаешь силой, то защищать тех, кто слабее тебя - это твой долг\""
 is_active = true
 
-[node name="MainSkill5" parent="." unique_id=1945472989 instance=ExtResource("1_w8sb8")]
+[node name="Control" parent="." unique_id=1906685378 instance=ExtResource("3_qnfvf")]
 layout_mode = 0
-offset_left = 613.0
-offset_top = 320.0
-offset_right = 658.0
-offset_bottom = 365.0
-mouse_filter = 1
+offset_left = 618.0
+offset_top = 274.0
+offset_right = 652.0
+offset_bottom = 308.0
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Знакомые повадки"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 10% (макс. 80%) во всех битвах с участием победившего врага."
 
-[node name="MainSkill6" parent="." unique_id=2070888507 instance=ExtResource("1_w8sb8")]
+[node name="Control5" parent="." unique_id=1516654829 instance=ExtResource("3_qnfvf")]
 layout_mode = 0
-offset_left = 764.0
-offset_top = 211.0
-offset_right = 809.0
-offset_bottom = 256.0
-mouse_filter = 1
+offset_left = 418.0
+offset_top = 199.0
+offset_right = 452.0
+offset_bottom = 233.0
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Знакомые повадки"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 10% (макс. 80%) во всех битвах с участием победившего врага."
 
-[node name="MainSkill7" parent="." unique_id=1851375631 instance=ExtResource("1_w8sb8")]
+[node name="Control10" parent="." unique_id=699439015 instance=ExtResource("3_qnfvf")]
 layout_mode = 0
-offset_left = 442.0
-offset_top = 320.0
-offset_right = 487.0
-offset_bottom = 365.0
-mouse_filter = 1
+offset_left = 409.0
+offset_top = 352.0
+offset_right = 443.0
+offset_bottom = 386.0
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Знакомые повадки"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 10% (макс. 80%) во всех битвах с участием победившего врага."
 
-[node name="MainSkill11" parent="." unique_id=74149776 instance=ExtResource("1_w8sb8")]
+[node name="Control8" parent="." unique_id=508913516 instance=ExtResource("3_qnfvf")]
 layout_mode = 0
-offset_left = 272.0
-offset_top = 166.0
-offset_right = 317.0
-offset_bottom = 211.0
-mouse_filter = 1
+offset_left = 486.0
+offset_top = 175.0
+offset_right = 520.0
+offset_bottom = 209.0
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Знакомые повадки"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 10% (макс. 80%) во всех битвах с участием победившего врага."
 
-[node name="MainSkill12" parent="." unique_id=781059550 instance=ExtResource("1_w8sb8")]
+[node name="Control6" parent="." unique_id=1473571481 instance=ExtResource("3_qnfvf")]
 layout_mode = 0
-offset_left = 529.0
-offset_top = 211.0
-offset_right = 574.0
-offset_bottom = 256.0
-mouse_filter = 1
+offset_left = 254.0
+offset_top = 225.0
+offset_right = 288.0
+offset_bottom = 259.0
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Знакомые повадки"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 10% (макс. 80%) во всех битвах с участием победившего врага."
 
-[node name="MainSkill13" parent="." unique_id=1134712290 instance=ExtResource("1_w8sb8")]
+[node name="Control7" parent="." unique_id=505686382 instance=ExtResource("3_qnfvf")]
 layout_mode = 0
-offset_left = 719.0
-offset_top = 609.0
-offset_right = 764.0
-offset_bottom = 654.0
-mouse_filter = 1
+offset_left = 225.0
+offset_top = 273.0
+offset_right = 259.0
+offset_bottom = 307.0
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Знакомые повадки"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 10% (макс. 80%) во всех битвах с участием победившего врага."
 
-[node name="MainSkill14" parent="." unique_id=1922232746 instance=ExtResource("1_w8sb8")]
+[node name="Control3" parent="." unique_id=507189167 instance=ExtResource("3_qnfvf")]
 layout_mode = 0
-offset_left = 487.0
-offset_top = 561.0
-offset_right = 532.0
-offset_bottom = 606.0
-mouse_filter = 1
+offset_left = 717.0
+offset_top = 402.0
+offset_right = 751.0
+offset_bottom = 436.0
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Знакомые повадки"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 10% (макс. 80%) во всех битвах с участием победившего врага."
 
-[node name="MainSkill15" parent="." unique_id=2088017854 instance=ExtResource("1_w8sb8")]
+[node name="Control4" parent="." unique_id=1102693515 instance=ExtResource("3_qnfvf")]
 layout_mode = 0
-offset_left = 356.0
-offset_top = 654.0
-offset_right = 401.0
-offset_bottom = 699.0
-mouse_filter = 1
+offset_left = 786.0
+offset_top = 254.0
+offset_right = 820.0
+offset_bottom = 288.0
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Знакомые повадки"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 10% (макс. 80%) во всех битвах с участием победившего врага."
 
-[node name="MainSkill16" parent="." unique_id=1096623826 instance=ExtResource("1_w8sb8")]
+[node name="Control13" parent="." unique_id=1445641114 instance=ExtResource("3_qnfvf")]
 layout_mode = 0
-offset_left = 613.0
-offset_top = 699.0
-offset_right = 658.0
-offset_bottom = 744.0
-mouse_filter = 1
+offset_left = 863.0
+offset_top = 637.0
+offset_right = 897.0
+offset_bottom = 671.0
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Знакомые повадки"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 10% (макс. 80%) во всех битвах с участием победившего врага."
 
-[node name="MainSkill17" parent="." unique_id=1882529746 instance=ExtResource("1_w8sb8")]
+[node name="Control14" parent="." unique_id=200167580 instance=ExtResource("3_qnfvf")]
 layout_mode = 0
-offset_left = 889.0
-offset_top = 365.0
-offset_right = 934.0
-offset_bottom = 410.0
-mouse_filter = 1
+offset_left = 883.0
+offset_top = 568.0
+offset_right = 917.0
+offset_bottom = 602.0
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Знакомые повадки"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 10% (макс. 80%) во всех битвах с участием победившего врага."
 
-[node name="MainSkill9" parent="." unique_id=278905568 instance=ExtResource("1_w8sb8")]
+[node name="Control15" parent="." unique_id=1520208244 instance=ExtResource("3_qnfvf")]
 layout_mode = 0
-offset_left = 272.0
-offset_top = 427.0
-offset_right = 317.0
-offset_bottom = 472.0
-mouse_filter = 1
+offset_left = 751.0
+offset_top = 466.0
+offset_right = 785.0
+offset_bottom = 500.0
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Знакомые повадки"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 10% (макс. 80%) во всех битвах с участием победившего врага."
 
-[node name="MainSkill4" parent="." unique_id=1958918663 instance=ExtResource("1_w8sb8")]
+[node name="Control16" parent="." unique_id=772596225 instance=ExtResource("3_qnfvf")]
 layout_mode = 0
-offset_left = 744.0
-offset_top = 427.0
-offset_right = 789.0
-offset_bottom = 472.0
-mouse_filter = 1
+offset_left = 697.0
+offset_top = 730.0
+offset_right = 731.0
+offset_bottom = 764.0
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Знакомые повадки"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 10% (макс. 80%) во всех битвах с участием победившего врага."
+
+[node name="Control17" parent="." unique_id=1307895034 instance=ExtResource("3_qnfvf")]
+layout_mode = 0
+offset_left = 751.0
+offset_top = 682.0
+offset_right = 785.0
+offset_bottom = 716.0
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Знакомые повадки"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 10% (макс. 80%) во всех битвах с участием победившего врага."
+
+[node name="Control11" parent="." unique_id=402373398 instance=ExtResource("3_qnfvf")]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 661.0
+offset_right = 520.0
+offset_bottom = 695.0
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Знакомые повадки"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 10% (макс. 80%) во всех битвах с участием победившего врага."
+
+[node name="Control23" parent="." unique_id=1889046005 instance=ExtResource("3_qnfvf")]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 743.0
+offset_right = 288.0
+offset_bottom = 777.0
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Знакомые повадки"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 10% (макс. 80%) во всех битвах с участием победившего врага."
+
+[node name="Control19" parent="." unique_id=1623777086 instance=ExtResource("3_qnfvf")]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 450.0
+offset_right = 410.0
+offset_bottom = 484.0
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Знакомые повадки"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 10% (макс. 80%) во всех битвах с участием победившего врага."
+
+[node name="Control20" parent="." unique_id=1100567435 instance=ExtResource("3_qnfvf")]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 492.0
+offset_right = 354.0
+offset_bottom = 526.0
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Знакомые повадки"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 10% (макс. 80%) во всех битвах с участием победившего врага."
+
+[node name="Control21" parent="." unique_id=829489290 instance=ExtResource("3_qnfvf")]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 548.0
+offset_right = 194.0
+offset_bottom = 582.0
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Знакомые повадки"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 10% (макс. 80%) во всех битвах с участием победившего врага."
+
+[node name="Control22" parent="." unique_id=1325368617 instance=ExtResource("3_qnfvf")]
+layout_mode = 0
+offset_left = 194.0
+offset_top = 622.0
+offset_right = 228.0
+offset_bottom = 656.0
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Знакомые повадки"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 10% (макс. 80%) во всех битвах с участием победившего врага."
+
+[node name="Control12" parent="." unique_id=507066132 instance=ExtResource("3_qnfvf")]
+layout_mode = 0
+offset_left = 563.0
+offset_top = 656.0
+offset_right = 597.0
+offset_bottom = 690.0
+background = ExtResource("2_pm15e")
+tooltip_header_text = "Знакомые повадки"
+tooltip_description_text = "После смерти в бою ловкость увеличивается на 10% (макс. 80%) во всех битвах с участием победившего врага."

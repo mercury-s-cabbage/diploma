@@ -3,11 +3,31 @@
 [ext_resource type="Script" uid="uid://cnxae7iyq2cct" path="res://Src/Game_world/environment/decor/сэргэ.gd" id="1_6r1ca"]
 [ext_resource type="Texture2D" uid="uid://cs57ntxmv6d1g" path="res://Src/Game_world/environment/decor/images/IMG_3075.PNG" id="2_33k4b"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_6r1ca"]
+radius = 35.97517
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_33k4b"]
+radius = 160.83763
+
 [node name="Сэргэ" type="Node2D" unique_id=1887882670]
 y_sort_enabled = true
 script = ExtResource("1_6r1ca")
 
 [node name="Img3075" type="Sprite2D" parent="." unique_id=1517141761]
 y_sort_enabled = true
-position = Vector2(-16.217865, -432.47278)
+position = Vector2(-13.383392, -415.4658)
 texture = ExtResource("2_33k4b")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1601071845]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=124385577]
+position = Vector2(1.4172363, 0)
+shape = SubResource("CircleShape2D_6r1ca")
+
+[node name="interaction_zone" type="Area2D" parent="." unique_id=1913353354]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interaction_zone" unique_id=20833521]
+shape = SubResource("CircleShape2D_33k4b")
+
+[connection signal="body_entered" from="interaction_zone" to="." method="_on_interaction_zone_body_entered"]
+[connection signal="body_exited" from="interaction_zone" to="." method="_on_interaction_zone_body_exited"]

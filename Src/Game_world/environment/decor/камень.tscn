@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://c4j5xc6rvsuyn"]
+
+[ext_resource type="Script" uid="uid://be3fsm8yuceg1" path="res://Src/Game_world/environment/decor/камень.gd" id="1_mokfx"]
+[ext_resource type="Texture2D" uid="uid://dllk1fm5u725v" path="res://Src/Game_world/environment/decor/images/IMG_3077.PNG" id="2_uoysb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_84ygc"]
+radius = 59.999985
+height = 267.4999
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iokue"]
+radius = 256.33698
+
+[node name="Камень" type="Node2D" unique_id=1820764830]
+y_sort_enabled = true
+script = ExtResource("1_mokfx")
+
+[node name="Img3077" type="Sprite2D" parent="." unique_id=1728730174]
+position = Vector2(-4.9999695, -20.000008)
+texture = ExtResource("2_uoysb")
+
+[node name="static" type="StaticBody2D" parent="." unique_id=1006220496]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="static" unique_id=1839722199]
+position = Vector2(7.4999847, 30)
+rotation = 1.5713702
+shape = SubResource("CapsuleShape2D_84ygc")
+
+[node name="Interaction_zone" type="Area2D" parent="." unique_id=205271452]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction_zone" unique_id=1005209004]
+position = Vector2(-3.8652344, -1.2884216)
+shape = SubResource("CircleShape2D_iokue")
+
+[connection signal="body_exited" from="Interaction_zone" to="." method="_on_interaction_zone_body_exited"]
+[connection signal="body_shape_entered" from="Interaction_zone" to="." method="_on_interaction_zone_body_shape_entered"]

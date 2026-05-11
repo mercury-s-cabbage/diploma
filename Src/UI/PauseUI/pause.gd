@@ -14,7 +14,7 @@ func _ready() -> void:
 	saves_list = Utils.load_from_json(saves_list_path).ids
 	visible = false
 	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
-	EventBus.create_save.connect(_update_saves)
+	#EventBus.create_save.connect(_update_saves)
 
 func _update_saves():
 	saves_list = Utils.load_from_json(saves_list_path).ids
@@ -28,7 +28,7 @@ func hide_menu() -> void:
 	visible = false
 
 func _on_save_button_pressed() -> void:
-	SaveManager.save_game()
+	EventBus.save_game_request.emit()
 
 func _open_saves():
 	main_menu.visible = false
